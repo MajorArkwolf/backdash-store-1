@@ -33,7 +33,7 @@
           <p id="verify"></p>
           <p>Phone Number: <input type="textbox" id="phonenumber"></input></p>
           <p>Address: <input type="textbox" id="address"></input></p>
-          <button type="submit" id="submitbutton" onclick="return false;" disabled>Submit</button>
+          <button type="submit" id="submitbutton" disabled>Submit</button>
         </form>
       </div>
     </div>
