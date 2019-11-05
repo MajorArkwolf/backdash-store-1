@@ -161,13 +161,23 @@ header {
 }
 
 .product-title {
+    font-size: 20px;
     display: flex;
     text-align: center;
+    flex-grow: 1;
+    padding: 10px 0;
+}
+
+
+.product-price {
+    font-size: 15px;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
     padding: 10px 0;
 }
+
 
 .product-image {
     display: flex;
@@ -181,14 +191,6 @@ header {
 .product-image img {
     width: 75%;
     height: auto;
-}
-
-.product-price {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    padding: 10px 0;
 }
 
 @media screen and (max-width: 600px) {
