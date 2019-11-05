@@ -8,7 +8,6 @@
   $dbName = "X32019269";
 
   $db = new mysqli($host, $userName, $password, $dbName);
-  echo $_POST;
   if ($db->connect_error) {
     die("Connection failed: " . $db->connect_error);
   }
