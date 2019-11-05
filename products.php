@@ -33,14 +33,13 @@
             $res = $mysqli->query("select * from Products");
 
             while ($row = $res->fetch_assoc()) {
-              <div class="product">
-              <div class="product-title"> $row['name'] </div>
-              <div class="product-image">
-                <img src="img/" . $row['id'] . '.png'
-                     height="125" width="125">
-              </div>
-              <div class="product-price"> row['price'] </div>
-            </div>
+              echo "<div class='product'>";
+                echo "<div class='product-title'>" . $row['name'] . "</div>";
+                  echo "<div class='product-image'>";
+                    echo "<img src='img/" . row['id'] . ".png' height='125' width='125'>";
+                  echo "</div>";
+                echo "<div class='product-price'>" . $row['price'] . "</div>";
+              echo "</div>";
             }
           ?>
         </div>
