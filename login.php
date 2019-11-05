@@ -19,6 +19,7 @@ session_start();
       </header>
       <?php
           ob_start();
+          $navmenuGroup = "account";
           include('navmenu.php');
           $myStr = ob_get_contents();
           ob_end_clean();

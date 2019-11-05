@@ -1,6 +1,6 @@
 <?php
+  echo $navmenuGroup;
   session_start();
-  echo __FILE__;
   if (isset($_SESSION['user_id'])) {
     $a = '<a href="details.php">Details</a>';
     $a .= '<a href="sendLogout.php">Log Out</a>';
