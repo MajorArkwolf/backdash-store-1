@@ -25,14 +25,14 @@
         <h2>
           Register
         </h2>
-        <form id="register" action="sendRegistration.php" method="post">
-          <p>Email: <input type="textbox" id="email"></input></p>
-          <p>Name: <input type="textbox" id="name"></input></p>
-          <p>Password: <input type="textbox" id="userPassword" onblur="CheckPassword()"></input></p>
+        <form id="register" action="sendRegistration.php" method="POST">
+          <p>Email: <input type="textbox" name="email" id="email"></input></p>
+          <p>Name: <input type="textbox" name="name" id="name"></input></p>
+          <p>Password: <input type="textbox" name="userPassword" id="userPassword" onblur="CheckPassword()"></input></p>
           <p>Confirm Password: <input type="textbox" id="userPassword2" onblur="CheckPassword()"></input></p>
           <p id="verify"></p>
-          <p>Phone Number: <input type="textbox" id="phonenumber"></input></p>
-          <p>Address: <input type="textbox" id="address"></input></p>
+          <p>Phone Number: <input type="textbox" name="phonenumber" id="phonenumber"></input></p>
+          <p>Address: <input type="textbox" name="address" id="address"></input></p>
           <button type="submit" id="submitbutton" disabled>Submit</button>
         </form>
       </div>
