@@ -214,6 +214,8 @@ header {
 .product-info {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0;
     padding-left: 15px;
 }
 
@@ -235,6 +237,7 @@ header {
     font-size: 18px;
     flex-grow: 1;
     padding-top: 25px;
+    padding-bottom: 10px;
 }
 
 .buy-button {
