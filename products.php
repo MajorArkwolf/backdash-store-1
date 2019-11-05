@@ -24,11 +24,14 @@
       <div class="text-area">
         <div class="product-grid">
           <?php
+            error_reporting(E_ALL);
+            ini_set("display_errors", 1);
+
             $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
-            if($stmt = $mysqli->prepare("select P.id, P.name, P.description, P.price from Products P")) {
+            if($stmt = $mysqli->prepare("select P.id, P.name, P.price from Products P")) {
                $stmt->execute();
-               $stmt->bind_result($id, $name, $description, $price);
+               $stmt->bind_result($id, $name, $price);
                $stmt->fetch();
             }
 
