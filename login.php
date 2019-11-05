@@ -34,7 +34,7 @@
           } else {
             echo '<form id="login" action="sendLogin.php" method="POST">
                       <p>Email: <input type="textbox" name="username" id="username"></input></p>
-                      <p>Password: <input type="textbox" name="password" id="password"></input></p>
+                      <p>Password: <input type="password" name="password" id="password"></input></p>
                       <button type="submit" id="submitbutton">Submit</button>
                     </form>
 
