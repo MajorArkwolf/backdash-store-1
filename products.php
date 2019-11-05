@@ -15,42 +15,34 @@
         </div>
       </header>
       <?php
-          ob_start();
-          include('navmenu.php');
-          $myStr = ob_get_contents();
-          ob_end_clean();
-          echo $myStr;
+        ob_start();
+        include('navmenu.php');
+        $myStr = ob_get_contents();
+        ob_end_clean();
+        echo $myStr;
       ?>
       <div class="text-area">
         <div class="product-grid">
-            <div class="product">
-                Foo1
-            </div>
-            <div class="product">
-                Foo2
-            </div>
-            <div class="product">
-                Foo3
-            </div>
-            <div class="product">
-                Foo4
-            </div>
-        <?php
+          <?php
             $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
             if ($mysqli->connect_errno) {
-                echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+              echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
             }
 
             $res = $mysqli->query("select * from Products");
 
             while ($row = $res->fetch_assoc()) {
-                // echo " id = " . $row['id'] . "\n";
-                // echo " name = " . $row['name'] . "\n";
-                // echo " description = " . $row['description'] . "\n";
-                // echo " price = " . $row['price'] . "\n";
+              <div class="product">
+              <div class="product-title"> $row['name'] </div>
+              <div class="product-image">
+                <img src="img/" . $row['id'] . '.png'
+                     height="125" width="125">
+              </div>
+              <div class="product-price"> row['price'] </div>
+            </div>
             }
-        ?>
+          ?>
         </div>
       </div>
     </div>

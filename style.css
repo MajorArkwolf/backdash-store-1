@@ -155,7 +155,30 @@ header {
     width: 200px;
     height: 200px;
     border: 1px solid black;
-    display: inline-grid;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-title {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 2;
+}
+
+.product-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
 }
 
 @media screen and (max-width: 600px) {
