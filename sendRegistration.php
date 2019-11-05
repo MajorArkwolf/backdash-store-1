@@ -17,26 +17,16 @@
       echo "Prepare failed: (" . $mysqli->errno . ") " . $mysqli->error;
   }
 
-  $id = $_POST['name'];
-  if (!$stmt->bind_param("s", $id)) {
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $password = $_POST['userPassword'];
+  $phonenumber = $_POST['phonenumber'];
+  $address = $_POST['address'];
+  if (!$stmt->bind_param("ssssss", $name, $email, $password, $phonenumber, $address)) {
       echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
   }
-  $id = $_POST['email'];
-  if (!$stmt->bind_param("s", $id)) {
-      echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
-  }
-  $id = $_POST['userPassword'];
-  if (!$stmt->bind_param("s", $id)) {
-      echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
-  }
-  $id = $_POST['phonenumber'];
-  if (!$stmt->bind_param("s", $id)) {
-      echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
-  }
-  $id = $_POST['address'];
-  if (!$stmt->bind_param("s", $id)) {
-      echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
-  }
+
+
   if (!$stmt->execute()) {
     echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
   }else {
