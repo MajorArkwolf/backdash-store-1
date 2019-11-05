@@ -31,7 +31,7 @@
                 echo "<div class='product-info'>";
                   echo "<div class='product-info-listing'>";
                     echo "<div class='product-info-name'>Product Name</div>";
-                    echo "<div class='product-info-price'>Product Price</div>'";
+                    echo "<div class='product-info-price'>Product Price</div>";
                     echo "<div class='product-info-description'>Product Description</div>";
                   echo "</div>";
                   echo "<div class='buy-button'>Buy</div>";
