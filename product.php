@@ -33,24 +33,18 @@
                $stmt->bind_param("i", intval($_GET['id']));
                $stmt->execute();
                $stmt->bind_result($id, $name, $description, $price);
-            }
-
-            while ($stmt->fetch()) {
-              echo $id;
-              echo $name;
-              echo $description;
-              echo $price;
+               $stmt->fetch();
             }
 
             echo "<div class='product-container'>";
               echo "<div class='product-image-big'>";
-                echo "<img src='img/" . "1" . ".png' height='100' width='100'>";
+                echo "<img src='img/" . $id . ".png' height='100' width='100'>";
               echo "</div>";
               echo "<div class='product-info'>";
                 echo "<div class='product-info-listing'>";
-                  echo "<div class='product-info-name'>Product Name</div>";
-                  echo "<div class='product-info-price'>Product Price</div>";
-                  echo "<div class='product-info-description'>Product Description</div>";
+                  echo "<div class='product-info-name'>" . $name . "</div>";
+                  echo "<div class='product-info-price'>" . $price . "</div>";
+                  echo "<div class='product-info-description'>" . $description . "</div>";
                 echo "</div>";
                 echo "<div class='buy-button'>Buy</div>";
               echo "</div>";
