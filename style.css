@@ -264,6 +264,10 @@ header {
 }
 
 @media screen and (max-width: 600px) {
+    html {
+        background-color: var(--content-bg);
+    }
+
     .text-area {
         padding: 1.5em;
     }
