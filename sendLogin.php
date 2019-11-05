@@ -23,7 +23,7 @@
           echo "user found";
 
       	// Verify user password and set $_SESSION
-      	if ($_POST['password'] == $user->password ) ) {
+      	if ($_POST['password'] === $user->password ) ) {
       		$_SESSION['user_id'] = $user->ID;
           echo "password true";
           //header('Location: loginsuccess.php');
