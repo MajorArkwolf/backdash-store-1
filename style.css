@@ -239,7 +239,7 @@ header {
 .product-info-description {
     font-size: 18px;
     flex-grow: 1;
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 .buy-button {
@@ -247,7 +247,7 @@ header {
     font-size: 22px;
     color: white;
     width: 65px;
-    padding: 10px 0;
+    padding: 8px 8px;
 }
 
 @media screen and (max-width: 600px) {
