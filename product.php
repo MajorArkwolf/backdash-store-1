@@ -24,19 +24,47 @@
       <div class="text-area">
         <p>
           <?php
-              echo "<div class='product-container'>";
-                echo "<div class='product-image-big'>";
-                  echo "<img src='img/" . "1" . ".png' height='100' width='100'>";
-                echo "</div>";
-                echo "<div class='product-info'>";
-                  echo "<div class='product-info-listing'>";
-                    echo "<div class='product-info-name'>Product Name</div>";
-                    echo "<div class='product-info-price'>Product Price</div>";
-                    echo "<div class='product-info-description'>Product Description</div>";
-                  echo "</div>";
-                  echo "<div class='buy-button'>Buy</div>";
-                echo "</div>";
+            $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
+
+            if ($mysqli->connect_errno) {
+              echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " .
+                $mysqli->connect_error;
+            }
+
+            if (!($statement = $mysqli->prepare("select * from Products where Products.id = ?"))) {
+              echo "Prepare failed: (" . $mysqli->errno . ") " . $mysqli->error;
+            }
+
+            if (!$statement->bind_param("i", $id)) {
+              echo "Binding parameters failed: (" . $statement->errno . ") " .
+                $statement->error;
+            }
+
+            if (!$statement->execute()) {
+              echo "Execute failed: (" . $statement->errno . ") " .
+                $statement->error;
+            }
+
+            $statement->bind_result($name, $code);
+
+            /* fetch values */
+            while ($statement->fetch()) {
+                printf ("%s (%s)\n", $name, $code);
+            }
+
+            echo "<div class='product-container'>";
+              echo "<div class='product-image-big'>";
+                echo "<img src='img/" . "1" . ".png' height='100' width='100'>";
               echo "</div>";
+              echo "<div class='product-info'>";
+                echo "<div class='product-info-listing'>";
+                  echo "<div class='product-info-name'>Product Name</div>";
+                  echo "<div class='product-info-price'>Product Price</div>";
+                  echo "<div class='product-info-description'>Product Description</div>";
+                echo "</div>";
+                echo "<div class='buy-button'>Buy</div>";
+              echo "</div>";
+            echo "</div>";
           ?>
         </p>
       </div>
