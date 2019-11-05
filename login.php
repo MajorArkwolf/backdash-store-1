@@ -29,13 +29,19 @@
         <h2>
           Login
         </h2>
-        <form id="login" action="sendLogin.php" method="POST">
-          <p>Email: <input type="textbox" name="username" id="username"></input></p>
-          <p>Password: <input type="textbox" name="password" id="password"></input></p>
-          <button type="submit" id="submitbutton">Submit</button>
-        </form>
+        <?php
+          if ( isset( $_SESSION['user_id'] ) ) {
+            echo '<p>You are already logged in</p>';
+          } else {
+            echo '<form id="login" action="sendLogin.php" method="POST">
+                      <p>Email: <input type="textbox" name="username" id="username"></input></p>
+                      <p>Password: <input type="textbox" name="password" id="password"></input></p>
+                      <button type="submit" id="submitbutton">Submit</button>
+                    </form>
 
-        <p>If you are not registered please <a href="register.php">register</a></p>
+                    <p>If you are not registered please <a href="register.php">register</a></p>';
+          }
+        ?>
       </div>
     </div>
     <script type="text/javascript" src="js/login.js"></script>
