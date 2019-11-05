@@ -1,32 +1,44 @@
 <?php
-  session_start();
+
+  ob_start();
   $host = "localhost";
-  $userName = "X32019269";
+  $username = "X32019269";
   $password = "X32019269";
-  $dbName = "X32019269";
+  $db_name = "X32019269";
+  $tbl_name="Accounts"; // Table name
 
-  // Always start this first
+  // Connect to server and select databse.
+  mysql_connect("$host", "$username", "$password")or die("cannot connect");
+  mysql_select_db("$db_name")or die("cannot select DB");
 
+  // Define $myusername and $mypassword
+  $myusername=$_POST['myusername'];
+  $mypassword=$_POST['mypassword'];
 
-  if ( ! empty( $_POST ) ) {
-      if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
-        if($_POST['username'] != '') {
-            // Getting submitted user data from database
-            $con = new mysqli($host, $userName, $password, $dbName);
-            $stmt = $con->prepare("SELECT * FROM Accounts WHERE email = ?");
-            $stmt->bind_param('s', $_POST['username']);
-            $stmt->execute();
-            $result = $stmt->get_result();
-        	  $user = $result->fetch_object();
-        }
-      	// Verify user password and set $_SESSION
-      	if ($_POST['password'] == $user->password) {
-      		$_SESSION['user_id'] = $user->ID;
-          header('Location: ./loginsuccess.php');
-      	} else {
-          header('Location: ./login.php');
-        }
-      }
+  // To protect MySQL injection (more detail about MySQL injection)
+  $myusername = stripslashes($myusername);
+  $mypassword = stripslashes($mypassword);
+  $myusername = mysql_real_escape_string($myusername);
+  $mypassword = mysql_real_escape_string($mypassword);
+
+  $sql="SELECT * FROM $tbl_name WHERE username='$myusername' and password='$mypassword'";
+  $result=mysql_query($sql);
+
+  // Mysql_num_row is counting table row
+  $count=mysql_num_rows($result);
+
+  // If result matched $myusername and $mypassword, table row must be 1 row
+
+  if($count==1){
+
+  // Register $myusername, $mypassword and redirect to file "login_success.php"
+  session_register("myusername");
+  session_register("mypassword");
+  header("location:login_success.php");
+  }
+  else {
+  echo "Wrong Username or Password";
   }
 
+  ob_end_flush();
  ?>
