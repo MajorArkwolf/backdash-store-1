@@ -20,7 +20,7 @@
 
 html {
     background-color: var(--bg);
-    min-height: 100%;
+    height: 100%;
     overflow-y: scroll;
 }
 
@@ -32,6 +32,10 @@ body {
     width: 100%;
     min-height: 100%;
     overflow: auto;
+}
+
+html, body{
+    min-height: 100%;
 }
 
 .content {
