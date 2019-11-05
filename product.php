@@ -50,13 +50,13 @@
                   echo "<div class='product-info-price'> $" . $price . "</div>";
                   echo "<div class='product-info-description'>" . $description . "</div>";
                 echo "</div>";
-                echo "<div class='buy-button'><i class='fas fa-shopping-cart'> Buy</i></div>";
+                echo "<div class='buy-button'><i class='fas fa-shopping-cart'></i>Buy</div>";
               echo "</div>";
             echo "</div>";
           ?>
         </p>
       </div>
     </div>
-    <script src="/navbar.js"></script>
+    <script src="navbar.js"></script>
   </body>
 </html>

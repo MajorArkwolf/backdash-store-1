@@ -31,6 +31,6 @@
         </p>
       </div>
     </div>
-    <script src="/navbar.js"></script>
+    <script src="navbar.js"></script>
   </body>
 </html>

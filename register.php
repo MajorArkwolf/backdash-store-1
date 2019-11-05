@@ -43,6 +43,6 @@
       </div>
     </div>
     <script type="text/javascript" src="js/register.js"></script>
-    <script src="/navbar.js"></script>
+    <script src="navbar.js"></script>
   </body>
 </html>
