@@ -27,7 +27,7 @@
         </h2>
         <form id="login" action="sendLogin.php" method="POST">
           <p>Email: <input type="textbox" name="username" id="username"></input></p>
-          <p>Password: <input type="textbox" name="userPassword" id="userPassword" onblur="CheckInfo()"></input></p>
+          <p>Password: <input type="textbox" name="password" id="password" onblur="CheckInfo()"></input></p>
           <button type="submit" id="submitbutton" disabled>Submit</button>
         </form>
       </div>
