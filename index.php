@@ -23,7 +23,23 @@
       ?>
       <div class="text-area">
         <p>
-          Welcome to the Backdash store.
+        <?php
+            $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
+
+            if ($mysqli->connect_errno) {
+                echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+            }
+
+            $res = $mysqli->query("select * from Products");
+
+            while ($row = $res->fetch_assoc()) {
+                echo " id = " . $row['id'] . "\n";
+                echo " name = " . $row['name'] . "\n";
+                echo " description = " . $row['description'] . "\n";
+                echo " price = " . $row['price'] . "\n";
+            }
+
+        ?>
         </p>
       </div>
     </div>
