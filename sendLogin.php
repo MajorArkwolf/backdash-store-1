@@ -41,12 +41,12 @@
 		$_SESSION['loggedin'] = TRUE;
 		$_SESSION['name'] = $_POST['username'];
 		$_SESSION['id'] = $id;
-		echo 'Welcome ' . $_SESSION['name'] . '!';
+		header('Location: ./loginsuccess.php');
 	} else {
-		echo 'Incorrect password!';
+		header('Location: ./login.php');
 	}
 } else {
-	echo 'Incorrect username!';
+	header('Location: ./login.php');
 }
 $stmt->close();
 ?>
