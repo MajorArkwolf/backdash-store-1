@@ -1,11 +1,12 @@
 <?php
+  session_start();
   $host = "localhost";
   $userName = "X32019269";
   $password = "X32019269";
   $dbName = "X32019269";
 
   // Always start this first
-  session_start();
+
 
   if ( ! empty( $_POST ) ) {
       if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
