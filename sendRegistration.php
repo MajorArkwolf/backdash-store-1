@@ -17,23 +17,23 @@
   if (!($stmt = $mysqli->prepare("INSERT INTO Accounts(name, email, password, phone, address) VALUES (?, ?, ?, ?, ?)"))) {
       echo "Prepare failed: (" . $mysqli->errno . ") " . $mysqli->error;
   }
-  $id = $_POST["name"];
+  $id = $_POST['name'];
   if (!$stmt->bind_param("s", $id)) {
       echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
   }
-  $id = $_POST["email"];
+  $id = $_POST['email'];
   if (!$stmt->bind_param("s", $id)) {
       echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
   }
-  $id = $_POST["userPassword"];
+  $id = $_POST['userPassword'];
   if (!$stmt->bind_param("s", $id)) {
       echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
   }
-  $id = $_POST["phonenumber"];
+  $id = $_POST['phonenumber'];
   if (!$stmt->bind_param("s", $id)) {
       echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
   }
-  $id = $_POST["address"];
+  $id = $_POST['address'];
   if (!$stmt->bind_param("s", $id)) {
       echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
   }
