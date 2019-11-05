@@ -16,7 +16,7 @@
       </header>
       <?php
         ob_start();
-        include('navmenu.php');
+        include('navmenu.php?group=shop');
         $myStr = ob_get_contents();
         ob_end_clean();
         echo $myStr;
