@@ -213,14 +213,11 @@ header {
 
 .product-info {
     display: flex;
-    flex-grow: 1;
-    flex-basis: 0;
     flex-direction: column;
     padding-left: 15px;
 }
 
 .product-info-listing {
-    flex-grow: 1;
 }
 
 .product-info-name {
