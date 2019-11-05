@@ -1,43 +1,52 @@
 <?php
   error_reporting(E_ALL);
   ini_set("display_errors", 1);
-  ob_start();
-  $host = "localhost";
-  $username = "X32019269";
-  $password = "X32019269";
-  $db_name = "X32019269";
-  $tbl_name="Accounts"; // Table name
 
-  // Connect to server and select databse.
-  mysql_connect("$host", "$username", "$password")or die("cannot connect");
-  mysql_select_db("$db_name")or die("cannot select DB");
+  session_start();
+  $DATABASE_HOST = "localhost";
+  $DATABASE_USER = "X32019269";
+  $DATABASE_PASS = "X32019269";
+  $DATABASE_NAME = "X32019269";
 
-  // Define $myusername and $mypassword
-  $myusername=$_POST['username'];
-  $mypassword=$_POST['password'];
-
-  // To protect MySQL injection (more detail about MySQL injection)
-  $myusername = stripslashes($myusername);
-  $mypassword = stripslashes($mypassword);
-  $myusername = mysql_real_escape_string($myusername);
-  $mypassword = mysql_real_escape_string($mypassword);
-
-  $sql="SELECT * FROM $tbl_name WHERE email='$myusername' and password='$mypassword'";
-  $result=mysql_query($sql);
-
-  // Mysql_num_row is counting table row
-  $count=mysql_num_rows($result);
-
-  // If result matched $myusername and $mypassword, table row must be 1 row
-
-  if($count==1){
-    // Register $myusername, $mypassword and redirect to file "login_success.php"
-    session_register("myusername");
-    session_register("mypassword");
-    header('Location: ./loginsuccess.php');
+  $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+  if ( mysqli_connect_errno() ) {
+  	// If there is an error with the connection, stop the script and display the error.
+  	die ('Failed to connect to MySQL: ' . mysqli_connect_error());
   }
-  else {
-    header('Location: ./login.php');
+
+  // Now we check if the data from the login form was submitted, isset() will check if the data exists.
+  if ( !isset($_POST['username'], $_POST['password']) ) {
+  	// Could not get the data that should have been sent.
+  	die ('Please fill both the username and password field!');
   }
-  ob_end_flush();
- ?>
+  // Prepare our SQL, preparing the SQL statement will prevent SQL injection.
+  if ($stmt = $con->prepare('SELECT id, password FROM Accounts WHERE email = ?')) {
+  	// Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
+  	$stmt->bind_param('s', $_POST['username']);
+  	$stmt->execute();
+  	// Store the result so we can check if the account exists in the database.
+  	$stmt->store_result();
+  }
+
+
+  if ($stmt->num_rows > 0) {
+	$stmt->bind_result($id, $password);
+	$stmt->fetch();
+	// Account exists, now we verify the password.
+	// Note: remember to use password_hash in your registration file to store the hashed passwords.
+	if (($_POST['password'] == $password)) {
+		// Verification success! User has loggedin!
+		// Create sessions so we know the user is logged in, they basically act like cookies but remember the data on the server.
+		session_regenerate_id();
+		$_SESSION['loggedin'] = TRUE;
+		$_SESSION['name'] = $_POST['username'];
+		$_SESSION['id'] = $id;
+		echo 'Welcome ' . $_SESSION['name'] . '!';
+	} else {
+		echo 'Incorrect password!';
+	}
+} else {
+	echo 'Incorrect username!';
+}
+$stmt->close();
+?>
