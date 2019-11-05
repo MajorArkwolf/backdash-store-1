@@ -38,7 +38,7 @@
                   echo "<div class='product-image'>";
                     echo "<img src='img/" . $row['id'] . ".png' height='100' width='100'>";
                   echo "</div>";
-                echo "<div class='product-price'>" . $row['price'] . "</div>";
+                echo "<div class='product-price'>" . "$" . $row['price'] . "</div>";
               echo "</div>";
             }
           ?>
