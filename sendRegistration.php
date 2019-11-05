@@ -7,8 +7,8 @@
   $password = "X32019269";
   $dbName = "X32019269";
 
-  $db = new mysqli($host, $userName, $password, $dbName);
-  if ($db->connect_error) {
+  $mysqli  = new mysqli($host, $userName, $password, $dbName);
+  if ($mysqli ->connect_error) {
     die("Connection failed: " . $db->connect_error);
   }
 
@@ -16,6 +16,7 @@
   if (!($stmt = $mysqli->prepare("INSERT INTO Accounts(name, email, password, phone, address) VALUES (?, ?, ?, ?, ?)"))) {
       echo "Prepare failed: (" . $mysqli->errno . ") " . $mysqli->error;
   }
+
   $id = $_POST['name'];
   if (!$stmt->bind_param("s", $id)) {
       echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
