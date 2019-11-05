@@ -35,7 +35,7 @@
           }
           echo '<p><b>ID:</b> ' . $id . '</p>';
           echo '<p><b>Email:</b> ' . $email . '</p>';
-          echo '<p></b>Name:</b> ' . $name . '</p>';
+          echo '<p><b>Name:</b> ' . $name . '</p>';
           echo '<p><b>Address:</b> ' . $address . '</p>';
          ?>
       </div>
