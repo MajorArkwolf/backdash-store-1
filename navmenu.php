@@ -1,5 +1,5 @@
 <?php
-  echo $_GET['group'];
+  echo $navmenuGroup;
   session_start();
   if (isset($_SESSION['user_id'])) {
     $a = '<a href="details.php">Details</a>';
