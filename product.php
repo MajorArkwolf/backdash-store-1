@@ -25,6 +25,20 @@
         <p>
           <?php
             echo "Product ID: " . $_GET['id'];
+
+              echo "<div class='product-container'>";
+                echo "<div class='product-image-big'>";
+                  echo "<img src='img/" . "1" . ".png' height='100' width='100'>";
+                echo "</div>";
+                echo "<div class='product-info'>";
+                  echo "<div class='product-info-listing'>";
+                    echo "<div class='product-name'>Product Name</div>";
+                    echo "<div class='product-price'>Product Price</div>'";
+                    echo "<div class='product-description'>Product Description</div>";
+                  echo "</div>";
+                  echo "<div class='buy-button'>Buy</div>";
+                echo "</div>";
+              echo "</div>";
           ?>
         </p>
       </div>
