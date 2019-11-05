@@ -18,6 +18,10 @@
     padding: 0;
 }
 
+html, body {
+    overflow: auto;
+}
+
 html {
     background-color: var(--bg);
     height: 100%;
