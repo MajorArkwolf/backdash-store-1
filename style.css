@@ -285,8 +285,12 @@ header {
         text-align: left;
     }
 
+    .product {
+        width: 175px;
+        height: 175px;
+    }
+
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
