@@ -50,7 +50,7 @@
                   echo "<div class='product-info-price'> $" . $price . "</div>";
                   echo "<div class='product-info-description'>" . $description . "</div>";
                 echo "</div>";
-                echo "<div class='buy-button'><i class='fas fa-shopping-cart'></i>Buy</div>";
+                echo "<div class='buy-button'><i class='fa fa-shopping-cart'></i>Buy</div>";
               echo "</div>";
             echo "</div>";
           ?>
