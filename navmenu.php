@@ -9,13 +9,19 @@
     $a .= '<a href="register.php">Register</a>';
   }
 #$a = '<a href="login.php">Login</a>';
-echo '<nav class="navbar">
-    <div class="dropdown">
-      <a href="index.php" class="dropbtn">Home</a>
-    </div>
+echo '<nav class="navbar">';
+  echo '<div class="dropdown';
+    if ($navmenuGroup == 'home') { echo ' active'; }
+  echo '">';
+echo   '<a href="index.php" class="dropbtn">Home</a>
+      </div>';
 
-    <div class="dropdown">
-      <button class="dropbtn">Shop
+
+  echo '<div class="dropdown';
+    if ($navmenuGroup == 'shop') { echo ' active'; }
+  echo '">';
+
+echo  '<button class="dropbtn">Shop
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
