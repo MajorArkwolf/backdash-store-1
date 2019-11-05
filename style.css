@@ -28,7 +28,6 @@ html, body{
 }
 
 body {
-    height: 100vh;
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
     font-size: 100%;
     color: var(--fg);
