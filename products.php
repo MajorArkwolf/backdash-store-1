@@ -29,7 +29,6 @@
             if($stmt = $mysqli->prepare("select P.id, P.name, P.price from Products P")) {
                $stmt->execute();
                $stmt->bind_result($id, $name, $price);
-               $stmt->fetch();
             }
 
             while ($stmt->fetch()) {

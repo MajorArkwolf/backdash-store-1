@@ -1,5 +1,6 @@
 <?php
   session_start();
+  echo __FILE__;
   if (isset($_SESSION['user_id'])) {
     $a = '<a href="details.php">Details</a>';
     $a .= '<a href="sendLogout.php">Log Out</a>';
@@ -9,7 +10,7 @@
   }
 #$a = '<a href="login.php">Login</a>';
 echo '<nav class="navbar">
-    <div class="dropdown active">
+    <div class="dropdown">
       <a href="index.php" class="dropbtn">Home</a>
     </div>
 
