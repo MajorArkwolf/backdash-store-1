@@ -172,6 +172,8 @@ header {
   justify-content: center;
   align-items: center;
   flex-grow: 2;
+  width: 100%;
+  height: auto;
 }
 
 .product-price {
