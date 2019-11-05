@@ -12,8 +12,8 @@
   mysql_select_db("$db_name")or die("cannot select DB");
 
   // Define $myusername and $mypassword
-  $myusername=$_POST['myusername'];
-  $mypassword=$_POST['mypassword'];
+  $myusername=$_POST['username'];
+  $mypassword=$_POST['password'];
 
   // To protect MySQL injection (more detail about MySQL injection)
   $myusername = stripslashes($myusername);
@@ -34,10 +34,10 @@
   // Register $myusername, $mypassword and redirect to file "login_success.php"
   session_register("myusername");
   session_register("mypassword");
-  header("location:login_success.php");
+  header('Location: ./loginsuccess.php');
   }
   else {
-  echo "Wrong Username or Password";
+  header('Location: ./login.php');
   }
 
   ob_end_flush();
