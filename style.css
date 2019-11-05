@@ -212,6 +212,8 @@ header {
 }
 
 .product-info {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -296,5 +298,13 @@ header {
 
     .product-container {
         flex-direction: column;
+    }
+
+    .product-image-big {
+        padding-right: initial;
+    }
+
+    .product-info {
+        padding-left: initial;
     }
 }
