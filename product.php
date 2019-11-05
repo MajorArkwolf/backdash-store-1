@@ -29,7 +29,7 @@
 
             $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
-            if($stmt = $sql_con->prepare("select * from Products where Products.id = ?")) {
+            if($stmt = $mysqli->prepare("select * from Products where Products.id = ?")) {
                $stmt->bind_param("i", intval($_GET['id']));
                $stmt->execute();
                $stmt->bind_result($id, $name, $description, $price);
