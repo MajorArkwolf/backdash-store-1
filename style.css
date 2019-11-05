@@ -225,15 +225,15 @@ header {
   flex-grow: 1;
 }
 
-.product-name {
+.product-info-name {
   flex-grow: 1;
 }
 
-.product-price {
+.product-info-price {
   flex-grow: 1;
 }
 
-.product-description {
+.product-info-description {
   flex-grow: 1;
 }
 
