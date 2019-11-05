@@ -11,7 +11,7 @@
     <div class="content">
       <header>
         <div>
-          <h1>Backdash</h1>
+          <h1>Account Details</h1>
         </div>
       </header>
       <?php
