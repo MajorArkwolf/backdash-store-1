@@ -222,14 +222,8 @@ header {
     flex-grow: 1;
 }
 
-.buy-button {
-    background-color: var(--bg);
-    font-weight: bold;
-    font-size: 25px;
-    color: white;
-}
-
 .product-info-name {
+    font-weight: bold;
     font-size: 25px;
     flex-grow: 1;
 }
@@ -243,6 +237,13 @@ header {
     font-size: 18px;
     flex-grow: 1;
     padding-top: 25px;
+}
+
+.buy-button {
+    background-color: var(--bg);
+    font-size: 25px;
+    color: white;
+    width: 100px;
 }
 
 @media screen and (max-width: 600px) {
