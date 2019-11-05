@@ -26,19 +26,19 @@
           <?php
             $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
-            if ($mysqli->connect_errno) {
-              echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+            if($stmt = $mysqli->prepare("select P.id, P.name, P.price from Products P")) {
+               $stmt->execute();
+               $stmt->bind_result($id, $name, $price);
+               $stmt->fetch();
             }
 
-            $res = $mysqli->query("select * from Products");
-
-            while ($row = $res->fetch_assoc()) {
-              echo "<a class='product' href='product.php?id=" . $row['id'] . "'>";
+            while ($stmt->fetch()) {
+              echo "<a class='product' href='product.php?id=" . $id . "'>";
                   echo "<div class='product-image'>";
-                    echo "<img src='img/" . $row['id'] . ".png' height='100' width='100'>";
+                    echo "<img src='img/" . $id . ".png' height='100' width='100'>";
                   echo "</div>";
-                echo "<div class='product-title'>" . $row['name'] . "</div>";
-                echo "<div class='product-price'>" . "$" . $row['price'] . "</div>";
+                echo "<div class='product-title'>" . $name . "</div>";
+                echo "<div class='product-price'>" . "$" . $price . "</div>";
               echo "</a>";
             }
           ?>
