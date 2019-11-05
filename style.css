@@ -284,4 +284,17 @@ header {
         width: 100%;
         text-align: left;
     }
+
+    .product {
+        width: 150px;
+        height: 150;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-container {
+        flex-direction: column;
+    }
 }
