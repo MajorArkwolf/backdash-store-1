@@ -23,7 +23,7 @@
       ?>
       <div class="text-area">
         <h2>
-          Register
+          Login
         </h2>
         <form id="login" action="sendLogin.php" method="POST">
           <p>Email: <input type="textbox" name="username" id="username"></input></p>

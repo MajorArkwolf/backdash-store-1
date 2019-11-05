@@ -12,6 +12,7 @@
 
   if ( ! empty( $_POST ) ) {
       if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
+        echo "begin lookup";
           // Getting submitted user data from database
           $con = new mysqli($host, $userName, $password, $dbName);
           $stmt = $con->prepare("SELECT * FROM Accounts WHERE email = ?");
@@ -19,13 +20,14 @@
           $stmt->execute();
           $result = $stmt->get_result();
       	  $user = $result->fetch_object();
+          echo "user found";
 
       	// Verify user password and set $_SESSION
       	if ( password_verify( $_POST['password'], $user->password ) ) {
       		$_SESSION['user_id'] = $user->ID;
-          header('Location: loginsuccess.php');
+          //header('Location: loginsuccess.php');
       	} else {
-          header('Location: login.php');
+          //header('Location: login.php');
         }
       }
   }
