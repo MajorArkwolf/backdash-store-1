@@ -34,9 +34,7 @@
               echo "Prepare failed: (" . $mysqli->errno . ") " . $mysqli->error;
             }
 
-            echo $_GET['id'];
-
-            if (!$statement->bind_param("i", $_GET['id'])) {
+            if (!$statement->bind_param("i", (int)$_GET['id'])) {
               echo "Binding parameters failed: (" . $statement->errno . ") " . $statement->error;
             }
 
