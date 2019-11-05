@@ -13,10 +13,14 @@ echo '<nav class="navbar">';
     if ($navmenuGroup == 'home') { echo ' active'; }
   echo '">';
 echo   '<a href="index.php" class="dropbtn">Home</a>
-      </div>
+      </div>';
 
-    <div class="dropdown">
-      <button class="dropbtn">Shop
+
+  echo '<div class="dropdown';
+    if ($navmenuGroup == 'shop') { echo ' active'; }
+  echo '">';
+
+echo  '<button class="dropbtn">Shop
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
