@@ -24,6 +24,9 @@
       <div class="text-area">
         <p>
           <?php
+          error_reporting(E_ALL);
+          ini_set("display_errors", 1);
+
             $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
             if ($mysqli->connect_errno) {
@@ -34,7 +37,7 @@
               echo "Prepare failed: (" . $mysqli->errno . ") " . $mysqli->error;
             }
 
-            if (!$statement->bind_param("i", (int)$_GET['id'])) {
+            if (!$statement->bind_param("i", intval($_GET['id']))) {
               echo "Binding parameters failed: (" . $statement->errno . ") " . $statement->error;
             }
 
