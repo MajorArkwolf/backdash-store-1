@@ -17,12 +17,12 @@
       echo "Prepare failed: (" . $mysqli->errno . ") " . $mysqli->error;
   }
 
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $password = $_POST['userPassword'];
-  $phonenumber = $_POST['phonenumber'];
-  $address = $_POST['address'];
-  if (!$stmt->bind_param("ssssss", $name, $email, $password, $phonenumber, $address)) {
+  $name = $_POST["name"];
+  $email = $_POST["email"];
+  $password = $_POST["userPassword"];
+  $phonenumber = $_POST["phonenumber"];
+  $address = $_POST["address"];
+  if (!$stmt->bind_param("sssss", $name, $email, $password, $phonenumber, $address)) {
       echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
   }
 
