@@ -16,6 +16,7 @@
       </header>
       <?php
           ob_start();
+          $navmenuGroup = "about";
           include('navmenu.php');
           $myStr = ob_get_contents();
           ob_end_clean();
