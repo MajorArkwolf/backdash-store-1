@@ -30,6 +30,8 @@
           <p>Password: <input type="textbox" name="password" id="password"></input></p>
           <button type="submit" id="submitbutton">Submit</button>
         </form>
+
+        <p>If you are not registered please <a href="register.php">register</a></p>
       </div>
     </div>
     <script type="text/javascript" src="js/login.js"></script>
