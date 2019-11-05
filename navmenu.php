@@ -1,6 +1,5 @@
 <?php
   session_start();
-  echo $navmenuGroup;
   if (isset($_SESSION['user_id'])) {
     $a = '<a href="details.php">Details</a>';
     $a .= '<a href="sendLogout.php">Log Out</a>';
@@ -28,7 +27,7 @@ echo  '<button class="dropbtn">Shop
         <a href="products.php">Products</a>
         <a href="categories.php">Categories</a>
       </div>
-    </div>'
+    </div>';
 
   echo '<div class="dropdown';
     if ($navmenuGroup == 'account') { echo ' active'; }
@@ -39,7 +38,7 @@ echo '<button class="dropbtn">Account
       </button>
       <div class="dropdown-content">' . $a . '
       </div>
-    </div>'
+    </div>';
 
   echo '<div class="dropdown';
     if ($navmenuGroup == 'about') { echo ' active'; }
@@ -49,5 +48,5 @@ echo '<a href="aboutus.php">About Us</a>
     </div>
 
     <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">☰</a>
-  </nav>'
+  </nav>';
  ?>
