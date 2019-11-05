@@ -1,5 +1,4 @@
 <?php
-  echo $navmenuGroup;
   session_start();
   if (isset($_SESSION['user_id'])) {
     $a = '<a href="details.php">Details</a>';
@@ -9,10 +8,12 @@
     $a .= '<a href="register.php">Register</a>';
   }
 #$a = '<a href="login.php">Login</a>';
-echo '<nav class="navbar">
-    <div class="dropdown">
-      <a href="index.php" class="dropbtn">Home</a>
-    </div>
+echo '<nav class="navbar">';
+  echo '<div class="dropdown';
+    if ($navmenuGroup == 'home') { echo ' active'; }
+  echo '">';
+echo   '<a href="index.php" class="dropbtn">Home</a>
+      </div>
 
     <div class="dropdown">
       <button class="dropbtn">Shop
