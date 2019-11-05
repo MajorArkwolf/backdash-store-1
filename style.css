@@ -235,6 +235,7 @@ header {
     font-size: 18px;
     flex-grow: 1;
     padding-top: 25px;
+    padding-bottom: 10px;
 }
 
 .buy-button {
