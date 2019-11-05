@@ -20,7 +20,7 @@
 
 html {
     background-color: var(--bg);
-    height: 100vn;
+    height: 100vh;
     overflow-y: scroll;
 }
 
@@ -29,8 +29,8 @@ body {
     font-size: 100%;
     color: var(--fg);
     margin: 0 auto;
-    height: 100vn;
-    min-height: 100vn;
+    height: 100vh;
+    min-height: 100vh;
     overflow: auto;
     position: relative;
 }
@@ -38,7 +38,7 @@ body {
 .content {
     width: 800px;
     max-width: 100%;
-    min-height: 100vn;
+    min-height: 100vh;
     color: var(--fg);
     background-color: var(--content-bg);
     margin: 0 auto;
