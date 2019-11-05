@@ -35,6 +35,7 @@
           <p>Address: <input type="textbox" name="address" id="address"></input></p>
           <button type="submit" id="submitbutton" disabled>Submit</button>
         </form>
+        <p>If you are already registered please <a href="login.php">login</a></p>
       </div>
     </div>
     <script type="text/javascript" src="js/register.js"></script>
