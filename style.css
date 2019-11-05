@@ -20,7 +20,11 @@
 
 html {
     background-color: var(--bg);
-    height: 100vh;
+}
+
+html, body{
+  min-height: 100vh;
+  overflow: auto;
 }
 
 body {
