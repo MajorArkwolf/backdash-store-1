@@ -28,7 +28,7 @@
           $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
           if($stmt = $mysqli->prepare("select id, name, email, address, isAdmin from Accounts where email = ?")) {
-             $stmt->bind_param("s", $_SESSIONS['name']);
+             $stmt->bind_param("s", $_SESSION['name']);
              $stmt->execute();
              $stmt->bind_result($id, $name, $email, $address, $admin);
              $stmt->fetch();
