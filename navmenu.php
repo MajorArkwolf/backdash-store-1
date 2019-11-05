@@ -7,7 +7,7 @@
     $a = '<a href="login.php">Login</a>';
     $a .= '<a href="register.php">Register</a>';
   }
-#$a = '<a href="login.php">Login</a>';
+
 echo '<nav class="navbar">';
   echo '<div class="dropdown';
     if ($navmenuGroup == 'home') { echo ' active'; }
