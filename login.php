@@ -29,7 +29,7 @@
           Login
         </h2>
         <?php
-          if ( isset( $_SESSION['user_id'] ) ) {
+          if ( isset( $_SESSION['loggedin'] ) ) {
             echo '<p>You are already logged in</p>';
           } else {
             echo '<form id="login" action="sendLogin.php" method="POST">
