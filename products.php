@@ -34,10 +34,10 @@
 
             while ($row = $res->fetch_assoc()) {
               echo "<a class='product' href='product.php?id=" . $row['id'] . "'>";
-                echo "<div class='product-title'>" . $row['name'] . "</div>";
                   echo "<div class='product-image'>";
                     echo "<img src='img/" . $row['id'] . ".png' height='100' width='100'>";
                   echo "</div>";
+                echo "<div class='product-title'>" . $row['name'] . "</div>";
                 echo "<div class='product-price'>" . "$" . $row['price'] . "</div>";
               echo "</a>";
             }
