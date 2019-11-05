@@ -284,4 +284,9 @@ header {
         width: 100%;
         text-align: left;
     }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
