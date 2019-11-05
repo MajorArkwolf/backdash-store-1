@@ -24,9 +24,20 @@
           echo $myStr;
       ?>
       <div class="text-area">
-        <p>
-          Welcome to the Backdash store.
-        </p>
+        <?php
+          $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
+
+          if($stmt = $mysqli->prepare("select P.id, P.name, P.email, P.address from Accounts P where P.email = ?")) {
+             $stmt->bind_param("i", intval($_SESSIONS['name']));
+             $stmt->execute();
+             $stmt->bind_result($id, $name, $email, $address);
+             $stmt->fetch();
+          }
+          echo '<p>Email: ' . $email . '</p>';
+          echo '<p>ID: ' . $id . '</p>';
+          echo '<p>Name: ' . $name . '</p>';
+          echo '<p>Address: ' . $address . '</p>';
+         ?>
       </div>
     </div>
     <script src="navbar.js"></script>
