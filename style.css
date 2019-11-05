@@ -142,6 +142,16 @@ header {
     display: block;
 }
 
+.product-grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+}
+
+.product {
+    display: inline-grid;
+}
+
 @media screen and (max-width: 600px) {
     .navbar a:not(:first-child), .dropdown .dropbtn {
         display: none;
