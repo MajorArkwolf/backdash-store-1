@@ -24,9 +24,6 @@
       <div class="text-area">
         <div class="product-grid">
           <?php
-            error_reporting(E_ALL);
-            ini_set("display_errors", 1);
-
             $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
             if($stmt = $mysqli->prepare("select P.id, P.name, P.price from Products P")) {
@@ -35,13 +32,15 @@
                $stmt->fetch();
             }
 
-            echo "<a class='product' href='product.php?id=" . $id . "'>";
-                echo "<div class='product-image'>";
-                  echo "<img src='img/" . $id . ".png' height='100' width='100'>";
-                echo "</div>";
-              echo "<div class='product-title'>" . $name . "</div>";
-              echo "<div class='product-price'>" . "$" . $price . "</div>";
-            echo "</a>";
+            while ($stmt->fetch()) {
+              echo "<a class='product' href='product.php?id=" . $id . "'>";
+                  echo "<div class='product-image'>";
+                    echo "<img src='img/" . $id . ".png' height='100' width='100'>";
+                  echo "</div>";
+                echo "<div class='product-title'>" . $name . "</div>";
+                echo "<div class='product-price'>" . "$" . $price . "</div>";
+              echo "</a>";
+            }
           ?>
         </div>
       </div>
