@@ -14,7 +14,7 @@
       if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
           // Getting submitted user data from database
           $con = new mysqli($host, $userName, $password, $dbName);
-          $stmt = $con->prepare("SELECT * FROM Accounts WHERE username = ?");
+          $stmt = $con->prepare("SELECT * FROM Accounts WHERE email = ?");
           $stmt->bind_param('s', $_POST['username']);
           $stmt->execute();
           $result = $stmt->get_result();
