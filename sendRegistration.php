@@ -1,11 +1,14 @@
 <?php
+  error_reporting(E_ALL);
+  ini_set("display_errors", 1);
+
   $host = "localhost";
   $userName = "X32019269";
   $password = "X32019269";
   $dbName = "X32019269";
 
   $db = new mysqli($host, $userName, $password, $dbName);
-
+  echo $_POST;
   if ($db->connect_error) {
     die("Connection failed: " . $db->connect_error);
   }
