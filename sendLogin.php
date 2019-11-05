@@ -31,14 +31,13 @@
 
   if($count==1){
 
-  // Register $myusername, $mypassword and redirect to file "login_success.php"
-  session_register("myusername");
-  session_register("mypassword");
-  header('Location: ./loginsuccess.php');
+    // Register $myusername, $mypassword and redirect to file "login_success.php"
+    session_register("myusername");
+    session_register("mypassword");
+    header('Location: ./loginsuccess.php');
   }
   else {
-  header('Location: ./login.php');
+    header('Location: ./login.php');
   }
-
   ob_end_flush();
  ?>
