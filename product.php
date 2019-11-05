@@ -24,8 +24,6 @@
       <div class="text-area">
         <p>
           <?php
-            echo "Product ID: " . $_GET['id'];
-
               echo "<div class='product-container'>";
                 echo "<div class='product-image-big'>";
                   echo "<img src='img/" . "1" . ".png' height='100' width='100'>";
