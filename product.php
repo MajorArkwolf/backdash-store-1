@@ -27,8 +27,7 @@
             $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
             if ($mysqli->connect_errno) {
-              echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " .
-                $mysqli->connect_error;
+              echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
             }
 
             if (!($statement = $mysqli->prepare("select * from Products where Products.id = ?"))) {
@@ -36,13 +35,11 @@
             }
 
             if (!$statement->bind_param("i", $id)) {
-              echo "Binding parameters failed: (" . $statement->errno . ") " .
-                $statement->error;
+              echo "Binding parameters failed: (" . $statement->errno . ") " . $statement->error;
             }
 
             if (!$statement->execute()) {
-              echo "Execute failed: (" . $statement->errno . ") " .
-                $statement->error;
+              echo "Execute failed: (" . $statement->errno . ") " . $statement->error;
             }
 
             $statement->bind_result($name, $code);
