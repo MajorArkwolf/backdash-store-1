@@ -203,6 +203,7 @@ header {
 .product-image-big {
     flex-grow: 1;
     flex-basis: 0;
+    padding-right: 15px;
 }
 
 .product-image-big img {
@@ -215,7 +216,7 @@ header {
     flex-grow: 1;
     flex-basis: 0;
     flex-direction: column;
-    padding-left: 30px;
+    padding-left: 15px;
 }
 
 .product-info-listing {
@@ -243,7 +244,7 @@ header {
     background-color: var(--bg);
     font-size: 22px;
     color: white;
-    width: 70px;
+    width: 65px;
     padding: 8px 8px;
 }
 
