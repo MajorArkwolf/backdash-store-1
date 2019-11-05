@@ -23,19 +23,8 @@
       ?>
       <div class="text-area">
         <h2>
-          Register
+          Registeration Successfull!
         </h2>
-        <form id="register" action="sendRegistration.php" method="POST">
-          <p>Email: <input type="textbox" name="email" id="email"></input></p>
-          <p>Name: <input type="textbox" name="name" id="name"></input></p>
-          <p>Password: <input type="textbox" name="userPassword" id="userPassword" onblur="CheckPassword()"></input></p>
-          <p>Confirm Password: <input type="textbox" id="userPassword2" onblur="CheckPassword()"></input></p>
-          <p id="verify"></p>
-          <p>Phone Number: <input type="textbox" name="phonenumber" id="phonenumber"></input></p>
-          <p>Address: <input type="textbox" name="address" id="address"></input></p>
-          <button type="submit" id="submitbutton" disabled>Submit</button>
-        </form>
-      </div>
     </div>
     <script type="text/javascript" src="js/register.js"></script>
     <script src="/navbar.js"></script>
