@@ -223,9 +223,10 @@ header {
 }
 
 .buy-button {
+    background-color: var(--bg);
     font-weight: bold;
-    flex-grow: 1;
     font-size: 25px;
+    color: white;
 }
 
 .product-info-name {
