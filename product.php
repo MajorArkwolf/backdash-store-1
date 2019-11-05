@@ -29,27 +29,17 @@
 
             $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
-            if ($mysqli->connect_errno) {
-              echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+            if($stmt = $sql_con->prepare("select * from Products where Products.id = ?")) {
+               $stmt->bind_param("i", intval($_GET['id']));
+               $stmt->execute();
+               $stmt->bind_result($id, $name, $description, $price);
             }
 
-            if (!($statement = $mysqli->prepare("select * from Products where Products.id = ?"))) {
-              echo "Prepare failed: (" . $mysqli->errno . ") " . $mysqli->error;
-            }
-
-            if (!$statement->bind_param("i", intval($_GET['id']))) {
-              echo "Binding parameters failed: (" . $statement->errno . ") " . $statement->error;
-            }
-
-            if (!$statement->execute()) {
-              echo "Execute failed: (" . $statement->errno . ") " . $statement->error;
-            }
-
-            $statement->bind_result($name, $code);
-
-            /* fetch values */
-            while ($statement->fetch()) {
-                printf ("%s (%s)\n", $name, $code);
+            while ($stmt->fetch()) {
+              echo $id;
+              echo $name;
+              echo $description;
+              echo $price;
             }
 
             echo "<div class='product-container'>";
