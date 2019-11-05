@@ -164,6 +164,9 @@ header {
     font-size: 20px;
     display: flex;
     text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     flex-grow: 1;
     padding: 10px 0;
 }
