@@ -293,4 +293,8 @@ header {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .product-container {
+        flex-direction: column;
+    }
 }
