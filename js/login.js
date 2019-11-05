@@ -1,6 +1,6 @@
 "use strict"
 function CheckInfo(){
-  var x = document.getElementById("email");
+  var x = document.getElementById("username");
   var y = document.getElementById("userPassword");
 
   if(x !== undefined || x !== NULL){
