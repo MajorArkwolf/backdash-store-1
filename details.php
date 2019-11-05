@@ -27,16 +27,19 @@
         <?php
           $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
-          if($stmt = $mysqli->prepare("select P.id, P.name, P.email, P.address from Accounts P where P.email = ?")) {
+          if($stmt = $mysqli->prepare("select P.id, P.name, P.email, P.address, P.isAdmin from Accounts P where P.email = ?")) {
              $stmt->bind_param("i", intval($_SESSIONS['name']));
              $stmt->execute();
-             $stmt->bind_result($id, $name, $email, $address);
+             $stmt->bind_result($id, $name, $email, $address, $admin);
              $stmt->fetch();
           }
           echo '<p><b>ID:</b> ' . $id . '</p>';
           echo '<p><b>Email:</b> ' . $email . '</p>';
           echo '<p><b>Name:</b> ' . $name . '</p>';
           echo '<p><b>Address:</b> ' . $address . '</p>';
+          if($admin == 1){
+            echo '<p><b>Admin:</b> True </p>';
+          }
          ?>
       </div>
     </div>
