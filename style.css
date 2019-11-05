@@ -251,7 +251,7 @@ header {
 }
 
 @media screen and (max-width: 600px) {
-    .navbar a:not(:first-child), .dropdown .dropbtn {
+    .navbar, .dropdown .dropbtn {
         display: none;
     }
     .navbar a.icon {
