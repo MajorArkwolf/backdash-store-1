@@ -35,7 +35,7 @@
                $stmt->fetch();
             }
 
-            echo "<a class='product' href='product.php?id=" . $row['id'] . "'>";
+            echo "<a class='product' href='product.php?id=" . $id . "'>";
                 echo "<div class='product-image'>";
                   echo "<img src='img/" . $id . ".png' height='100' width='100'>";
                 echo "</div>";
