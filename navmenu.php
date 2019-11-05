@@ -33,21 +33,16 @@ echo  '<button class="dropbtn">Shop
     if ($navmenuGroup == 'account') { echo ' active'; }
   echo '">';
 
+  echo '<div class="dropdown';
+    if ($navmenuGroup == 'about') { echo ' active'; }
+  echo '">';
+  echo    '<a href="aboutus.php" class="dropbtn">About Us</a>
+      </div>';
+
 echo '<button class="dropbtn">Account
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">' . $a . '
       </div>
     </div>';
-
-  echo '<div class="dropdown';
-    if ($navmenuGroup == 'about') { echo ' active'; }
-  echo '">';
-
-echo '<nav class="navbar">';
-  echo '<div class="dropdown';
-    if ($navmenuGroup == 'about') { echo ' active'; }
-  echo '">';
-echo   '<a href="aboutus.php" class="dropbtn">About Us</a>
-      </div>';
  ?>
