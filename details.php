@@ -33,10 +33,10 @@
              $stmt->bind_result($id, $name, $email, $address);
              $stmt->fetch();
           }
-          echo '<p>Email: ' . $email . '</p>';
-          echo '<p>ID: ' . $id . '</p>';
-          echo '<p>Name: ' . $name . '</p>';
-          echo '<p>Address: ' . $address . '</p>';
+          echo '<p><b>ID:</b> ' . $id . '</p>';
+          echo '<p><b>Email:</b> ' . $email . '</p>';
+          echo '<p></b>Name:</b> ' . $name . '</p>';
+          echo '<p><b>Address:</b> ' . $address . '</p>';
          ?>
       </div>
     </div>
