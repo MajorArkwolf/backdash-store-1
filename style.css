@@ -194,6 +194,49 @@ header {
     height: auto;
 }
 
+.product-container {
+  display: flex;
+  width: 50%;
+  height: 50%;
+}
+
+.product-image-big {
+  flex-grow: 2;
+  flex-basis: 0;
+}
+
+.product-image-big img {
+  width: 100%;
+  height: auto;
+}
+
+.product-info {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 0;
+  flex-direction: column;
+}
+
+.product-info-listing {
+  flex-grow: 1;
+}
+
+.buy-button {
+  flex-grow: 1;
+}
+
+.product-name {
+  flex-grow: 1;
+}
+
+.product-price {
+  flex-grow: 1;
+}
+
+.product-description {
+  flex-grow: 1;
+}
+
 @media screen and (max-width: 600px) {
     .navbar a:not(:first-child), .dropdown .dropbtn {
         display: none;
