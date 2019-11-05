@@ -7,11 +7,6 @@
   $password = "X32019269";
   $dbName = "X32019269";
 
-  $mysqli  = new mysqli($host, $userName, $password, $dbName);
-  if ($mysqli ->connect_error) {
-    die("Connection failed: " . $db->connect_error);
-  }
-
   // Always start this first
   session_start();
 
