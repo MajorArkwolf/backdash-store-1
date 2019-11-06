@@ -308,6 +308,13 @@ header {
         text-align: left;
     }
 
+    .navbar .search-container button {
+        display: initial;
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
     .content {
         -webkit-box-shadow: initial;
         -moz-box-shadow: initial;
