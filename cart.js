@@ -9,6 +9,7 @@ function updateTable(str) {
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
+            let cart = localStorage.getObj("cart");
             let table = document.getElementById("cart")
             let data = JSON.parse(this.responseText)
 
@@ -19,9 +20,9 @@ function updateTable(str) {
             let cell4 = row.insertCell(3)
 
             cell1.innerHTML = data["name"]
-            cell2.innerHTML = "1234"
+            cell2.innerHTML = cart[data["id"]]
             cell3.innerHTML = data["price"]
-            cell4.innerHTML = "foobar"
+            cell4.innerHTML = cart[data["id"]] * data["price"]
         }
     };
 
