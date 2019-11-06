@@ -81,14 +81,11 @@ header {
     font-size: 1.05em;
     text-decoration: none;
     text-align: center;
-    line-height: 48px;
 }
 
 .navbar .icon {
     display: none;
     font-size: 0.95em;
-    width: 48px;
-    height: 48px;
 }
 
 .dropdown {
