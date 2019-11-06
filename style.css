@@ -390,12 +390,7 @@ header {
 }
 
 input[type=number] {
-    height: 30px;
-}
-
-input[type=number]:hover::-webkit-inner-spin-button {
-    width: 14px;
-    height: 30px;
+    height: 50px;
 }
 
 .submit-button {
