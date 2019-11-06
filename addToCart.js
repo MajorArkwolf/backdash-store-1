@@ -34,6 +34,6 @@ function addToCart() {
 
     for (const [key, value] of Object.entries(cart)) {
         getData(key);
-        console.log(key, value);
+        //console.log(key, value);
     }
 }
