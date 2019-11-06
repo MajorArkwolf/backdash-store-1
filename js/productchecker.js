@@ -5,7 +5,9 @@ function CheckProduct(){
   var description = document.getElementById("description");
   var price = document.getElementById("price");
   var stock = document.getElementById("stock");
-
+  if(name == null || description == null || price == null || stock == null){
+    return false;
+  }
   if (name.value != "") {
     count++;
   }

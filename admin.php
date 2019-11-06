@@ -31,14 +31,14 @@
         <h2>Admin Page</h2>
         <br></br>
         <h3>Add Category</h3>
-          <form id="newCategory" onsubmit="CheckCategory()" action="login.php" method="POST">
+          <form id="newCategory" onsubmit="return CheckCategory()" action="login.php" method="POST">
             <p>Category Name: <input type="textbox" name="cname" id="cname"></input></p>
             <p>Category Description: <input type="textbox" name="cdescription" id="cdescription"></input></p>
             <button type="submit" id="submitbutton">Submit</button>
           </form>
         <br></br>
         <h3>Add Product</h3>
-        <form id="newproduct" onsubmit="CheckProduct();" action="login.php" method="POST">
+        <form id="newproduct" onsubmit="return CheckProduct();" action="login.php" method="POST">
           <p>Product Name: <input type="textbox" name="pname" id="pname"></input></p>
           <p>Product Description: <input type="textbox" name="pdescription" id="pdescription"></input></p>
           <?php
