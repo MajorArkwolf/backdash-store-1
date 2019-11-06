@@ -30,34 +30,42 @@ function CheckInput(){
   var password = document.getElementById("userPassword");
   var phone = document.getElementById("phonenumber");
   var address = document.getElementById("address");
+
+  //The verficiation text boxes.
+  var v_email = document.getElementById("emailverify");
+  var v_name = document.getElementById("nameverify");
+  var v_password = document.getElementById("passwordverify");
+  var v_phone = document.getElementById("phoneverify");
+  var v_address = document.getElementById("addressverify");
+
   if(validateEmail(email.value)) {
     count++;
-    document.getElementById("emailverify").innerHTML = "";
+    v_email.innerHTML = "";
   } else {
-    document.getElementById("emailverify").innerHTML = "Please enter a valid email!";
+    v_email.innerHTML = "Please enter a valid email!";
   }
   if (name.value != "") {
     count++;
-    document.getElementById("nameverify").innerHTML = "";
+    v_name.innerHTML = "";
   } else {
-    document.getElementById("nameverify").innerHTML = "Please enter a name!";
+    v_name.innerHTML = "Please enter a name!";
   }
   if (password.value != ""){
     count++;
   } else {
-    document.getElementById("passwordverify").innerHTML = "Password can not be blank!";
+    v_password.innerHTML = "Password can not be blank!";
   }
   if(phone.value != "") {
     count++;
-    document.getElementById("phoneverify").innerHTML = "";
+    v_phone.innerHTML = "";
   } else {
-    document.getElementById("phoneverify").innerHTML = "Please enter a phone number!";
+    v_phone.innerHTML = "Please enter a phone number!";
   }
   if(address.value != "") {
     count++;
-    document.getElementById("addressverify").innerHTML = "";
+    v_address.innerHTML = "";
   } else {
-    document.getElementById("addressverify").innerHTML = "Please enter an address in!";
+    v_address.innerHTML = "Please enter an address in!";
   }
 
   if (count == 5) {
