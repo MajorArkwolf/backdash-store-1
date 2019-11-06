@@ -36,6 +36,7 @@
           <p>Price: <input type="textbox" name="price" id="price"></input></p>
           <p>Product Name: <input type="textbox" name="stock" id="stock"></input></p>
           <p>IMAGE UPLOADER COMING SOON</p>
+          <button type="submit" id="submitbutton" disabled>Submit</button>
         </form>
         <br></br>
         <h3>Current Product List</h3>
