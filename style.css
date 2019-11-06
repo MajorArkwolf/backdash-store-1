@@ -382,9 +382,9 @@ header {
 }
 
 .quantity-picker {
-    width: 40px;
+    width: 30px;
     height: 36px;
-    padding-right: 10px;
+    padding-right: 30px;
     font-size: 16px;
     text-align: center;
 }
@@ -392,7 +392,6 @@ header {
 input[type=number]::-webkit-inner-spin-button {
     height: 30px;
 }
-
 
 .submit-button {
     background-color: var(--bg);
