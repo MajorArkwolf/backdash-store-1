@@ -261,16 +261,6 @@ header {
 }
 
 @media screen and (max-width: 600px) {
-    html {
-        background-color: var(--content-bg);
-    }
-
-    .content {
-        -webkit-box-shadow: initial;
-        -moz-box-shadow: initial;
-        box-shadow: initial;
-    }
-
     .text-area {
         padding: 1.5em;
     }
