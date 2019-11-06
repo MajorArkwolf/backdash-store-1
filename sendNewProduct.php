@@ -27,7 +27,7 @@
 
 
 
-  if (!$stmt->bind_param("ssisi", $name, $description, $price, $category, $stock)) {
+  if (!$stmt->bind_param("ssssi", $name, $description, $price, $category, $stock)) {
       echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
   }
 
