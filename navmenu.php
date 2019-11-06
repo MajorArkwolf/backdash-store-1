@@ -45,7 +45,7 @@ echo '<button class="dropbtn">Account
   echo '">';
   echo   '<a href="aboutus.php" class="dropbtn">About Us</a>
         </div>
-        <div class="dropdown search-container">
+        <div class="search-container">
     <form action="search.php">
       <input type="text" placeholder="Search..." name="text" required>
       <button type="submit"><i class="fa fa-search"></i></button>

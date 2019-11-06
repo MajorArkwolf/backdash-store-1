@@ -306,6 +306,7 @@ header {
         float: none;
         text-align: left;
         padding-bottom: 10px;
+        height: 48px;
     }
 
     .navbar .search-container button {
