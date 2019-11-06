@@ -335,6 +335,10 @@ header {
     padding: 1em;
 }
 
+.cart-container {
+   overflow-x: auto;
+}
+
 .cart {
   border-collapse: collapse;
   width: 100%;
