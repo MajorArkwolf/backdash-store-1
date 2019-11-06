@@ -345,21 +345,20 @@ header {
 }
 
 #name {
-   width: 70%;
+   width: 55%;
 }
 
 #quantity {
-   width: 10%;
+   width: 15%;
 }
 
 #price {
 
-   width: 10%;
+   width: 15%;
 }
 
 #total {
-
-   width: 10%;
+   width: 15%;
 }
 
 .cart td, .cart th {
