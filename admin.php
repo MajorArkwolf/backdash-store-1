@@ -63,7 +63,7 @@
           }
 
           while ($stmt->fetch()) {
-            echo '<p><button type="submit" value="'. $id . '">DELETE</button> <a href="product.php?id='. $id .'" role="button">VIEW</a> ID: ' . $id . ' Name: '. $name . ' Price: ' . $price . '</p>';
+            echo '<p><button type="submit" value="'. $id . '">DELETE</button> <a href="product.php?id='. $id .'" class="btn btn-info" role="button">VIEW</a> ID: ' . $id . ' Name: '. $name . ' Price: ' . $price . '</p>';
           }
         ?>
       </div>
