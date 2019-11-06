@@ -21,8 +21,8 @@ function updateTable(str) {
 
             cell1.innerHTML = data["name"]
             cell2.innerHTML = cart[data["id"]]
-            cell3.innerHTML = data["price"]
-            cell4.innerHTML = cart[data["id"]] * data["price"]
+            cell3.innerHTML = "$" + data["price"]
+            cell4.innerHTML = "$" + (cart[data["id"]] * data["price"])
         }
     };
 
