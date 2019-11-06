@@ -64,7 +64,7 @@
                     <label for='stock'>Stock</label>
                     <input id='stock' type='text' name='stock' value='{$stock}'>
                     <label for='description'>Description</label>
-                    <textarea name='description' id='description' resize: vertical;>{$description}</textarea>
+                    <textarea name='description' id='description' >{$description}</textarea>
                     <button type='submit'>Update</button>
                   </form>
                 </div>";

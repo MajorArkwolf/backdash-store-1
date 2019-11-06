@@ -311,6 +311,10 @@ header {
     grid-row: auto;
 }
 
+.input-form textarea {
+    resize: vertical;
+}
+
 .input-form > input, .input-form > textarea, .input-form > button {
     grid-column: controls;
     grid-row: auto;
