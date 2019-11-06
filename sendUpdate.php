@@ -15,7 +15,7 @@
   }
 
   /* Prepared statement, stage 1: prepare */
-  if (!($stmt = $mysqli->prepare("UPDATE INTO Accounts name = ?, email = ?, password = ?, phone = ?, address = ? where id = ?"))) {
+  if (!($stmt = $mysqli->prepare("UPDATE Accounts set name = ?, email = ?, password = ?, phone = ?, address = ? where id = ?"))) {
       echo "Prepare failed: (" . $mysqli->errno . ") " . $mysqli->error;
   }
 
