@@ -1,6 +1,32 @@
+Storage.prototype.setObj = function(key, obj) {
+    return this.setItem(key, JSON.stringify(obj))
+}
+Storage.prototype.getObj = function(key) {
+    return JSON.parse(this.getItem(key))
+}
+
+function getData(str) {
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(JSON.parse(this.responseText))
+        }
+    };
+
+    xmlhttp.open("GET","getData.php?id="+str,true);
+    xmlhttp.send();
+}
+
 function populateCart() {
     let cart = document.getElementById("cart");
+
+    for (const [key, value] of Object.entries(cart)) {
+        if (key != null) {
+             getData(key)
+        }
+    }
 }
+
 
 populateCart();
 
