@@ -279,7 +279,7 @@ header {
         display: none;
     }
     .navbar a.icon {
-        float: right;
+        float: left;
         display: block;
     }
 }
