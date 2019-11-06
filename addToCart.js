@@ -5,7 +5,7 @@ Storage.prototype.getObj = function(key) {
     return JSON.parse(this.getItem(key))
 }
 
-localStorage.setItem("cart", JSON.stringify([]));
+localStorage.setObj("cart", []);
 
 function addToCart() {
     let quantity = parseInt(document.getElementById("quantity-picker"));
