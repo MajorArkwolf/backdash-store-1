@@ -73,9 +73,9 @@
            }
            while ($stmt->fetch()) {
              echo '<tr>';
-             echo '<td>'. $salesnotes .'<td>';
-             echo '<td>'. $id .'<td>';
-             echo '<td>'. $totalprice .'<td>';
+             echo '<td>'. $salesnotes .'</td>';
+             echo '<td>'. $id .'</td>';
+             echo '<td>'. $totalprice .'</td>';
              echo '</tr>';
            }
           ?>
