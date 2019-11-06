@@ -29,8 +29,8 @@
       ?>
       <div class="text-area">
         <h2>Admin Page</h2>
-
-        <h3>Add Category<h3>
+        <br></br>
+        <h3>Add Category</h3>
           <form id="newCategory" onsubmit="CheckCategory();" action="" method="POST">
             <p>Category Name: <input type="textbox" name="cname" id="cname"></input></p>
             <p>Category Description: <input type="textbox" name="cdescription" id="cdescription"></input></p>
