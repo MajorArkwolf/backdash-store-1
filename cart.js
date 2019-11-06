@@ -18,10 +18,11 @@ function getData(str) {
 }
 
 function populateCart() {
-    console.log("FOO")
     let cart = document.getElementById("cart");
 
     for (const [key, value] of Object.entries(cart)) {
+        console.log(key, value)
+
         if (key != null) {
              getData(key)
         }
