@@ -89,7 +89,7 @@
           }
 
           while ($stmt->fetch()) {
-            echo '<p><button type="submit" value="'. $id . '">DELETE</button> <a href="product.php?id='. $id .'" class="btn btn-info" role="button">VIEW</a> ID: ' . $id . ' Name: '. $name . ' Price: ' . $price . " CID: ". $category . '</p>';
+            echo '<p><form action="sendDeleteItem.php" method="post"><button type="submit" name="deletedItem" value="'. $id . '">DELETE</button></form> <a href="product.php?id='. $id .'" class="btn btn-info" role="button">VIEW</a> ID: ' . $id . ' Name: '. $name . ' Price: ' . $price . " CID: ". $category . '</p>';
           }
         ?>
       </div>
