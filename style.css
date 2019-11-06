@@ -389,9 +389,11 @@ header {
     text-align: center;
 }
 
-input[type=number] {
-    height: 50px;
+input[type=number]:hover::-webkit-inner-spin-button {
+    width: 30px;
+    height: 30px;
 }
+
 
 .submit-button {
     background-color: var(--bg);
