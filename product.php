@@ -48,12 +48,17 @@
                   echo "<div class='product-info-stock'>" . $stock . " units stocked</div>";
                   echo "<div class='product-info-description'>" . $description . "</div>";
                 echo "</div>";
-                echo '<form action="foo.php">';
-                echo   '<input class="quantity-picker" type="number" name="quantity" value="1" min="1">';
-                echo   '<button type="submit" class="submit-button" name="submit">';
-                echo     '<i class="fa fa-shopping-cart"></i> Add to cart';
-                echo   '</button>';
-                echo '</form>';
+
+                if ($stock >= 1) {
+                  echo '<form action="foo.php">';
+                  echo   '<input class="quantity-picker" type="number" name="quantity" value="1" min="1">';
+                  echo   '<button type="submit" class="submit-button" name="submit">';
+                  echo     '<i class="fa fa-shopping-cart"></i> Add to cart';
+                  echo   '</button>';
+                  echo '</form>';
+                } else {
+                  echo 'Out of stock';
+                }
 
               echo "</div>";
             echo "</div>";
