@@ -55,7 +55,7 @@
             if($_SESSION['admin']) {
               echo "
                 <div class='product-update'>
-                  <h3>Update product details</h3>
+                  <h3 id='update-details'>Update product details</h3>
 
                   <form class='input-form' action='updateItem.php'>
                     <input id='id' type='hidden' name='id' value='{$id}'>

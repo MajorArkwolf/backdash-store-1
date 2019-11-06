@@ -344,6 +344,10 @@ header {
     padding-bottom: 10px;
 }
 
+#update-details {
+    padding-bottom: 10px;
+}
+
 #name {
    width: 55%;
 }
