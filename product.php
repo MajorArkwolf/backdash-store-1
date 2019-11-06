@@ -45,7 +45,7 @@
                 echo "<div class='product-info-listing'>";
                   echo "<div class='product-info-name'>" . $name . "</div>";
                   echo "<div class='product-info-price'> $" . $price . "</div>";
-                  echo "<div class='product-info-stock'> $" . $stock . "</div>";
+                  echo "<div class='product-info-stock'>" . $stock . " units stocked</div>";
                   echo "<div class='product-info-description'>" . $description . "</div>";
                 echo "</div>";
                 echo "<div class='buy-button'><i class='fa fa-shopping-cart'></i> Add to cart</div>";
