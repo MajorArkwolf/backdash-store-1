@@ -45,11 +45,11 @@
           echo '<p><button type="submit" id="submitbutton">Submit</button>';
           echo '</form>';
           echo '<br></br>';
-          echo '<form id="update" onsubmit="" action="sendUpdatePassword.php" method="POST">';
+          echo '<form id="updatePassword" onsubmit="" action="sendUpdatePassword.php" method="POST">';
           echo '<p>Password: <input type="password" name="userPassword" id="userPassword" onblur="CheckPassword()"></input></p>';
           echo '<p>Confirm Password: <input type="password" id="userPassword2" onblur="CheckPassword()"></input></p>';
           echo '<p id="passwordverify"></p>';
-          echo '/form';
+          echo '</form';
          ?>
       </div>
     </div>
