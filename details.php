@@ -54,8 +54,10 @@
           echo '<button type="submit" id="submitbutton" disabled>Submit</button>';
           echo '</form>';
          ?>
+         <br></br>
          <h2>Order History</h2>
-
+         <p>coming soon</p>
+         <br></br>
          <?php
             if($_SESSION["admin"]) {
               echo '<h2>SECRET ADMIN PAGE</h2>';
