@@ -11,7 +11,7 @@ function addToCart() {
         cart = JSON.parse(localStorage.getItem("cart"));
     }
 
-    cart[id.value] = (cart[id.value] || 0) + quantity.value;
+    cart[id.value] = (cart[id.value] || 0) + parseInt(quantity.value);
     localStorage.setItem("cart", JSON.stringify(cart));
     console.log(cart);
 }
