@@ -72,15 +72,14 @@
                   <form class='input-form' action='updateItem.php'>
                     <input id='id' type='hidden' name='id' value='{$id}'>
                     <label for='name'>Name</label>
-                    <input id='name' type='text' name='name' value='{$name}'>";
+                    <input id='name' type='text' name='name' value='{$name}'>
+                    <label for='category'>Category</label>
+                    <select name='category' id='category'>";
 
                   if($stmtCat = $mysqli->prepare("select C.id, C.name from Categories C")) {
                      $stmtCat->execute();
                      $stmtCat->bind_result($categoryId, $categoryName);
                   }
-
-                  echo "<label for='category'>Category</label>";
-                  echo '<select name="category" id="category">';
                   while ($stmtCat->fetch()) {
                     echo '<option value="' . $categoryId .'" >'. $categoryName . '</option>';
                   }
