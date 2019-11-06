@@ -29,6 +29,20 @@
       ?>
       <div class="text-area">
         <h2>Admin Page</h2>
+
+        <h3>Current Product List</h3>
+        <?php
+          $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
+
+          if($stmt = $mysqli->prepare("select P.id, P.name, P.price from Products P")) {
+             $stmt->execute();
+             $stmt->bind_result($id, $name, $price);
+          }
+
+          while ($stmt->fetch()) {
+            echo '<p>ID: ' . $id . ' Name: '. $name . ' Price: ' . $price . '<button type="submit" value="'. $id . '"></button></p>';
+          }
+        ?>
       </div>
     </div>
     <script type="text/javascript" src="js/register.js"></script>
