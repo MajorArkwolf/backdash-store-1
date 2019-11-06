@@ -67,7 +67,7 @@
               $stmt->fetch();
            }
            while ($stmt->fetch()) {
-             echo '<p> Transaction ID: ' . $id . " Total Price: " . $totalprice . "Sales Notes :". $salesnotes;
+             echo '<p> Transaction ID: ' . $id . ' Total Price: ' . $totalprice . 'Sales Notes :'. $salesnotes;
            }
           ?>
          <br></br>
