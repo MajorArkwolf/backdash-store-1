@@ -31,19 +31,22 @@
         <h2>Admin Page</h2>
         <br></br>
         <h3>Edit Member<h3>
-          <?php
-            $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
+          <form id="editaccount" onsubmit="" action="" method="POST">
+              <?php
+                $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
-            if($stmt = $mysqli->prepare("select id, name from Accounts")) {
-               $stmt->execute();
-               $stmt->bind_result($id, $name);
-            }
-            echo '<p>User: <select name="aname" id="aname">';
-            while ($stmt->fetch()) {
-              echo '<option value="' . $id .'" >'. $name . '</option>';
-            }
-            echo '</select></p>'
-          ?>
+                if($stmt = $mysqli->prepare("select id, name from Accounts")) {
+                   $stmt->execute();
+                   $stmt->bind_result($id, $name);
+                }
+                echo '<p>User: <select name="aname" id="aname">';
+                while ($stmt->fetch()) {
+                  echo '<option value="' . $id .'" >'. $name . '</option>';
+                }
+                echo '</select></p>'
+              ?>
+            <button type="submit" id="submitbutton">Edit Member</button>
+          </form>
         <br></br>
         <h3>Add Category</h3>
           <form id="newCategory" onsubmit="return CheckCategory()" action="sendNewCategory.php" method="POST">
