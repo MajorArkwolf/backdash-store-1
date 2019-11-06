@@ -9,7 +9,7 @@
   }
 
 echo '<nav class="navbar">';
-  echo '<div class="dropdown';
+  echo '<div class="option';
     if ($navmenuGroup == 'home') { echo ' active'; }
   echo '">';
 echo   '<a href="index.php" class="dropbtn">Home</a>
