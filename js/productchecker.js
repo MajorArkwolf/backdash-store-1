@@ -30,7 +30,7 @@ function CheckCategory(){
   var count = 0;
   var name = document.getElementById("name");
   var description = document.getElementById("description");
-  if(name.value == undefined || description.value == undefined){
+  if(name == null || description == null){
     return false;
   }
   if (name.value != "") {
