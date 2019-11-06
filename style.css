@@ -78,9 +78,10 @@ header {
     float: left;
     display: block;
     color: var(--navbar-fg);
-    text-align: center;
-    text-decoration: none;
     font-size: 1.05em;
+    text-decoration: none;
+    text-align: center;
+    line-height: 48px;
 }
 
 .navbar .icon {
