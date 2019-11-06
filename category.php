@@ -18,7 +18,7 @@
             <?php
               $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
-              if($stmt = $mysqli->prepare("select C.name from Category C where C.id = ?")) {
+              if($stmt = $mysqli->prepare("select C.name from Categories C where C.id = ?")) {
                  $stmt->bind_param("i", intval($_GET['id']));
                  $stmt->execute();
                  $stmt->bind_result($name);
