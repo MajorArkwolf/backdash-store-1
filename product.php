@@ -69,6 +69,11 @@
             echo "</div>";
 
             if($_SESSION['admin']) {
+              if($stmtCat = $mysqli->prepare("select C.id, C.name from Categories C")) {
+                $stmtCat->execute();
+                $stmtCat->bind_result($categoryId, $categoryName);
+              }
+
               echo "
                 <div class='product-update'>
                   <h3 id='update-details'>Update product details</h3>
@@ -78,15 +83,10 @@
                     <label for='name'>Name</label>
                     <input id='name' type='text' name='name' value='{$name}'>
                     <label for='category'>Category</label>
-                    <select name='category' id='category'>";
+                    <select name='category' id='category' value='{$categoryId}'>";
 
-                    if($stmtCat = $mysqli->prepare("select C.id, C.name from Categories C")) {
-                      $stmtCat->execute();
-                      $stmtCat->bind_result($categoryId, $categoryName);
-
-                      while ($stmtCat->fetch()) {
-                        echo "<option value='{$categoryId}'>{$categoryName}</option>";
-                      }
+                    while ($stmtCat->fetch()) {
+                      echo "<option value='{$categoryId}'>{$categoryName}</option>";
                     }
 
                     echo "</select>
