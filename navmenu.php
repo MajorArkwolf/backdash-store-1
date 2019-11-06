@@ -9,7 +9,7 @@
   }
 
 echo '<nav class="navbar">';
-  echo '<div class="option';
+  echo '<div class="dropbtn';
     if ($navmenuGroup == 'home') { echo ' active'; }
   echo '">';
 echo   '<a href="index.php" class="dropbtn">Home</a>
@@ -40,7 +40,7 @@ echo '<button class="dropbtn">Account
       </div>
     </div>';
 
-  echo '<div class="dropdown';
+  echo '<div class="dropbtn';
     if ($navmenuGroup == 'about') { echo ' active'; }
   echo '">';
   echo   '<a href="aboutus.php" class="dropbtn">About Us</a>
