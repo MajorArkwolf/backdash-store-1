@@ -387,6 +387,7 @@ header {
     font-size: 16px;
     text-align: center;
     margin-right: 20px;
+
 }
 
 input[type=number]::-webkit-inner-spin-button {
@@ -401,6 +402,7 @@ input[type=number]::-webkit-inner-spin-button {
     height: 40px;
     padding: 8px 8px;
     border: none;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
