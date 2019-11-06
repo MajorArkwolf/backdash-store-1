@@ -79,11 +79,12 @@
                     <label for='category'>Category</label>
                     <select name='category' id='category'>";
 
-                  if($stmtCat = $mysqli->prepare("select id, name from Categories")) {
-                     $stmtCat->execute();
-                     $stmtCat->bind_result($categoryId, $categoryName);
+                  if($stmt = $mysqli->prepare("select C.id, C.name from Categories C")) {
+                     $stmt->execute();
+                     $stmt->bind_result($categoryId, $categoryName);
                   }
-                  while ($stmtCat->fetch()) {
+
+                  while ($stmt->fetch()) {
                     echo '<option value="' . $categoryId .'" >'. $categoryName . '</option>';
                   }
                   echo '</select>';
