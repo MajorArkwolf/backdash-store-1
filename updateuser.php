@@ -57,7 +57,7 @@
           echo '<form id="updatePassword" onsubmit="" action="sendUpdatePassword.php" method="POST">';
           echo '<p>ID: <input type="textbox" name="id" id="id" value="' . $id . '"></input></p>';
           echo '<p>Password: <input type="password" name="userPassword" id="userPassword"></input></p>';
-          echo '<button type="submit" id="submitbutton" disabled>Submit</button>';
+          echo '<button type="submit" id="submitbutton">Submit</button>';
           echo '</form>';
          ?>
       </div>
