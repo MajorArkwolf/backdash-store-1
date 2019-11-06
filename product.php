@@ -81,7 +81,7 @@
 
                   echo "<label for='category'>Category</label>";
                   echo '<select name="category" id="category">';
-                  while ($stmt->fetch()) {
+                  while ($stmtCat->fetch()) {
                     echo '<option value="' . $categoryId .'" >'. $categoryName . '</option>';
                   }
                   echo '</select>';
