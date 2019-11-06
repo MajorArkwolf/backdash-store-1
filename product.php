@@ -53,6 +53,10 @@
                 echo "<div class='buy-button'><i class='fa fa-shopping-cart'></i> Add to cart</div>";
               echo "</div>";
             echo "</div>";
+
+            if($_SESSION['admin']) {
+              echo '<p><b>Admin Token:</b> True </p>';
+            }
           ?>
         </p>
       </div>
