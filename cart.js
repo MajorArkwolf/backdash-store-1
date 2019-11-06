@@ -5,11 +5,23 @@ Storage.prototype.getObj = function(key) {
     return JSON.parse(this.getItem(key))
 }
 
-function getData(str) {
+function updateTable(str) {
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            console.log(JSON.parse(this.responseText))
+            let table = document.getElementById("cart")
+            let data = JSON.parse(this.responseText)
+
+            let row = table.insertRow(table.rows.length)
+            let cell1 = row.insertCell(0)
+            let cell2 = row.insertCell(1)
+            let cell3 = row.insertCell(2)
+            let cell4 = row.insertCell(3)
+
+            cell1.innerHTML = data["name"]
+            cell2.innerHTML = "1234"
+            cell3.innerHTML = data["price"]
+            cell4.innerHTML = "foobar"
         }
     };
 
@@ -21,23 +33,11 @@ function populateCart() {
     let cart = localStorage.getObj("cart");
 
     for (const [key, value] of Object.entries(cart)) {
-        console.log(key, value)
-
-        if (key != null) {
-             getData(key)
+        if (key != 0 && key != null) {
+            console.log(key, value)
+            updateTable(key)
         }
     }
 }
 
 populateCart();
-
-//let row = table.insertRow(1);
-//let cell1 = row.insertCell(0);
-//let cell2 = row.insertCell(1);
-//let cell3 = row.insertCell(2);
-//let cell4 = row.insertCell(3);
-//
-//cell1.innerHTML = "Foo";
-//cell2.innerHTML = "1";
-//cell3.innerHTML = "$10";
-//cell4.innerHTML = "$20";
