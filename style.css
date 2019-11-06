@@ -311,6 +311,10 @@ header {
     grid-row: auto;
 }
 
+.input-form button {
+    cursor: pointer;
+}
+
 .input-form textarea {
     resize: vertical;
 }
