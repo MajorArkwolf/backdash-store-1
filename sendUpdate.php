@@ -21,7 +21,7 @@
 
   $name = $_POST["name"];
   $email = $_POST["email"];
-  $phonenumber = $_POST["phonenumber"];
+  $phonenumber = $_POST["phone"];
   $address = $_POST["address"];
   $id = $_SESSION["id"];
 
