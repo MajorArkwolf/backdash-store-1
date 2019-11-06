@@ -18,4 +18,8 @@ function addToCart() {
 
     cart[id] = (cart[id] || 0) + quantity;
     localStorage.setObj("cart", cart);
+
+    for (const [key, value] of Object.entries(cart)) {
+        console.log(key, value);
+    }
 }

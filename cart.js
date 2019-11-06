@@ -18,7 +18,7 @@ function getData(str) {
 }
 
 function populateCart() {
-    let cart = document.getElementById("cart");
+    let cart = localStorage.getObj("cart");
 
     for (const [key, value] of Object.entries(cart)) {
         console.log(key, value)
