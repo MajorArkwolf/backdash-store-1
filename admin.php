@@ -31,7 +31,7 @@
         <h2>Admin Page</h2>
         <br></br>
         <h3>Edit Member<h3>
-          <form id="editaccount" onsubmit="" action="" method="POST">
+          <form id="editaccount" onsubmit="" action="updateuser.php" method="POST">
               <?php
                 $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
@@ -56,7 +56,7 @@
           </form>
         <br></br>
         <h3>Add Product</h3>
-        <form id="newproduct" onsubmit="return CheckProduct();" action="sendNewProduct.php" method="POST">
+        <form id="newproduct" onsubmit="return CheckProduct()" action="sendNewProduct.php" method="POST">
           <p>Product Name: <input type="textbox" name="pname" id="pname"></input></p>
           <p>Product Description: <input type="textbox" name="pdescription" id="pdescription"></input></p>
           <?php
