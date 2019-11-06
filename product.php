@@ -50,7 +50,7 @@
                 echo "</div>";
 
                 if ($stock >= 1) {
-                  echo '<form action="foo.php">';
+                  echo '<form id="add-to-cart" action="javascript:addToCart();">';
                   echo   '<input class="quantity-picker" type="number" name="quantity" value="1" min="1">';
                   echo   '<button type="submit" class="submit-button" name="submit">';
                   echo     '<i class="fa fa-shopping-cart"></i> Add to cart';
@@ -88,5 +88,6 @@
     </div>
     <script src="productchecker.js"></script>
     <script src="navbar.js"></script>
+    <script src="cart.js"></script>
   </body>
 </html>
