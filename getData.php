@@ -18,11 +18,23 @@
          $stmt->fetch();
       }
 
-      echo $id;
-      echo $name;
-      echo $description;
-      echo $price;
-      echo $stock;
+      echo '<table>
+              <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>description</th>
+                <th>price</th>
+                <th>stock</th>
+              </tr>';
+
+      echo '<tr>'
+      echo '<td>{$id}</td>'
+      echo '<td>{$name}</td>'
+      echo '<td>{$description}</td>'
+      echo '<td>{$price}</td>'
+      echo '<td>{$stock}</td>'
+      echo '</tr>';
+      echo '</table>';
     ?>
   </body>
 </html>
