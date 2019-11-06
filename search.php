@@ -44,7 +44,8 @@
 
             while ($stmt->fetch()) {
               if ($firstFetch) {
-                $numRows = $stmt->num_rows;
+                $numRows = intval($stmt->num_rows);
+                echo $numRows;
 
                 if ($numRows == 0) {
                   echo "<h3>No results found for {$_GET['text']} </h3>";
