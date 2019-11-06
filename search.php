@@ -37,23 +37,21 @@
             if ($stmt = $mysqli->prepare("select P.id, P.name, P.price from Products P where P.name like ?")) {
                $stmt->bind_param("s", $search);
                $stmt->execute();
+               $stmt->store_result();
                $stmt->bind_result($id, $name, $price);
             }
 
-            $firstFetch = true;
+            $displayedRowCount = true;
 
             while ($stmt->fetch()) {
-              if ($firstFetch) {
-                $numRows = intval($stmt->num_rows);
-                echo $numRows;
-
-                if ($numRows == 0) {
+              if (!$displayedRowCount) {
+                if ($stmt->num_rows) {
                   echo "<h3>No results found for {$_GET['text']} </h3>";
                 } else {
-                  echo "<h3>Found {$numRows} results for {$_GET['text']} </h3>";
+                  echo "<h3>Found {$stmt->num_rows} results for {$_GET['text']} </h3>";
                 }
 
-                $firstFetch = false;
+                $displayedRowCount = false;
               }
 
               echo "<a class='product' href='product.php?id=" . $id . "'>";
