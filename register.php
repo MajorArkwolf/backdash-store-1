@@ -36,7 +36,7 @@
           <p id="verify"></p>
           <p>Phone Number: <input type="textbox" name="phonenumber" id="phonenumber"></input></p>
           <p>Address: <input type="textbox" name="address" id="address"></input></p>
-          <button type="submit" id="submitbutton" disabled>Submit</button>
+          <button type="submit" id="submitbutton" onclick="CheckInput()" disabled>Submit</button>
         </form>
         <p>If you are already registered please <a href="login.php">login</a></p>
       </div>
