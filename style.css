@@ -340,6 +340,10 @@ header {
   width: 100%;
 }
 
+.cart-title {
+    padding-bottom: 10px;
+}
+
 .cart td, .cart th {
   border: 1px solid #ddd;
   padding: 8px;

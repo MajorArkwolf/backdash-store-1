@@ -26,7 +26,7 @@
           echo $myStr;
       ?>
       <div class="text-area">
-        <h3>
+        <h3 class="cart-title">
           Shopping Cart
         </h3>
         <table class="cart">
