@@ -1,7 +1,7 @@
 "use strict"
 function CheckProduct(){
   var count = 0;
-  var name = document.getElementById("name")
+  var name = document.getElementById("name");
   var description = document.getElementById("description");
   var price = document.getElementById("price");
   var stock = document.getElementById("stock");
@@ -28,13 +28,13 @@ function CheckProduct(){
 
 function CheckCategory(){
   var count = 0;
-  var name = document.getElementById("name")
+  var name = document.getElementById("name");
   var description = document.getElementById("description");
 
   if (name.value != "" && name.value != undefined) {
     count++;
   }
-  if (description.value != "" && description.value != undefined){
+  if (description.value != "" && name.value != undefined){
     count++;
   }
 

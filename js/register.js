@@ -26,7 +26,7 @@ function validateEmail(email) {
 function CheckInput(){
   var count = 0;
   var email = document.getElementById("email");
-  var name = document.getElementById("name")
+  var name = document.getElementById("name");
   var password = document.getElementById("userPassword");
   var phone = document.getElementById("phonenumber");
   var address = document.getElementById("address");
