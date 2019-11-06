@@ -14,7 +14,7 @@
     <div class="content">
       <header>
         <div>
-          <h1>Product Categories</h1>
+          <h1>Products</h1>
         </div>
       </header>
       <?php
@@ -30,17 +30,19 @@
           <?php
             $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
-            if($stmt = $mysqli->prepare("select C.id, C.name from Categories C")) {
-              $stmt->execute();
-              $stmt->bind_result($id, $name);
+            if($stmt = $mysqli->prepare("select P.id, P.name, P.price from Products P where P.category = ?")) {
+               $stmt->bind_param("i", intval($_GET['id']));
+               $stmt->execute();
+               $stmt->bind_result($id, $name, $price);
             }
 
             while ($stmt->fetch()) {
-              echo "<a class='product' href='category.php?id=" . $id . "'>";
+              echo "<a class='product' href='product.php?id=" . $id . "'>";
                   echo "<div class='product-image'>";
-                    echo "<img src='img/category/" . $id . ".png' height='100' width='100'>";
+                    echo "<img src='img/product/" . $id . ".png' height='100' width='100'>";
                   echo "</div>";
                 echo "<div class='product-title'>" . $name . "</div>";
+                echo "<div class='product-price'>" . "$" . $price . "</div>";
               echo "</a>";
             }
           ?>
