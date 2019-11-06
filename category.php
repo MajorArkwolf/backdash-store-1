@@ -14,7 +14,20 @@
     <div class="content">
       <header>
         <div>
-          <h1>Products</h1>
+          <h1>
+            <?php
+              $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
+
+              if($stmt = $mysqli->prepare("select C.name from Categories C where C.id = ?")) {
+                 $stmt->bind_param("i", intval($_GET['id']));
+                 $stmt->execute();
+                 $stmt->bind_result($name);
+                 $stmt->fetch();
+              }
+
+              echo $name;
+             ?>
+          </h1>
         </div>
       </header>
       <?php
