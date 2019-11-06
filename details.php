@@ -25,6 +25,9 @@
           echo $myStr;
       ?>
       <div class="text-area">
+        <h2>
+          Account Details
+        </h2>
         <?php
           $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
@@ -34,18 +37,12 @@
              $stmt->bind_result($id, $name, $email, $address, $admin);
              $stmt->fetch();
           }
-          echo '<form id="update" onsubmit="return CheckInput();" action="" method="POST">'
-          echo '<p>Email: <input type="textbox" name="email" id="email">' . $email . '</input></p>';
-          echo '<p>Name: <input type="textbox" name="name" id="email">' . $name . '</input></p>';
-          echo '<p>Address: <input type="textbox" name="address" id="email">' . $address . '</input></p>';
+          echo '<form id="update" onsubmit="" action="" method="POST">'
+          echo '<p>Email: <input type="textbox" name="email" id="email" value="' . $email . '"></input></p>';
+          echo '<p>Name: <input type="textbox" name="name" id="email" value="' . $name . '"></input></p>';
+          echo '<p>Address: <input type="textbox" name="address" id="email"  value="' . $address . '"></input></p>';
           echo '<p><button type="submit" id="submitbutton" disabled>Submit</button>'
           echo '</form>'
-          if($admin == 1){
-            echo '<p><b>Admin:</b> True </p>';
-          }
-          if($_SESSION['admin']) {
-            echo '<p><b>Admin Token:</b> True </p>';
-          }
          ?>
       </div>
     </div>
