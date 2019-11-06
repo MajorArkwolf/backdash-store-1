@@ -8,9 +8,9 @@ function CheckPassword(){
       if(x.value != "" && y.value != "") {
         if (x.value == y.value) {
           document.getElementById('submitbutton').disabled = false;
-          document.getElementById("verify").innerHTML = "";
+          document.getElementById("passwordverify").innerHTML = "";
         } else {
-          document.getElementById("verify").innerHTML = "Your passwords do not match!";
+          document.getElementById("passwordverify").innerHTML = "Your passwords do not match!";
         }
       }
     }
@@ -31,18 +31,32 @@ function CheckInput(){
   var address = document.getElementById("address");
   if(validateEmail(email.value)) {
     count++;
+    document.getElementById("emailverify").innerHTML = "";
+  } else {
+    document.getElementById("emailverify").innerHTML = "Please enter a valid email!";
   }
   if (name.value != "") {
     count++;
+    document.getElementById("nameverify").innerHTML = "";
+  } else {
+    document.getElementById("nameverify").innerHTML = "Please enter a name!";
   }
   if (password.value != ""){
     count++;
+  } else {
+    document.getElementById("passwordverify").innerHTML = "Password can not be blank!";
   }
   if(phone.value != "") {
     count++;
+    document.getElementById("phoneverify").innerHTML = "";
+  } else {
+    document.getElementById("phoneverify").innerHTML = "Please enter a phone number!";
   }
   if(address.value != "") {
     count++;
+    document.getElementById("addressverify").innerHTML = "";
+  } else {
+    document.getElementById("addressverify").innerHTML = "Please enter an address in!";
   }
 
   if (count == 5) {
