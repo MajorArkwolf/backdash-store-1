@@ -52,6 +52,14 @@
           echo '<button type="submit" id="submitbutton" disabled>Submit</button>';
           echo '</form';
          ?>
+         <h2>Order History</h2>
+
+         <?php
+            if($_SESSION["admin"]) {
+              echo '<h2>SECRET ADMIN PAGE</h2>';
+              echo '<a href="admin.php">ADMIN PAGE</a>';
+            }
+          ?>
       </div>
     </div>
     <script type="text/javascript" src="js/register.js"></script>
