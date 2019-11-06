@@ -67,7 +67,8 @@
                     </div>
                     <div>
                       <label for='description'>Description: </label>
-                      <textarea name='description' id='description' maxlength='500' value='{$description}></textarea>
+                      <textarea name='description' id='description' maxlength='500'
+                                value='{$description}>'</textarea>
                     </div>
 
                     <button type='submit'>Update</button>
