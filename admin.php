@@ -29,12 +29,26 @@
       ?>
       <div class="text-area">
         <h2>Admin Page</h2>
+        <br></br>
         <h3>Add Product</h3>
         <form id="newproduct" onsubmit="" action="" method="POST">
           <p>Product Name: <input type="textbox" name="name" id="name"></input></p>
           <p>Product Description: <input type="textbox" name="description" id="description"></input></p>
+          <?php
+            $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
+
+            if($stmt = $mysqli->prepare("select id, name from Categories")) {
+               $stmt->execute();
+               $stmt->bind_result($id, $name);
+            }
+            echo '<select>';
+            while ($stmt->fetch()) {
+              echo '<option value="' . $id .'" >'. $name . '</option>';
+            }
+            echo '</select>'
+          ?>
           <p>Price: <input type="textbox" name="price" id="price"></input></p>
-          <p>Product Name: <input type="textbox" name="stock" id="stock"></input></p>
+          <p>Stock: <input type="textbox" name="stock" id="stock"></input></p>
           <p>IMAGE UPLOADER COMING SOON</p>
           <button type="submit" id="submitbutton" disabled>Submit</button>
         </form>
