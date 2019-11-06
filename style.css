@@ -393,6 +393,7 @@ header {
     width: 140px;
     height: 40px;
     padding: 8px 8px;
+    border: none;
 }
 
 @media screen and (max-width: 600px) {
