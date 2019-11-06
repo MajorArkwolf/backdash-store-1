@@ -29,11 +29,18 @@
       ?>
       <div class="text-area">
         <h2>Admin Page</h2>
+
+        <h3>Add Category<h3>
+          <form id="newCategory" onsubmit="CheckCategory();" action="" method="POST">
+            <p>Category Name: <input type="textbox" name="cname" id="cname"></input></p>
+            <p>Category Description: <input type="textbox" name="cdescription" id="cdescription"></input></p>
+            <button type="submit" id="submitbutton">Submit</button>
+          </form>
         <br></br>
         <h3>Add Product</h3>
         <form id="newproduct" onsubmit="CheckProduct();" action="" method="POST">
-          <p>Product Name: <input type="textbox" name="name" id="name"></input></p>
-          <p>Product Description: <input type="textbox" name="description" id="description"></input></p>
+          <p>Product Name: <input type="textbox" name="pname" id="pname"></input></p>
+          <p>Product Description: <input type="textbox" name="pdescription" id="pdescription"></input></p>
           <?php
             $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
@@ -41,14 +48,14 @@
                $stmt->execute();
                $stmt->bind_result($id, $name);
             }
-            echo '<p>Category: <select>';
+            echo '<p>Category: <select name="pcategory" id="pcategory">';
             while ($stmt->fetch()) {
               echo '<option value="' . $id .'" >'. $name . '</option>';
             }
             echo '</select></p>'
           ?>
-          <p>Price: <input type="textbox" name="price" id="price"></input></p>
-          <p>Stock: <input type="textbox" name="stock" id="stock"></input></p>
+          <p>Price: <input type="textbox" name="pprice" id="pprice"></input></p>
+          <p>Stock: <input type="textbox" name="pstock" id="pstock"></input></p>
           <p>IMAGE UPLOADER COMING SOON</p>
           <button type="submit" id="submitbutton">Submit</button>
         </form>
