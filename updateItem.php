@@ -1,5 +1,5 @@
 <?php
-  header("refresh:5;url=product.php?id={$_GET['id']}");
+  header("refresh:3;url=product.php?id={$_GET['id']}");
   session_start();
 ?>
 <!DOCTYPE html>
@@ -18,6 +18,14 @@
           <h1>Products</h1>
         </div>
       </header>
+      <?php
+          ob_start();
+          $navmenuGroup = "shop";
+          include('navmenu.php');
+          $myStr = ob_get_contents();
+          ob_end_clean();
+          echo $myStr;
+      ?>
       <div class="text-area">
         <h2>
         <?php
@@ -30,7 +38,6 @@
 
             if($_SESSION['admin']) {
               $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
-
               $query = "update Products P set P.name = ?, P.description = ?, P.price = ?, P.stock = ? where P.id = ?";
 
               if ($stmt = $mysqli->prepare($query)) {
