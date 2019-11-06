@@ -5,6 +5,7 @@ function addToCart() {
     let id = document.getElementById("id");
     let cart;
 
+    console.log(id.value);
     if (localStorage.getItem("cart") === null) {
         cart = [];
     } else {
