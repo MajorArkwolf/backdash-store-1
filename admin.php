@@ -40,7 +40,7 @@
           }
 
           while ($stmt->fetch()) {
-            echo '<p>ID: ' . $id . ' Name: '. $name . ' Price: ' . $price . '<button type="submit" value="'. $id . '"></button></p>';
+            echo '<p><button type="submit" value="'. $id . '">DELETE</button> <button type="submit" value="'. $id . '">VIEW</button> ID: ' . $id . ' Name: '. $name . ' Price: ' . $price . '</p>';
           }
         ?>
       </div>
