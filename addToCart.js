@@ -1,5 +1,3 @@
-localStorage.setItem("cart", JSON.stringify([]));
-
 function addToCart() {
     let quantity = document.getElementById("quantity-picker");
     let id = document.getElementById("id");
@@ -13,6 +11,7 @@ function addToCart() {
     }
 
     cart[id.value] = (cart[id.value] || 0) + parseInt(quantity.value);
+
     localStorage.setItem("cart", JSON.stringify(cart));
     console.log(cart);
 }
