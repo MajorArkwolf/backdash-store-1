@@ -31,7 +31,7 @@
         <h2>Admin Page</h2>
         <br></br>
         <h3>Add Category</h3>
-          <form id="newCategory" onsubmit="return CheckCategory()" action="login.php" method="POST">
+          <form id="newCategory" onsubmit="return CheckCategory()" action="sendNewCategory.php" method="POST">
             <p>Category Name: <input type="textbox" name="cname" id="cname"></input></p>
             <p>Category Description: <input type="textbox" name="cdescription" id="cdescription"></input></p>
             <button type="submit" id="submitbutton">Submit</button>
