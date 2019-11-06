@@ -297,11 +297,11 @@ header {
         background-color: var(--content-bg);
     }
 
-    .navbar search-container{
+    .navbar .search-container{
         display: none;
     }
 
-    .navbar.responsive search-container{
+    .navbar.responsive .search-container{
         display: initial;
     }
 
