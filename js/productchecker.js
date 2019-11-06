@@ -25,3 +25,22 @@ function CheckProduct(){
     return false;
   }
 }
+
+function CheckCategory(){
+  var count = 0;
+  var name = document.getElementById("name")
+  var description = document.getElementById("description");
+
+  if (name.value != "") {
+    count++;
+  }
+  if (description.value != ""){
+    count++;
+  }
+
+  if (count == 2) {
+    return true;
+  } else {
+    return false;
+  }
+}
