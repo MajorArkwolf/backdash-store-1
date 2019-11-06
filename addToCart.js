@@ -12,8 +12,6 @@ function addToCart() {
     let id = parseInt(document.getElementById("id").value);
     let cart = localStorage.getObj("cart");
 
-    console.log(id);
-    console.log(cart);
 
     if (cart === null) {
         localStorage.setObj("cart", []);
@@ -22,4 +20,6 @@ function addToCart() {
 
     cart[id] = (cart[id] || 0) + quantity;
     localStorage.setObj("cart", cart);
+
+    console.log(id + ": " + localStorage.getObj("cart")[id]);
 }
