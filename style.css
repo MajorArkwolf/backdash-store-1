@@ -303,6 +303,9 @@ header {
 
     .navbar.responsive .search-container{
         display: initial;
+        float: none;
+        display: block;
+        text-align: left;
     }
 
     .content {
