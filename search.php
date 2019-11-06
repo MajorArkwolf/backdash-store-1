@@ -40,15 +40,21 @@
                $stmt->bind_result($id, $name, $price);
             }
 
-            $numRows = $stmt->num_rows;
-
-            if ($numRows == 0) {
-              echo "<p>No results found for {$_GET['text']} </p>";
-            } else {
-              echo "<p>Found {$numRows} results for {$_GET['text']} </p>";
-            }
+            $firstFetch = true;
 
             while ($stmt->fetch()) {
+              if ($firstFetch) {
+                $numRows = $stmt->num_rows;
+
+                if ($numRows == 0) {
+                  echo "<h3>No results found for {$_GET['text']} </h3>";
+                } else {
+                  echo "<h3>Found {$numRows} results for {$_GET['text']} </h3>";
+                }
+
+                $firstFetch = false;
+              }
+
               echo "<a class='product' href='product.php?id=" . $id . "'>";
                   echo "<div class='product-image'>";
                     echo "<img src='img/product/" . $id . ".png' height='100' width='100'>";
