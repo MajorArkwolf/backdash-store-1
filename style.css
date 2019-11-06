@@ -317,6 +317,10 @@ header {
         text-align: left;
     }
 
+    .navbar.responsive .icon {
+        text-align: center;
+    }
+
     .navbar.responsive .dropdown {float: none;}
     .navbar.responsive .dropdown-content {position: relative;}
     .navbar.responsive .dropdown .dropbtn {
@@ -344,9 +348,5 @@ header {
 
     .product-info {
         padding-left: initial;
-    }
-
-    .navbar .icon {
-        text-align: center;
     }
 }
