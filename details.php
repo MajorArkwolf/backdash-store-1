@@ -40,6 +40,9 @@
           if($admin == 1){
             echo '<p><b>Admin:</b> True </p>';
           }
+          if($_SESSION['admin']) {
+            echo '<p><b>Admin Token:</b> True </p>';
+          }
          ?>
       </div>
     </div>
