@@ -44,8 +44,14 @@ echo '<button class="dropbtn">Account
     if ($navmenuGroup == 'about') { echo ' active'; }
   echo '">';
   echo   '<a href="aboutus.php" class="dropbtn">About Us</a>
-        </div>';
+        </div>
+        <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
 
-echo '<a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">☰</a>
-  </nav>';
+  <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()"><i class="fa fa-bars"></i></a>
+    </nav>';
  ?>
