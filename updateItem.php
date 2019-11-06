@@ -20,12 +20,12 @@
       <div class="text-area">
         <h2>
         <?php
+            error_reporting(E_ALL);
+            ini_set("display_errors", 1);
+
             ob_start();
             include('navmenu.php');
             ob_end_clean();
-
-            error_reporting(E_ALL);
-            ini_set("display_errors", 1);
 
             if($_SESSION['admin']) {
               $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
@@ -40,7 +40,7 @@
 
                   echo "Update successfully!";
               }
-            } else [
+            } else {
               echo "Not authorized";
             }
         ?>
