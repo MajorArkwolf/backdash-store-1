@@ -309,7 +309,6 @@ header {
 .input-form > label  {
     grid-column: labels;
     grid-row: auto;
-    margin: auto 0;
 }
 
 .input-form > input, .input-form > textarea, .input-form > button {

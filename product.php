@@ -62,9 +62,7 @@
                     <label for='price'>Price</label>
                     <input id='price' type='text' name='price' value='{$price}'>
                     <label for='description'>Description</label>
-                    <textarea name='description' id='description' maxlength='500'>
-                      {$description}
-                    </textarea>
+                    <textarea name='description' id='description' maxlength='500'>{$description}</textarea>
                     <button type='submit'>Update</button>
                   </form>
                 </div>";
