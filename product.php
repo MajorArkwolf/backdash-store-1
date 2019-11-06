@@ -85,11 +85,12 @@
                       $stmtCat->bind_result($categoryId, $categoryName);
 
                       while ($stmtCat->fetch()) {
-                        echo '<option value="' . $categoryId .'" >'. $categoryName . '</option>';
+                        echo "<option value='{$categoryId}'>{$categoryName}</option>";
                       }
                     }
 
-                  echo "<label for='price'>Price</label>
+                    echo "</select>
+                      <label for='price'>Price</label>
                     <input id='price' type='text' name='price' value='{$price}'>
                     <label for='stock'>Stock</label>
                     <input id='stock' type='text' name='stock' value='{$stock}'>
