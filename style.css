@@ -345,4 +345,8 @@ header {
     .product-info {
         padding-left: initial;
     }
+
+    .navbar .icon {
+        text-align: center;
+    }
 }
