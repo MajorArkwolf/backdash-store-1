@@ -45,7 +45,7 @@
           echo '<p>Name: <input type="textbox" name="name" id="name" value="' . $name . '"></input></p>';
           echo '<p>Phone: <input type="textbox" name="phone" id="phone" value="' . $phone . '"></input></p>';
           echo '<p>Address:</p> <p><textarea rows="4" cols="50" name="address" id="address">' . $address . '</textarea></p>';
-          if($id == 1) {
+          if($admin == 1) {
             echo '<p>Is Admin? <input type="checkbox" name="isAdmin" value="1" checked></input></p>';
           } else {
             echo '<p>Is Admin? <input type="checkbox" name="isAdmin" value="1"></input></p>';
