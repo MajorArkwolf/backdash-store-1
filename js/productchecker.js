@@ -31,10 +31,10 @@ function CheckCategory(){
   var name = document.getElementById("name")
   var description = document.getElementById("description");
 
-  if (name.value != "") {
+  if (name.value != "" && name.value != undefined) {
     count++;
   }
-  if (description.value != ""){
+  if (description.value != "" && description.value != undefined){
     count++;
   }
 
