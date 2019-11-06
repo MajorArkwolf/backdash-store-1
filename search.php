@@ -40,6 +40,12 @@
                $stmt->bind_result($id, $name, $price);
             }
 
+            if ($stmt->num_rows == 0) {
+              echo "<p>No results found for '$_GET['text]'</p>";
+            } else {
+              echo "<p>Search results for '$_GET['text]'</p>";
+            }
+
             while ($stmt->fetch()) {
               echo "<a class='product' href='product.php?id=" . $id . "'>";
                   echo "<div class='product-image'>";
