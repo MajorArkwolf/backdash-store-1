@@ -49,7 +49,7 @@
                   echo "<div class='product-info-description'>" . $description . "</div>";
                 echo "</div>";
                 echo '<form action="foo.php">';
-                echo   '<input type="number" name="quantity" min="1">';
+                echo   '<input class="quantity-picker" type="number" name="quantity" min="1">';
                 echo   '<input type="submit" value="Add to cart">';
                 echo '</form>';
 
