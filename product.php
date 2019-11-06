@@ -72,8 +72,21 @@
                   <form class='input-form' action='updateItem.php'>
                     <input id='id' type='hidden' name='id' value='{$id}'>
                     <label for='name'>Name</label>
-                    <input id='name' type='text' name='name' value='{$name}'>
-                    <label for='price'>Price</label>
+                    <input id='name' type='text' name='name' value='{$name}'>";
+
+                  if($stmt = $mysqli->prepare("select C.id, C.name from Categories C")) {
+                     $stmt->execute();
+                     $stmt->bind_result($categoryId, $categoryName);
+                  }
+
+                  echo "<label for='category'>Category</label>";
+                  echo '<select name="category" id="category">';
+                  while ($stmt->fetch()) {
+                    echo '<option value="' . $categoryId .'" >'. $categoryName . '</option>';
+                  }
+                  echo '</select></p>';
+
+                  echo "<label for='price'>Price</label>
                     <input id='price' type='text' name='price' value='{$price}'>
                     <label for='stock'>Stock</label>
                     <input id='stock' type='text' name='stock' value='{$stock}'>
