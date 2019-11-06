@@ -46,7 +46,7 @@ function CheckInput(){
   }
 
   if (count == 5) {
-    return true;
+    window.location.href = "sendRegistration.php";
   } else {
     return false;
   }
