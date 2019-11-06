@@ -5,11 +5,11 @@ Storage.prototype.getObj = function(key) {
     return JSON.parse(this.getItem(key))
 }
 
+
 function addToCart() {
     let quantity = parseInt(document.getElementById("quantity-picker").value);
     let id = parseInt(document.getElementById("id").value);
     let cart = localStorage.getObj("cart");
-
 
     if (cart === null) {
         localStorage.setObj("cart", []);
