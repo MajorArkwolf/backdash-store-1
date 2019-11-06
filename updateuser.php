@@ -40,7 +40,7 @@
              $stmt->bind_result($id, $name, $email, $address, $admin, $phone);
              $stmt->fetch();
           }
-          echo '<form id="update" onsubmit="" action="sendUpdate.php" method="POST">';
+          echo '<form id="update" onsubmit="" action="sendUpdateUser.php" method="POST">';
           echo '<p>Email: <input type="textbox" name="email" id="email" value="' . $email . '"></input></p>';
           echo '<p>Name: <input type="textbox" name="name" id="name" value="' . $name . '"></input></p>';
           echo '<p>Phone: <input type="textbox" name="phone" id="phone" value="' . $phone . '"></input></p>';
