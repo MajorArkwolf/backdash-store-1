@@ -28,13 +28,15 @@ function CheckProduct(){
 
 function CheckCategory(){
   var count = 0;
-  var name = document.getElementById("name");
-  var description = document.getElementById("description");
-
-  if (name.value != "" && name.value != undefined) {
+  var name = document.getElementById("name").value;
+  var description = document.getElementById("description").value;
+  if(name == undefined || description == undefined){
+    return false;
+  }
+  if (name != "" && name != undefined) {
     count++;
   }
-  if (description.value != "" && name.value != undefined){
+  if (description != "" && name != undefined){
     count++;
   }
 
