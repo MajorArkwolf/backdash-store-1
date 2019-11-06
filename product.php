@@ -48,10 +48,10 @@
                   echo "<div class='product-info-stock'>" . $stock . " units stocked</div>";
                   echo "<div class='product-info-description'>" . $description . "</div>";
                 echo "</div>";
-                echo '<form action="foo.php">'
-                echo   '<input type="number" name="quantity" min="1">'
-                echo   '<input type="submit" value="Add to cart">'
-                echo '</form>'
+                echo '<form action="foo.php">';
+                echo   '<input type="number" name="quantity" min="1">';
+                echo   '<input type="submit" value="Add to cart">';
+                echo '</form>';
 
                 #echo "<div class='buy-button'><i class='fa fa-shopping-cart'></i> Add to cart</div>";
 
