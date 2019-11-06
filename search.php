@@ -42,7 +42,6 @@
 
             $displayedRowCount = false;
 
-
             while ($stmt->fetch()) {
               if (!$displayedRowCount) {
                 if ($stmt->num_rows > 0) {
@@ -50,9 +49,9 @@
                   if ($stmt->num_rows > 1) {
                     echo "s";
                   }
-                  echo " for {$_GET['text']} </h3>";
+                  echo " for '{$_GET['text']}':</h3>";
                 } else {
-                  echo "<h3>No results found for {$_GET['text']} </h3>";
+                  echo "<h3>No results found for '{$_GET['text']}'.</h3>";
                 }
 
                 echo "<div class='product-grid'>";
