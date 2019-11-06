@@ -38,6 +38,7 @@
                $stmt->execute();
                $stmt->bind_result($id, $name, $description, $price, $stock);
                $stmt->fetch();
+               $stmt->close();
             }
 
             echo "<div class='product-container'>";
@@ -89,7 +90,6 @@
                     }
 
                   echo "<label for='price'>Price</label>
-                    <label for='price'>Price</label>
                     <input id='price' type='text' name='price' value='{$price}'>
                     <label for='stock'>Stock</label>
                     <input id='stock' type='text' name='stock' value='{$stock}'>
