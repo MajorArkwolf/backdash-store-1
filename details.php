@@ -39,6 +39,7 @@
           echo 'Name: <input type="textbox" name="name" id="email">' . $name . '</input></p>';
           echo 'Address: <input type="textbox" name="address" id="email">' . $address . '</input></p>';
           echo '<button type="submit" id="submitbutton" disabled>Submit</button>'
+          echo '</form>'
           if($admin == 1){
             echo '<p><b>Admin:</b> True </p>';
           }
