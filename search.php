@@ -45,8 +45,12 @@
 
             while ($stmt->fetch()) {
               if (!$displayedRowCount) {
-                if ($stmt->num_rows) {
-                  echo "<h3>Found {$stmt->num_rows} results for {$_GET['text']} </h3>";
+                if ($stmt->num_rows > 0) {
+                  echo "<h3>Found {$stmt->num_rows} result";
+                  if ($stmt->num_rows > 1) {
+                    echo "s";
+                  }
+                  echo " for {$_GET['text']} </h3>";
                 } else {
                   echo "<h3>No results found for {$_GET['text']} </h3>";
                 }
