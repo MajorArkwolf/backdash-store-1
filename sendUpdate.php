@@ -33,8 +33,8 @@
 
   if (!$stmt->execute()) {
     echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
-    header('Location: register.php');
+    header('Location: error.php');
   }else {
-    header('Location: success.php');
+    header('Location: details.php');
   }
  ?>
