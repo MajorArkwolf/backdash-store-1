@@ -26,7 +26,6 @@
         echo $myStr;
       ?>
       <div class="text-area">
-        <div class="product-grid">
           <?php
             error_reporting(E_ALL);
             ini_set("display_errors", 1);
@@ -37,23 +36,27 @@
             if ($stmt = $mysqli->prepare("select P.id, P.name, P.price from Products P where P.name like ?")) {
                $stmt->bind_param("s", $search);
                $stmt->execute();
+               $stmt->store_result();
                $stmt->bind_result($id, $name, $price);
             }
 
-            $firstFetch = true;
+            $displayedRowCount = false;
+
 
             while ($stmt->fetch()) {
-              if ($firstFetch) {
-                $numRows = intval($stmt->num_rows);
-                echo $numRows;
-
-                if ($numRows == 0) {
-                  echo "<h3>No results found for {$_GET['text']} </h3>";
+              if (!$displayedRowCount) {
+                if ($stmt->num_rows > 0) {
+                  echo "<h3>Found {$stmt->num_rows} result";
+                  if ($stmt->num_rows > 1) {
+                    echo "s";
+                  }
+                  echo " for {$_GET['text']} </h3>";
                 } else {
-                  echo "<h3>Found {$numRows} results for {$_GET['text']} </h3>";
+                  echo "<h3>No results found for {$_GET['text']} </h3>";
                 }
 
-                $firstFetch = false;
+                echo "<div class='product-grid'>";
+                $displayedRowCount = true;
               }
 
               echo "<a class='product' href='product.php?id=" . $id . "'>";
