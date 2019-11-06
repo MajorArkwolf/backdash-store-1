@@ -20,8 +20,8 @@ function updateTable(str) {
             let cell4 = row.insertCell(3)
 
             cell1.innerHTML = data["name"]
-            cell2.innerHTML = "$" + cart[data["id"]]
-            cell3.innerHTML = data["price"]
+            cell2.innerHTML = cart[data["id"]]
+            cell3.innerHTML = "$" + data["price"]
             cell4.innerHTML = "$" + (cart[data["id"]] * data["price"])
         }
     };
