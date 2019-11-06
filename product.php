@@ -42,7 +42,7 @@
 
             echo "<div class='product-container'>";
               echo "<div class='product-image-big'>";
-                echo "<img src='img/" . $id . ".png' height='100' width='100'>";
+                echo "<img src='img/product/" . $id . ".png' height='100' width='100'>";
               echo "</div>";
               echo "<div class='product-info'>";
                 echo "<div class='product-info-listing'>";
