@@ -89,6 +89,7 @@ header {
     z-index: 15;
     width: 48px;
     height: 48px;
+    line-height: 48px;
 }
 
 .dropdown {
