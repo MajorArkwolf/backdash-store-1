@@ -38,10 +38,10 @@
              $stmt->fetch();
           }
           echo '<form id="update" onsubmit="" action="" method="POST">';
-#          echo '<p>Email: <input type="textbox" name="email" id="email" value="' . $email . '"></input></p>';
-#          echo '<p>Name: <input type="textbox" name="name" id="email" value="' . $name . '"></input></p>';
-#          echo '<p>Address: <input type="textbox" name="address" id="email"  value="' . $address . '"></input></p>';
-#          echo '<p><button type="submit" id="submitbutton" disabled>Submit</button>'
+          echo '<p>Email: <input type="textbox" name="email" id="email" value="' . $email . '"></input></p>';
+          echo '<p>Name: <input type="textbox" name="name" id="email" value="' . $name . '"></input></p>';
+          echo '<p>Address: <input type="textbox" name="address" id="email"  value="' . $address . '"></input></p>';
+          echo '<p><button type="submit" id="submitbutton" disabled>Submit</button>';
           echo '</form>';
          ?>
       </div>
