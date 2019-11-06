@@ -45,6 +45,12 @@ echo '<button class="dropbtn">Account
     </div>';
 
   echo '<div class="dropdown';
+    if ($navmenuGroup == 'cart') { echo ' active'; }
+  echo '">';
+echo   '<a href="cart.php" class="dropbtn">Cart</a>
+      </div>';
+
+  echo '<div class="dropdown';
     if ($navmenuGroup == 'about') { echo ' active'; }
   echo '">';
   echo   '<a href="aboutus.php" class="dropbtn">About Us</a>

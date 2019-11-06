@@ -19,7 +19,7 @@
       </header>
       <?php
           ob_start();
-          $navmenuGroup = "home";
+          $navmenuGroup = "cart";
           include('navmenu.php');
           $myStr = ob_get_contents();
           ob_end_clean();
