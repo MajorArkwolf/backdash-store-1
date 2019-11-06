@@ -74,9 +74,9 @@
                     <label for='name'>Name</label>
                     <input id='name' type='text' name='name' value='{$name}'>";
 
-                  if($stmt = $mysqli->prepare("select C.id, C.name from Categories C")) {
-                     $stmt->execute();
-                     $stmt->bind_result($categoryId, $categoryName);
+                  if($stmtCat = $mysqli->prepare("select C.id, C.name from Categories C")) {
+                     $stmtCat->execute();
+                     $stmtCat->bind_result($categoryId, $categoryName);
                   }
 
                   echo "<label for='category'>Category</label>";
