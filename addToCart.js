@@ -1,17 +1,16 @@
 function addToCart() {
     let quantity = document.getElementById("quantity-picker");
     let id = document.getElementById("id");
-    let cartStorage = localStorage.getItem("cart");
+    let cart;
 
-    if (cart === null) {
-        let cart = [];
+    if (localStorage.getItem("cart") === null) {
+        cart = [];
         cart.push({id: id, quantity: quantity})
-        localStorage.setItem("cart", JSON.stringify(cart));
-        alert(cart);
     } else {
-        let cart = JSON.parse(localStorage.getItem("cart"));
+        cart = JSON.parse(localStorage.getItem("cart"));
         cart.push({id: id, quantity: quantity})
-        localStorage.setItem("cart", JSON.stringify(cart));
-        alert(cart);
     }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(cart);
 }
