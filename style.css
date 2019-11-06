@@ -180,9 +180,9 @@ header {
 
 .product-price {
     font-size: 13px;
+    margin: 0 auto;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
 }
 
 .product-stock {
