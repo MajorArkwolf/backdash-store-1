@@ -59,6 +59,7 @@
          <h2>Order History</h2>
          <table id="cart">
          <tr>
+           <th>View</th>
            <th id="name">Notes</th>
            <th id="quantity">ID</th>
            <th id="price">Price</th>
@@ -73,6 +74,7 @@
            }
            while ($stmt->fetch()) {
              echo '<tr>';
+             echo '<td><form action="" method="post"><button type="submit" name="viewpurchase" value="'. $id . '">VIEW</button></form></td>'
              echo '<td>'. $salesnotes .'</td>';
              echo '<td>'. $id .'</td>';
              echo '<td>'. $totalprice .'</td>';
