@@ -51,7 +51,7 @@
 
                 if ($stock >= 1) {
                   echo '<form id="add-to-cart" action="javascript:addToCart();">';
-                  echo '<input id="productId" type="hidden" name="id" value="{$id}'>';
+                  echo "<input id='productId' type='hidden' name='id' value='{$id}'>";
                   echo   '<input id="quantity-picker" type="number" name="quantity" value="1" min="1">';
                   echo   '<button type="submit" class="submit-button" name="submit">';
                   echo     '<i class="fa fa-shopping-cart"></i> Add to cart';
