@@ -41,7 +41,7 @@
                $stmt->bind_result($id, $name, $price);
             }
 
-            $displayedRowCount = true;
+            $displayedRowCount = false;
 
             while ($stmt->fetch()) {
               if (!$displayedRowCount) {
