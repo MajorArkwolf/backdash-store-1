@@ -95,6 +95,7 @@ header {
     float: left;
     overflow: hidden;
     z-index: 10;
+    height: 48px;
 }
 
 .dropdown .dropbtn {
