@@ -255,9 +255,8 @@ header {
 }
 
 .navbar .search-container {
+    display: flex;
     float: right;
-    height: auto;
-    margin: 0 auto;
 }
 
 .navbar input[type=text] {
@@ -284,9 +283,8 @@ header {
     background: var(--button-hover-bg);
 }
 
-.search-container form {
-    width: 100%;
-    margin: 0 auto;
+.navbar form {
+    margin: auto;
 }
 
 @media screen and (max-width: 600px) {
@@ -309,7 +307,6 @@ header {
     }
 
     .navbar.responsive .search-container{
-        display: inline;
         float: none;
         text-align: left;
         padding-bottom: 10px;
