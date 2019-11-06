@@ -7,12 +7,11 @@ function addToCart() {
 
     if (localStorage.getItem("cart") === null) {
         cart = [];
-        cart.push({id: id, quantity: quantity})
     } else {
         cart = JSON.parse(localStorage.getItem("cart"));
-        cart.push({id: id, quantity: quantity})
     }
 
+    cart[id.value] = quantity.value;
     localStorage.setItem("cart", JSON.stringify(cart));
     console.log(cart);
 }
