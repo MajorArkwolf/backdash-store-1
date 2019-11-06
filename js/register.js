@@ -42,7 +42,7 @@ function CheckInput(){
     count++;
     v_email.textContent = "";
   } else {
-    //v_email.textContent = "Please enter a valid email!";
+    v_email.textContent = "Please enter a valid email!";
   }
   if (name.value != "") {
     count++;
@@ -69,7 +69,7 @@ function CheckInput(){
   }
 
   if (count == 5) {
-    return true;
+    //return true;
   } else {
     return false;
   }
