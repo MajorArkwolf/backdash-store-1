@@ -30,18 +30,24 @@
           Shopping Cart
         </h3>
         <table class="cart">
-        <tr>
-          <th id="name">Name</th>
-          <th id="quantity">Quantity</th>
-          <th id="price">Price</th>
-          <th id="total">Total</th>
-        </tr>
-        <tr>
-          <td>Button</td>
-          <td>5</td>
-          <td>$2</td>
-          <td>$10</td>
-        </tr>
+          <tr>
+            <th id="name">Name</th>
+            <th id="quantity">Quantity</th>
+            <th id="price">Price</th>
+            <th id="total">Total</th>
+          </tr>
+          <tr>
+            <td>Button</td>
+            <td>5</td>
+            <td>$2</td>
+            <td>$10</td>
+          </tr>
+          <tr>
+            <td>Hitbox</td>
+            <td>1</td>
+            <td>$149.99</td>
+            <td>$149.99</td>
+          </tr>
         </table>
       </div>
     </div>
