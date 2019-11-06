@@ -33,10 +33,11 @@
              $stmt->bind_result($id, $name, $email, $address, $admin);
              $stmt->fetch();
           }
-          echo '<p><b>ID:</b> ' . $id . '</p>';
-          echo '<p><b>Email:</b> ' . $email . '</p>';
-          echo '<p><b>Name:</b> ' . $name . '</p>';
-          echo '<p><b>Address:</b> ' . $address . '</p>';
+          echo '<form id="update" onsubmit="return CheckInput();" action="" method="POST">'
+          echo 'Email: <input type="textbox" name="email" id="email">' . $email . '</input></p>';
+          echo 'Name: <input type="textbox" name="name" id="email">' . $name . '</input></p>';
+          echo 'Address: <input type="textbox" name="address" id="email">' . $address . '</input></p>';
+          echo '<button type="submit" id="submitbutton" disabled>Submit</button>'
           if($admin == 1){
             echo '<p><b>Admin:</b> True </p>';
           }
