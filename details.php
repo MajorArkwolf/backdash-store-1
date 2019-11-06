@@ -57,7 +57,19 @@
          ?>
          <br></br>
          <h2>Order History</h2>
-         <p>coming soon</p>
+         <?php
+           $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
+
+           if($stmt = $mysqli->prepare("select id, totalprice, salesnotes from ShopTransaction where id = ?")) {
+              $stmt->bind_param("i", $_SESSION['id']);
+              $stmt->execute();
+              $stmt->bind_result($id, $totalprice, $salesnotes);
+              $stmt->fetch();
+           }
+           while ($stmt->fetch()) {
+             echo '<p> Transaction ID: ' . $id . " Total Price: " . $totalprice . "Sales Notes :". $salesnotes;
+           }
+          ?>
          <br></br>
          <?php
             if($_SESSION["admin"]) {
