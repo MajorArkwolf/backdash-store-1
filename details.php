@@ -35,10 +35,10 @@
              $stmt->fetch();
           }
           echo '<form id="update" onsubmit="return CheckInput();" action="" method="POST">'
-          echo 'Email: <input type="textbox" name="email" id="email">' . $email . '</input></p>';
-          echo 'Name: <input type="textbox" name="name" id="email">' . $name . '</input></p>';
-          echo 'Address: <input type="textbox" name="address" id="email">' . $address . '</input></p>';
-          echo '<button type="submit" id="submitbutton" disabled>Submit</button>'
+          echo '<p>Email: <input type="textbox" name="email" id="email">' . $email . '</input></p>';
+          echo '<p>Name: <input type="textbox" name="name" id="email">' . $name . '</input></p>';
+          echo '<p>Address: <input type="textbox" name="address" id="email">' . $address . '</input></p>';
+          echo '<p><button type="submit" id="submitbutton" disabled>Submit</button>'
           echo '</form>'
           if($admin == 1){
             echo '<p><b>Admin:</b> True </p>';
