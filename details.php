@@ -49,6 +49,7 @@
           echo '<p>Password: <input type="password" name="userPassword" id="userPassword" onblur="CheckPassword()"></input></p>';
           echo '<p>Confirm Password: <input type="password" id="userPassword2" onblur="CheckPassword()"></input></p>';
           echo '<p id="passwordverify"></p>';
+          echo '<button type="submit" id="submitbutton2" disabled>Submit</button>';
           echo '</form';
          ?>
       </div>
