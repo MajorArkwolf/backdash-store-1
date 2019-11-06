@@ -31,7 +31,7 @@
         <h2>Admin Page</h2>
         <br></br>
         <h3>Add Product</h3>
-        <form id="newproduct" onsubmit="" action="" method="POST">
+        <form id="newproduct" onsubmit="CheckProduct();" action="" method="POST">
           <p>Product Name: <input type="textbox" name="name" id="name"></input></p>
           <p>Product Description: <input type="textbox" name="description" id="description"></input></p>
           <?php
@@ -50,7 +50,7 @@
           <p>Price: <input type="textbox" name="price" id="price"></input></p>
           <p>Stock: <input type="textbox" name="stock" id="stock"></input></p>
           <p>IMAGE UPLOADER COMING SOON</p>
-          <button type="submit" id="submitbutton" disabled>Submit</button>
+          <button type="submit" id="submitbutton">Submit</button>
         </form>
         <br></br>
         <h3>Current Product List</h3>
@@ -63,7 +63,7 @@
           }
 
           while ($stmt->fetch()) {
-            echo '<p><button type="submit" value="'. $id . '">DELETE</button> <button type="submit" value="'. $id . '">VIEW</button> ID: ' . $id . ' Name: '. $name . ' Price: ' . $price . '</p>';
+            echo '<p><button type="submit" value="'. $id . '">DELETE</button> <a href="product.php?id='. $id .'" role="button">VIEW</a> ID: ' . $id . ' Name: '. $name . ' Price: ' . $price . '</p>';
           }
         ?>
       </div>

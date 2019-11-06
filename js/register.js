@@ -69,7 +69,7 @@ function CheckInput(){
   }
 
   if (count == 5) {
-    //return true;
+    return true;
   } else {
     return false;
   }

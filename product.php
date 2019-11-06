@@ -57,6 +57,7 @@
         </p>
       </div>
     </div>
+    <script src="productchecker.js"></script>
     <script src="navbar.js"></script>
   </body>
 </html>
