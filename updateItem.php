@@ -38,12 +38,12 @@
 
             if($_SESSION['admin']) {
               $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
-              $query = "update Products P set P.name = ?, P.description = ?, P.price = ?, P.stock = ? where P.id = ?";
+              $query = "update Products P set P.name = ?, P.description = ?, P.price = ?, P.stock = ?, P.category = ? where P.id = ?";
 
               if ($stmt = $mysqli->prepare($query)) {
-                  $stmt->bind_param("ssdii", $_GET['name'], $_GET['description'],
+                  $stmt->bind_param("ssdiii", $_GET['name'], $_GET['description'],
                     doubleval($_GET['price']), intval($_GET['stock']),
-                    intval($_GET['id']));
+                    intval($_GET['category']), intval($_GET['id']));
                   $stmt->execute();
 
                   echo "Update successfully!";
