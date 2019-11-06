@@ -28,7 +28,7 @@
         <h2>
           Register
         </h2>
-        <form id="register" action="return CheckInput();" method="POST">
+        <form id="register" onsubmit="return CheckInput();" method="POST">
           <p>Email: <input type="textbox" name="email" id="email"></input></p>
           <p>Name: <input type="textbox" name="name" id="name"></input></p>
           <p>Password: <input type="password" name="userPassword" id="userPassword" onblur="CheckPassword()"></input></p>
