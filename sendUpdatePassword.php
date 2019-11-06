@@ -20,7 +20,7 @@
   }
 
   $password = $_POST["userPassword"];
-
+  $id = $_SESSION["id"];
 
   if (!$stmt->bind_param("si", $password, $id)) {
       echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
