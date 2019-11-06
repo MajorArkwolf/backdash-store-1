@@ -51,7 +51,7 @@
 
                 if ($stock >= 1) {
                   echo '<form id="add-to-cart" action="javascript:addToCart();">';
-                  echo '<input id="id" type="hidden" name="id" value="{$id}">';
+                  echo '<input id="productId" type="hidden" name="id" value="{$id}'>';
                   echo   '<input id="quantity-picker" type="number" name="quantity" value="1" min="1">';
                   echo   '<button type="submit" class="submit-button" name="submit">';
                   echo     '<i class="fa fa-shopping-cart"></i> Add to cart';
@@ -70,15 +70,15 @@
                   <h3 id='update-details'>Update product details</h3>
 
                   <form class='input-form' action='updateItem.php'>
-                    <input id='updateId' type='hidden' name='id' value='{$id}'>
+                    <input id='id' type='hidden' name='id' value='{$id}'>
                     <label for='name'>Name</label>
-                    <input id='updateName' type='text' updateName='updateName' value='{$name}'>
-                    <label for='updatePrice'>updatePrice</label>
-                    <input id='updatePrice' type='text' updateName='updatePrice' value='{$price}'>
-                    <label for='updateStock'>updateStock</label>
-                    <input id='updateStock' type='text' updateName='updateStock' value='{$stock}'>
-                    <label for='updateDescription'>updateDescription</label>
-                    <textarea name='updateDescription' id='updateDescription' >{$description}</textarea>
+                    <input id='name' type='text' name='name' value='{$name}'>
+                    <label for='price'>Price</label>
+                    <input id='price' type='text' name='price' value='{$price}'>
+                    <label for='stock'>Stock</label>
+                    <input id='stock' type='text' name='stock' value='{$stock}'>
+                    <label for='description'>Description</label>
+                    <textarea name='description' id='description' >{$description}</textarea>
                     <button type='submit'>Update</button>
                   </form>
                 </div>";
