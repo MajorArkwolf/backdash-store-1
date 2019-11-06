@@ -256,6 +256,8 @@ header {
 
 .navbar .search-container {
     float: right;
+    height: auto;
+    margin: 0 auto;
 }
 
 .navbar input[type=text] {
@@ -282,6 +284,11 @@ header {
     background: var(--button-hover-bg);
 }
 
+.search-container form {
+    width: 100%;
+    margin: 0 auto;
+}
+
 @media screen and (max-width: 600px) {
     .navbar a:not(:first-child), .dropdown .dropbtn {
         display: none;
@@ -306,6 +313,7 @@ header {
         float: none;
         text-align: left;
         padding-bottom: 10px;
+        height: 58px;
     }
 
     .navbar .search-container button {
