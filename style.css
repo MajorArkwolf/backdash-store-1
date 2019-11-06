@@ -336,8 +336,8 @@ header {
 }
 
 .cart {
-  border-collapse: collapse;
-  width: 100%;
+    border-collapse: collapse;
+    width: 100%;
 }
 
 .cart-title {
@@ -382,8 +382,16 @@ header {
 }
 
 .quantity-picker {
-    width: 30px;
+    width: 40px;
     height: 30px;
+}
+
+.submit-button {
+    background-color: var(--bg);
+    font-size: 18px;
+    color: white;
+    width: 115px;
+    padding: 8px 8px;
 }
 
 @media screen and (max-width: 600px) {
