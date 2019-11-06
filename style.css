@@ -299,13 +299,13 @@ header {
 
     .navbar .search-container{
         display: none;
-        padding-bottom: 10px;
     }
 
     .navbar.responsive .search-container{
         display: inline;
         float: none;
         text-align: left;
+        padding-bottom: 10px;
     }
 
     .navbar .search-container button {
