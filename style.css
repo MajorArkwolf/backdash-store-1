@@ -95,10 +95,9 @@ header {
     float: left;
     overflow: hidden;
     z-index: 10;
-    height: 48px;
 }
 
-.dropdown .dropbtn {
+.dropbtn {
     font-size: 1.05em;
     border: none;
     outline: none;
@@ -318,7 +317,7 @@ header {
 
     .navbar.responsive .dropdown {float: none;}
     .navbar.responsive .dropdown-content {position: relative;}
-    .navbar.responsive .dropdown .dropbtn {
+    .navbar.responsive .dropbtn {
         display: block;
         width: 100%;
         text-align: left;
