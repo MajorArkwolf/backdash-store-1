@@ -49,7 +49,7 @@
                   if ($stmt->num_rows > 1) {
                     echo "s";
                   }
-                  echo " for '{$_GET['text']}':</h3>";
+                  echo " for '{$_GET['text']}'.</h3>";
                 } else {
                   echo "<h3>No results found for '{$_GET['text']}'.</h3>";
                 }
