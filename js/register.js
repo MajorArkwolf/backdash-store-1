@@ -42,30 +42,30 @@ function CheckInput(){
     count++;
     v_email.innerHTML = "";
   } else {
-    v_email.innerHTML = "Please enter a valid email!";
+    //v_email.innerHTML = "Please enter a valid email!";
   }
   if (name.value != "") {
     count++;
     v_name.innerHTML = "";
   } else {
-    v_name.innerHTML = "Please enter a name!";
+    //v_name.innerHTML = "Please enter a name!";
   }
   if (password.value != ""){
     count++;
   } else {
-    v_password.innerHTML = "Password can not be blank!";
+    //v_password.innerHTML = "Password can not be blank!";
   }
   if(phone.value != "") {
     count++;
     v_phone.innerHTML = "";
   } else {
-    v_phone.innerHTML = "Please enter a phone number!";
+    //v_phone.innerHTML = "Please enter a phone number!";
   }
   if(address.value != "") {
     count++;
     v_address.innerHTML = "";
   } else {
-    v_address.innerHTML = "Please enter an address in!";
+    //v_address.innerHTML = "Please enter an address in!";
   }
 
   if (count == 5) {
