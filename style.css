@@ -299,19 +299,18 @@ header {
 
     .navbar .search-container{
         display: none;
+        padding-bottom: 10px;
     }
 
     .navbar.responsive .search-container{
-        display: initial;
+        display: inline;
         float: none;
-        display: block;
         text-align: left;
     }
 
     .navbar .search-container button {
-        display: initial;
+        display: inline;
         float: none;
-        display: block;
         text-align: left;
     }
 
