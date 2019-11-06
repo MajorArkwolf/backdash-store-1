@@ -333,7 +333,7 @@ header {
     padding: 1em;
 }
 
-.cart {
+#cart {
     border-collapse: collapse;
     width: 100%;
 }

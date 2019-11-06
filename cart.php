@@ -29,7 +29,7 @@
         <h3 class="cart-title">
           Shopping Cart
         </h3>
-        <table class="cart">
+        <table id="cart">
           <tr>
             <th id="name">Name</th>
             <th id="quantity">Quantity</th>
