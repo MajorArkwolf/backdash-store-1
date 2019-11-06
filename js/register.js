@@ -8,6 +8,7 @@ function CheckPassword(){
       if(x.value != "" && y.value != "") {
         if (x.value == y.value) {
           document.getElementById('submitbutton').disabled = false;
+          document.getElementById("verify").innerHTML = "";
         } else {
           document.getElementById("verify").innerHTML = "Your passwords do not match!";
         }
