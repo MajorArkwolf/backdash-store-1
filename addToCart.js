@@ -22,4 +22,6 @@ function addToCart() {
     for (const [key, value] of Object.entries(cart)) {
         console.log(key, value);
     }
+
+    alert("Added to cart")
 }
