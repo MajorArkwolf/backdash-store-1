@@ -41,11 +41,11 @@
                $stmt->execute();
                $stmt->bind_result($id, $name);
             }
-            echo '<select>';
+            echo '<p>Category: <select>';
             while ($stmt->fetch()) {
               echo '<option value="' . $id .'" >'. $name . '</option>';
             }
-            echo '</select>'
+            echo '</select></p>'
           ?>
           <p>Price: <input type="textbox" name="price" id="price"></input></p>
           <p>Stock: <input type="textbox" name="stock" id="stock"></input></p>
