@@ -8,7 +8,7 @@ Storage.prototype.getObj = function(key) {
 
 function addToCart() {
     let quantity = parseInt(document.getElementById("quantity-picker").value);
-    let id = parseInt(document.getElementById("id").value);
+    let id = parseInt(document.getElementById("productId").value);
     let cart = localStorage.getObj("cart");
 
     if (cart === null) {
