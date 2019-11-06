@@ -38,7 +38,7 @@
           </form>
         <br></br>
         <h3>Add Product</h3>
-        <form id="newproduct" onsubmit="return CheckProduct();" action="login.php" method="POST">
+        <form id="newproduct" onsubmit="return CheckProduct();" action="sendNewProduct.php" method="POST">
           <p>Product Name: <input type="textbox" name="pname" id="pname"></input></p>
           <p>Product Description: <input type="textbox" name="pdescription" id="pdescription"></input></p>
           <?php
