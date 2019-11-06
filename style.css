@@ -390,7 +390,6 @@ header {
 }
 
 input[type=number]::-webkit-inner-spin-button {
-    width: 30px;
     height: 30px;
 }
 
