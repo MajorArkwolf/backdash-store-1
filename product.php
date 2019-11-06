@@ -62,11 +62,11 @@
                       <input id='name' type='text' name='name' value='${name}'>
                     </div>
                     <div>
-                      <label for='price'>Name: </label>
+                      <label for='price'>Price: </label>
                       <input id='price' type='text' name='price' value='${price}'>
                     </div>
                     <div>
-                      <label for='description'>Name: </label>
+                      <label for='description'>Description: </label>
                       <input id='description' type='text' name='description' value='${description}'>
                     </div>
 
