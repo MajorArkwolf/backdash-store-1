@@ -1,5 +1,6 @@
 function addToCart() {
     let quantity = document.getElementById("quantity-picker");
+    let id = document.getElementById("id");
 
-    alert(quantity.value);
+    alert(quantity.value + ", " + id.value);
 }
