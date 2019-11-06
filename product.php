@@ -56,7 +56,7 @@
                 <div class='product-update'>
                   <h3>Update product details</h3>
 
-                  <form class='input-form' action='product-update.php'>
+                  <form class='input-form' action='updateItem.php'>
                     <label for='name'>Name</label>
                     <input id='name' type='text' name='name' value='{$name}'>
                     <label for='price'>Price</label>
