@@ -28,7 +28,7 @@
         <h2>
           Register
         </h2>
-        <form id="register" onsubmit="return CheckInput();" method="POST">
+        <form id="register" onsubmit="return CheckInput();" action="sendRegistration.php" method="POST">
           <p>Email: <input type="textbox" name="email" id="email"></input></p>
           <p>Name: <input type="textbox" name="name" id="name"></input></p>
           <p>Password: <input type="password" name="userPassword" id="userPassword" onblur="CheckPassword()"></input></p>
@@ -36,7 +36,7 @@
           <p id="verify"></p>
           <p>Phone Number: <input type="textbox" name="phonenumber" id="phonenumber"></input></p>
           <p>Address: <input type="textbox" name="address" id="address"></input></p>
-          <button type="submit" id="submitbutton" onclick="" disabled>Submit</button>
+          <button type="submit" id="submitbutton" disabled>Submit</button>
         </form>
         <p>If you are already registered please <a href="login.php">login</a></p>
       </div>
