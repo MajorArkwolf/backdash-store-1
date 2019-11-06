@@ -26,7 +26,6 @@
         echo $myStr;
       ?>
       <div class="text-area">
-        <div class="product-grid">
           <?php
             error_reporting(E_ALL);
             ini_set("display_errors", 1);
@@ -43,6 +42,7 @@
 
             $displayedRowCount = false;
 
+
             while ($stmt->fetch()) {
               if (!$displayedRowCount) {
                 if ($stmt->num_rows > 0) {
@@ -55,6 +55,7 @@
                   echo "<h3>No results found for {$_GET['text']} </h3>";
                 }
 
+                echo "<div class='product-grid'>";
                 $displayedRowCount = false;
               }
 
