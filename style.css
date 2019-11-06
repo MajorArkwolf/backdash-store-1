@@ -389,7 +389,7 @@ header {
     text-align: center;
 }
 
-input[type=number]:hover::-webkit-inner-spin-button {
+input[type=number]::-webkit-inner-spin-button {
     width: 30px;
     height: 30px;
 }
