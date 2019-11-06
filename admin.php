@@ -75,7 +75,6 @@
           ?>
           <p>Price: <input type="textbox" name="pprice" id="pprice"></input></p>
           <p>Stock: <input type="textbox" name="pstock" id="pstock"></input></p>
-          <p>IMAGE UPLOADER COMING SOON</p>
           <button type="submit" id="submitbutton">Submit</button>
         </form>
         <br></br>
