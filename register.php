@@ -14,7 +14,7 @@
     <div class="content">
       <header>
         <div>
-          <h1>Registar</h1>
+          <h1>Register</h1>
         </div>
       </header>
       <?php
