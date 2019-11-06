@@ -44,7 +44,8 @@
 
             while ($stmt->fetch()) {
               if (!$displayedRowCount) {
-                if ($stmt->num_rows > 0) {
+                echo $stmt->num_rows;
+                if ($stmt->num_rows >= 1) {
                   echo "<h3>Found {$stmt->num_rows} result";
                   if ($stmt->num_rows > 1) {
                     echo "s";
