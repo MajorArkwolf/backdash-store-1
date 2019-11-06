@@ -27,12 +27,12 @@
                 <th>stock</th>
               </tr>';
 
-      echo '<tr>'
-      echo '<td>{$id}</td>'
-      echo '<td>{$name}</td>'
-      echo '<td>{$description}</td>'
-      echo '<td>{$price}</td>'
-      echo '<td>{$stock}</td>'
+      echo '<tr>';
+      echo '<td>{$id}</td>';
+      echo '<td>{$name}</td>';
+      echo '<td>{$description}</td>';
+      echo '<td>{$price}</td>';
+      echo '<td>{$stock}</td>';
       echo '</tr>';
       echo '</table>';
     ?>
