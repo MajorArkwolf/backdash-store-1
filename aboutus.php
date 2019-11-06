@@ -36,6 +36,14 @@
           <li>All products are bought from high quality suppliers.</li>
           <li>If its just "not right", ship it back and we will replace it.</li>
         </ul>
+        <br></br>
+        <h2>Contact Us</h2>
+        <p>Need to contact us?</p>
+        <ul>
+          <li><b>Email:</b> admin@doubletap.com.au</li>
+          <li><b>Phone:</b> 1300 655 506</li>
+          <li><b>Address:</b> 48 Ranch Road, Roy Hill, 6888, WA, Australia</li>
+        </ul>
       </div>
     </div>
     <script src="navbar.js"></script>
