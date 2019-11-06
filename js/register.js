@@ -11,6 +11,7 @@ function CheckPassword(){
           document.getElementById("passwordverify").innerHTML = "";
         } else {
           document.getElementById("passwordverify").innerHTML = "Your passwords do not match!";
+          document.getElementById('submitbutton').disabled = true;
         }
       }
     }
