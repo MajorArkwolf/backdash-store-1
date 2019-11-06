@@ -88,5 +88,6 @@
     </div>
     <script src="productchecker.js"></script>
     <script src="navbar.js"></script>
+    <script src="cart.js"></script>
   </body>
 </html>
