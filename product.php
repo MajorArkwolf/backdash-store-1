@@ -83,10 +83,14 @@
                     <label for='name'>Name</label>
                     <input id='name' type='text' name='name' value='{$name}'>
                     <label for='category'>Category</label>
-                    <select name='category' id='category' value='{$category}'>";
+                    <select name='category' id='category'>";
 
                     while ($stmtCat->fetch()) {
-                      echo "<option value='{$categoryId}'>{$categoryName}</option>";
+                        echo "<option value='{$categoryId}'>{$categoryName} ";
+                      if ($category == $categoryId) {
+                        echo "selected='selected'"
+                      }
+                      echo "</option>";
                     }
 
                     echo "</select>
