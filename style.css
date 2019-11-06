@@ -297,6 +297,17 @@ header {
         background-color: var(--content-bg);
     }
 
+    .navbar .search-container{
+        display: none;
+    }
+
+    .navbar.responsive .search-container{
+        display: initial;
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
     .content {
         -webkit-box-shadow: initial;
         -moz-box-shadow: initial;

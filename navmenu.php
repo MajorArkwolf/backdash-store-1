@@ -47,7 +47,7 @@ echo '<button class="dropbtn">Account
         </div>
         <div class="search-container">
     <form action="search.php">
-      <input type="text" placeholder="Search..." name="text">
+      <input type="text" placeholder="Search..." name="text" required>
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
   </div>
