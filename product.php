@@ -28,9 +28,6 @@
       <div class="text-area">
         <p>
           <?php
-          error_reporting(E_ALL);
-          ini_set("display_errors", 1);
-
             $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
             if($stmt = $mysqli->prepare("select P.id, P.name, P.description, P.price from Products P where P.id = ?")) {
@@ -42,7 +39,7 @@
 
             echo "<div class='product-container'>";
               echo "<div class='product-image-big'>";
-                echo "<img src='img/" . $id . ".png' height='100' width='100'>";
+                echo "<img src='img/product/" . $id . ".png' height='100' width='100'>";
               echo "</div>";
               echo "<div class='product-info'>";
                 echo "<div class='product-info-listing'>";
@@ -53,6 +50,12 @@
                 echo "<div class='buy-button'><i class='fa fa-shopping-cart'></i> Add to cart</div>";
               echo "</div>";
             echo "</div>";
+
+            if($_SESSION['admin']) {
+              echo '<p><b>Admin Token:</b> True </p>';
+            } else {
+              echo '<p>Normal user</p>';
+            }
           ?>
         </p>
       </div>
