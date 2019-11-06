@@ -52,9 +52,15 @@
             echo "</div>";
 
             if($_SESSION['admin']) {
-              echo '<p><b>Admin Token:</b> True </p>';
-            } else {
-              echo '<p>Normal user</p>';
+              echo '
+                <div class="product-update-container">
+                  <form action="product-update.php">
+                  <input type="text" placeholder="Name" value="{$name}" name="name" required>
+                  <input type="text" placeholder="Price" value="{$price}" name="price" required>
+                  <input type="text" placeholder="Description" value="{$description}" name="description" required>
+                  <button type="submit">Update</button>
+                  </form>
+                </div>';
             }
           ?>
         </p>
