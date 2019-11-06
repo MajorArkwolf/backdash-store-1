@@ -1,4 +1,5 @@
 <?php
+  header("refresh:5;url=product.php?id={$_GET['id']}");
   session_start();
 ?>
 <!DOCTYPE html>
