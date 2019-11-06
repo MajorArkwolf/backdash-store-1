@@ -48,24 +48,24 @@ function CheckInput(){
     count++;
     v_name.textContent = "";
   } else {
-    //v_name.textContent = "Please enter a name!";
+    v_name.textContent = "Please enter a name!";
   }
   if (password.value != ""){
     count++;
   } else {
-    //v_password.textContent = "Password can not be blank!";
+    v_password.textContent = "Password can not be blank!";
   }
   if(phone.value != "") {
     count++;
     v_phone.textContent = "";
   } else {
-    //v_phone.textContent = "Please enter a phone number!";
+    v_phone.textContent = "Please enter a phone number!";
   }
   if(address.value != "") {
     count++;
     v_address.textContent = "";
   } else {
-    //v_address.textContent = "Please enter an address in!";
+    v_address.textContent = "Please enter an address in!";
   }
 
   if (count == 5) {
