@@ -57,20 +57,14 @@
                   <h3>Update product details</h3>
 
                   <form class='input-form' action='product-update.php'>
-                    <div>
-                      <label for='name'>Name: </label>
-                      <input id='name' type='text' name='name' value='{$name}'>
-                    </div>
-                    <div>
-                      <label for='price'>Price: </label>
-                      <input id='price' type='text' name='price' value='{$price}'>
-                    </div>
-                    <div>
-                      <label for='description'>Description: </label>
-                      <textarea name='description' id='description' maxlength='500'
-                                value='{$description}'></textarea>
-                    </div>
-
+                    <label for='name'>Name: </label>
+                    <input id='name' type='text' name='name' value='{$name}'>
+                    <label for='price'>Price: </label>
+                    <input id='price' type='text' name='price' value='{$price}'>
+                    <label for='description'>Description: </label>
+                    <textarea name='description' id='description' maxlength='500'>
+                      {$description}
+                    </textarea>
                     <button type='submit'>Update</button>
                   </form>
                 </div>";
