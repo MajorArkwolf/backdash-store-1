@@ -57,6 +57,12 @@
          ?>
          <br></br>
          <h2>Order History</h2>
+         <table id="cart">
+         <tr>
+           <th id="name">Notes</th>
+           <th id="quantity">ID</th>
+           <th id="price">Price</th>
+         </tr>
          <?php
            $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
@@ -66,7 +72,11 @@
               $stmt->bind_result($id, $totalprice, $salesnotes);
            }
            while ($stmt->fetch()) {
-             echo '<p> Transaction ID: ' . $id . ' Total Price: ' . $totalprice . 'Sales Notes :'. $salesnotes . '</p>';
+             echo '<tr>';
+             echo '<td>'. $salesnotes .'<td>';
+             echo '<td>'. $id .'<td>';
+             echo '<td>'. $totalprice .'<td>';
+             echo '</tr>';
            }
           ?>
          <br></br>
