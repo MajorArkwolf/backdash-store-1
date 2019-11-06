@@ -38,7 +38,7 @@
             while ($stmt->fetch()) {
               echo "<a class='product' href='product.php?id=" . $id . "'>";
                   echo "<div class='product-image'>";
-                    echo "<img src='img/" . $id . ".png' height='100' width='100'>";
+                    echo "<img src='img/product/" . $id . ".png' height='100' width='100'>";
                   echo "</div>";
                 echo "<div class='product-title'>" . $name . "</div>";
                 echo "<div class='product-price'>" . "$" . $price . "</div>";
