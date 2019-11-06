@@ -26,9 +26,16 @@
           echo $myStr;
       ?>
       <div class="text-area">
-        <p>
-          Welcome to the Backdash store.
-        </p>
+        <h2>Welcome to the Backdash store.</h2>
+        <p>Backdash is an online company based out of Australia built to serve the needs of consumers/players
+          who want high-quality products without long wait times in Australia. Backdash caters to games that
+          require specific hardware for games to be played optimally and this means that products that are cheap
+          or break easily will not be stocked. Our customers want to know that the product they have bought from us
+          will keep working from when they are practicing in the living room to competing on the grand stage.
+          Backdash will ensure that no customer is ever disappointed.</p>
+        <p>Backdash is founded by members who share a passion in the esports scene and allocates 5-10%
+          of the price depending on the product to be held aside, which is used to sponsor tournaments/players
+          and provide equipment to sick children who need an escape outlet from there everyday traumas. </p>
       </div>
     </div>
     <script src="navbar.js"></script>
