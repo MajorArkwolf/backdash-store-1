@@ -29,7 +29,7 @@ function CheckInput(){
   var password = document.getElementById("userPassword");
   var phone = document.getElementById("phonenumber");
   var address = document.getElementById("address");
-  if(validateEmail(email.value) && email.value != "") {
+  if(validateEmail(email.value)) {
     count++;
   }
   if (name.value != "") {
