@@ -335,22 +335,33 @@ header {
     padding: 1em;
 }
 
-.cart table {
-    overflow-x: auto;
-    border: 1px solid black;
+.cart {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.cart td, .cart th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.cart tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.cart tr:hover {
+    background-color: #ddd;
 }
 
 .cart th {
-    background-color: #4CAF50;
-    color: white;
-}
-.cart th, td {
-  border-bottom: 1px solid #ddd;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
 }
 
-.cart tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
+
 
 @media screen and (max-width: 600px) {
     html {
