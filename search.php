@@ -56,7 +56,7 @@
                 }
 
                 echo "<div class='product-grid'>";
-                $displayedRowCount = false;
+                $displayedRowCount = true;
               }
 
               echo "<a class='product' href='product.php?id=" . $id . "'>";
