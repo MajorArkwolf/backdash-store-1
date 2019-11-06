@@ -40,25 +40,20 @@
                $stmt->bind_result($id, $name, $price);
             }
 
-            $displayedRowCount = false;
+            echo $stmt->num_rows;
+            if ($stmt->num_rows >= 1) {
+              echo "<h3>Found {$stmt->num_rows} result";
+              if ($stmt->num_rows > 1) {
+                echo "s";
+              }
+              echo " for '{$_GET['text']}'.</h3>";
+            } else {
+              echo "<h3>No results found for '{$_GET['text']}'.</h3>";
+            }
+
+            echo "<div class='product-grid'>";
 
             while ($stmt->fetch()) {
-              if (!$displayedRowCount) {
-                echo $stmt->num_rows;
-                if ($stmt->num_rows >= 1) {
-                  echo "<h3>Found {$stmt->num_rows} result";
-                  if ($stmt->num_rows > 1) {
-                    echo "s";
-                  }
-                  echo " for '{$_GET['text']}'.</h3>";
-                } else {
-                  echo "<h3>No results found for '{$_GET['text']}'.</h3>";
-                }
-
-                echo "<div class='product-grid'>";
-                $displayedRowCount = true;
-              }
-
               echo "<a class='product' href='product.php?id=" . $id . "'>";
                   echo "<div class='product-image'>";
                     echo "<img src='img/product/" . $id . ".png' height='100' width='100'>";
