@@ -30,10 +30,10 @@
           <?php
             $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
-            if ($stmt = $mysqli->prepare("select P.id, P.name, P.description, P.price, P.quantity from Products P where P.id = ?")) {
+            if ($stmt = $mysqli->prepare("select P.id, P.name, P.description, P.price, P.stock from Products P where P.id = ?")) {
                $stmt->bind_param("i", intval($_GET['id']));
                $stmt->execute();
-               $stmt->bind_result($id, $name, $description, $price, $quantity);
+               $stmt->bind_result($id, $name, $description, $price, $stock);
                $stmt->fetch();
             }
 
@@ -61,10 +61,10 @@
                     <input id='name' type='text' name='name' value='{$name}'>
                     <label for='price'>Price</label>
                     <input id='price' type='text' name='price' value='{$price}'>
-                    <label for='quantity'>Quantity</label>
-                    <input id='quantity' type='text' name='quantity' value='{$quantity}'>
+                    <label for='stock'>Stock</label>
+                    <input id='stock' type='text' name='stock' value='{$stock}'>
                     <label for='description'>Description</label>
-                    <textarea name='description' id='description' resize: vertical;>{$description}</textarea>
+                    <textarea name='description' id='description' >{$description}</textarea>
                     <button type='submit'>Update</button>
                   </form>
                 </div>";
