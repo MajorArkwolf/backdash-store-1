@@ -303,16 +303,14 @@ header {
     }
 
     .navbar.responsive .search-container{
-        display: initial;
+        display: inline;
         float: none;
-        display: block;
         text-align: left;
     }
 
     .navbar .search-container button {
-        display: initial;
+        display: inline;
         float: none;
-        display: block;
         text-align: left;
     }
 
