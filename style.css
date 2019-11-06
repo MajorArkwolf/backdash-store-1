@@ -11,6 +11,8 @@
     --navbar-hover-bg: #555;
     --dropdown-bg: #f0f0f0;
     --dropdown-hover-bg: #ddd;
+    --button-bg: #ddd;
+    --button-hover-bg: #eee;
 }
 
 *, html {
@@ -268,14 +270,14 @@ header {
     padding: 6px 10px;
     margin-top: 8px;
     margin-right: 16px;
-    background: #ddd;
+    background: var(--button-bg);
     font-size: 17px;
     border: none;
     cursor: pointer;
 }
 
 .navbar .search-container button:hover {
-    background: #ccc;
+    background: var(--button-hover-bg);
 }
 
 @media screen and (max-width: 600px) {
