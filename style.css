@@ -87,6 +87,8 @@ header {
 .navbar .icon {
     display: none;
     font-size: 0.95em;
+    width: 48px;
+    height: 48px;
 }
 
 .dropdown {
