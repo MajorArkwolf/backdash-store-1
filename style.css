@@ -299,6 +299,7 @@ header {
 
     .navbar .search-container{
         display: none;
+        padding-bottom: 10px;
     }
 
     .navbar.responsive .search-container{
