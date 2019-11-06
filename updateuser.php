@@ -40,26 +40,28 @@
              $stmt->bind_result($id, $name, $email, $address, $admin, $phone);
              $stmt->fetch();
           }
-          echo '<h3>Update Account Details</h3>';
           echo '<form id="update" onsubmit="" action="sendUpdate.php" method="POST">';
           echo '<p>Email: <input type="textbox" name="email" id="email" value="' . $email . '"></input></p>';
           echo '<p>Name: <input type="textbox" name="name" id="name" value="' . $name . '"></input></p>';
           echo '<p>Phone: <input type="textbox" name="phone" id="phone" value="' . $phone . '"></input></p>';
           echo '<p>Address:</p> <p><textarea rows="4" cols="50" name="address" id="address">' . $address . '</textarea></p>';
+          if($id == 1) {
+            echo '<p>Is Admin? <input type="checkbox" name="isAdmin" value="1" checked></input></p>';
+          } else {
+            echo '<p>Is Admin? <input type="checkbox" name="isAdmin" value="1"></input></p>';
+          }
           echo '<p><button type="submit" id="submitbutton2">Submit</button>';
           echo '</form>';
           echo '<br></br>';
           echo '<h3>Update Password</h3>';
           echo '<form id="updatePassword" onsubmit="" action="sendUpdatePassword.php" method="POST">';
-          echo '<p>Password: <input type="password" name="userPassword" id="userPassword" onblur="CheckPassword()"></input></p>';
-          echo '<p>Confirm Password: <input type="password" id="userPassword2" onblur="CheckPassword()"></input></p>';
-          echo '<p id="passwordverify"></p>';
+          echo '<p>ID: <input type="textbox" name="id" id="id" value="' . $id . '"></input></p>';
+          echo '<p>Password: <input type="password" name="userPassword" id="userPassword"></input></p>';
           echo '<button type="submit" id="submitbutton" disabled>Submit</button>';
           echo '</form>';
          ?>
       </div>
     </div>
-    <script type="text/javascript" src="js/register.js"></script>
     <script src="navbar.js"></script>
   </body>
 </html>
