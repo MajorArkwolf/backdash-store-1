@@ -29,6 +29,20 @@
         <h3>
           Shopping Cart
         </h3>
+        <table class="cart">
+        <tr>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Item Price</th>
+          <th>Item Total</th>
+        </tr>
+        <tr>
+          <td>Button</td>
+          <td>5</td>
+          <td>$2</td>
+          <td>$10</td>
+        </tr>
+        </table>
       </div>
     </div>
     <script src="navbar.js"></script>
