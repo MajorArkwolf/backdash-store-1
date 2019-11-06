@@ -335,10 +335,6 @@ header {
     padding: 1em;
 }
 
-.cart-container {
-   overflow-x: auto;
-}
-
 .cart {
   border-collapse: collapse;
   width: 100%;
@@ -353,19 +349,12 @@ header {
     background-color: #f2f2f2;
 }
 
-.cart tr:hover {
-    background-color: #ddd;
-}
-
 .cart th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 8px;
   text-align: left;
-  background-color: #4CAF50;
+  background-color: var(--navbar-bg);
   color: white;
 }
-
-
 
 @media screen and (max-width: 600px) {
     html {
