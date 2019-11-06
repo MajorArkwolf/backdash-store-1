@@ -344,6 +344,24 @@ header {
     padding-bottom: 10px;
 }
 
+#name {
+   width: 70%;
+}
+
+#quantity {
+   width: 10%;
+}
+
+#price {
+
+   width: 10%;
+}
+
+#total {
+
+   width: 10%;
+}
+
 .cart td, .cart th {
   border: 1px solid #ddd;
   padding: 8px;

@@ -31,10 +31,10 @@
         </h3>
         <table class="cart">
         <tr>
-          <th>Name</th>
-          <th>Quantity</th>
-          <th>Item Price</th>
-          <th>Item Total</th>
+          <th id="name">Name</th>
+          <th id="quantity">Quantity</th>
+          <th id="price">Price</th>
+          <th id="total">Total</th>
         </tr>
         <tr>
           <td>Button</td>
