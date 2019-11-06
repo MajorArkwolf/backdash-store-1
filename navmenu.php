@@ -1,10 +1,14 @@
 <?php
   session_start();
+    $a = "";
+  if(isset($_SESSION['admin'])){
+    $a .= '<a href="admin.php">Admin</a>';
+  }
   if (isset($_SESSION['loggedin'])) {
-    $a = '<a href="details.php">Details</a>';
+    $a .= '<a href="details.php">Details</a>';
     $a .= '<a href="sendLogout.php">Log Out</a>';
   } else {
-    $a = '<a href="login.php">Login</a>';
+    $a .= '<a href="login.php">Login</a>';
     $a .= '<a href="register.php">Register</a>';
   }
 
