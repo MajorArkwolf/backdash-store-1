@@ -1,8 +1,8 @@
-let table = document.getElementById("cart");
-
-function addToCart() {
-    alert("Hello")
+function populateCart() {
+    let cart = document.getElementById("cart");
 }
+
+populateCart();
 
 //let row = table.insertRow(1);
 //let cell1 = row.insertCell(0);
