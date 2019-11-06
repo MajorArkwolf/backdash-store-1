@@ -5,6 +5,8 @@ Storage.prototype.getObj = function(key) {
     return JSON.parse(this.getItem(key))
 }
 
+//localStorage.setObj("cart", []);
+
 function addToCart() {
     let quantity = parseInt(document.getElementById("quantity-picker").value);
     let id = parseInt(document.getElementById("id").value);
@@ -20,4 +22,8 @@ function addToCart() {
     localStorage.setObj("cart", cart);
 
     console.log(id + ": " + localStorage.getObj("cart")[id]);
+
+    cart.forEach((i) => {
+        console.log(i);
+    })
 }
