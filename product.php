@@ -56,18 +56,19 @@
                 <div class='product-update'>
                   <h3>Update product details</h3>
 
-                  <form action='product-update.php'>
+                  <form class='input-form' action='product-update.php'>
                     <div>
                       <label for='name'>Name: </label>
-                      <input id='name' type='text' name='name' value='${name}'>
+                      <input id='name' type='text' name='name' value='{$name}'>
                     </div>
                     <div>
                       <label for='price'>Price: </label>
-                      <input id='price' type='text' name='price' value='${price}'>
+                      <input id='price' type='text' name='price' value='{$price}'>
                     </div>
                     <div>
                       <label for='description'>Description: </label>
-                      <input id='description' type='text' name='description' value='${description}'>
+                      <textarea name='description' id='description' maxlength='500'
+                                value='{$description}'></textarea>
                     </div>
 
                     <button type='submit'>Update</button>
