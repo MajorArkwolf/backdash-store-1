@@ -15,15 +15,19 @@
   }
 
   /* Prepared statement, stage 1: prepare */
-  if (!($stmt = $mysqli->prepare("INSERT INTO Categories (name, description) VALUES (?,?)"))) {
+  if (!($stmt = $mysqli->prepare("INSERT INTO Products (name, description, price, category, stock) VALUES (?,?,?,?,?)"))) {
       echo "Prepare failed: (" . $mysqli->errno . ") " . $mysqli->error;
   }
 
-  $name = $_POST["cname"];
-  $description = $_POST["cdescription"];
+  $name = $_POST["pname"];
+  $description = $_POST["pdescription"];
+  $category = $_POST["pcategory"];
+  $price = $_POST["pprice"];
+  $stock = $_POST["pstock"];
 
 
-  if (!$stmt->bind_param("ss", $name, $description)) {
+
+  if (!$stmt->bind_param("ssisi", $name, $description, $price, $category, $stock)) {
       echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
   }
 
