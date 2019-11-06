@@ -40,7 +40,7 @@
           echo '<form id="update" onsubmit="" action="" method="POST">';
           echo '<p>Email: <input type="textbox" name="email" id="email" value="' . $email . '"></input></p>';
           echo '<p>Name: <input type="textbox" name="name" id="name" value="' . $name . '"></input></p>';
-          echo '<p>Password: <input type="password" name="userPassword" id="userPassword" onblur="CheckPassword()"></input></p>'
+          echo '<p>Password: <input type="password" name="userPassword" id="userPassword" onblur="CheckPassword()"></input></p>';
           echo '<p>Address: <textarea rows="4" cols="50" name="address" id="address"  value="' . $address . '"></textarea></p>';
           echo '<p><button type="submit" id="submitbutton" disabled>Submit</button>';
           echo '</form>';
