@@ -57,6 +57,7 @@
                   <h3>Update product details</h3>
 
                   <form class='input-form' action='updateItem.php'>
+                    <input id='id' type='hidden' name='id' value='{$id}'>
                     <label for='name'>Name</label>
                     <input id='name' type='text' name='name' value='{$name}'>
                     <label for='price'>Price</label>
