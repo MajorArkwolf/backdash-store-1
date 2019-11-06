@@ -82,10 +82,10 @@
                     if($stmtCat = $mysqli->prepare("select C.id, C.name from Categories C")) {
                       $stmtCat->execute();
                       $stmtCat->bind_result($categoryId, $categoryName);
-                    }
 
-                    while ($stmtCat->fetch()) {
-                      echo '<option value="' . $categoryId .'" >'. $categoryName . '</option>';
+                      while ($stmtCat->fetch()) {
+                        echo '<option value="' . $categoryId .'" >'. $categoryName . '</option>';
+                      }
                     }
 
                   echo "<label for='price'>Price</label>
