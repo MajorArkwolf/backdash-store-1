@@ -263,6 +263,7 @@ header {
     margin-top: 8px;
     font-size: 17px;
     border: none;
+    color: var(--fg);
 }
 
 .navbar .search-container button {
