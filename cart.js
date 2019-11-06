@@ -33,7 +33,7 @@ function populateCart() {
     let cart = localStorage.getObj("cart");
 
     for (const [key, value] of Object.entries(cart)) {
-        if (key != 0 || key != null) {
+        if (key != 0 && key != null) {
             console.log(key, value)
             updateTable(key)
         }
