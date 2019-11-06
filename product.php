@@ -53,12 +53,24 @@
 
             if($_SESSION['admin']) {
               echo "
-                <div class='product-update-container'>
+                <div class='product-update'>
+                  <h3>Update product details</h3>
+
                   <form action='product-update.php'>
-                  <input type='text' placeholder='Name' value='{$name}' name='name' required>
-                  <input type='text' placeholder='Price' value='{$price}' name='price' required>
-                  <input type='text' placeholder='Description' value='{$description}' name='description' required>
-                  <button type='submit'>Update</button>
+                    <div>
+                      <label for='name'>Name: </label>
+                      <input id='name' type='text' name='name' value='${name}'>
+                    </div>
+                    <div>
+                      <label for='price'>Name: </label>
+                      <input id='price' type='text' name='price' value='${price}'>
+                    </div>
+                    <div>
+                      <label for='description'>Name: </label>
+                      <input id='description' type='text' name='description' value='${description}'>
+                    </div>
+
+                    <button type='submit'>Update</button>
                   </form>
                 </div>";
             }
