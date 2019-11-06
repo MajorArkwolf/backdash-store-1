@@ -84,7 +84,7 @@
                   while ($stmt->fetch()) {
                     echo '<option value="' . $categoryId .'" >'. $categoryName . '</option>';
                   }
-                  echo '</select></p>';
+                  echo '</select>';
 
                   echo "<label for='price'>Price</label>
                     <input id='price' type='text' name='price' value='{$price}'>
