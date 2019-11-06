@@ -33,10 +33,10 @@
 
             $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
-            if ($stmt = $mysqli->prepare("select P.id, P.name, P.description, P.price, P.stock from Products P where P.id = ?")) {
+            if ($stmt = $mysqli->prepare("select P.id, P.name, P.description, P.price, P.stock, P.category from Products P where P.id = ?")) {
                $stmt->bind_param("i", intval($_GET['id']));
                $stmt->execute();
-               $stmt->bind_result($id, $name, $description, $price, $stock);
+               $stmt->bind_result($id, $name, $description, $price, $stock, $category);
                $stmt->fetch();
                $stmt->close();
             }
@@ -83,7 +83,7 @@
                     <label for='name'>Name</label>
                     <input id='name' type='text' name='name' value='{$name}'>
                     <label for='category'>Category</label>
-                    <select name='category' id='category' value='{$categoryId}'>";
+                    <select name='category' id='category' value='{$category}'>";
 
                     while ($stmtCat->fetch()) {
                       echo "<option value='{$categoryId}'>{$categoryName}</option>";
