@@ -15,18 +15,14 @@
   }
 
   /* Prepared statement, stage 1: prepare */
-  if (!($stmt = $mysqli->prepare("UPDATE Accounts set name = ?, email = ?, phone = ?, address = ? where id = ?"))) {
+  if (!($stmt = $mysqli->prepare("UPDATE Accounts set password = ? where id = ?"))) {
       echo "Prepare failed: (" . $mysqli->errno . ") " . $mysqli->error;
   }
 
-  $name = $_POST["name"];
-  $email = $_POST["email"];
-  $phonenumber = $_POST["phonenumber"];
-  $address = $_POST["address"];
-  $id = $_SESSION["id"];
+  $password = $_POST["userPassword"];
 
 
-  if (!$stmt->bind_param("ssssi", $name, $email, $phonenumber, $address, $id)) {
+  if (!$stmt->bind_param("si", $password, $id)) {
       echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
   }
 
