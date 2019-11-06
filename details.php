@@ -62,7 +62,7 @@
          ini_set("display_errors", 1);
            $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
-           if($stmt = $mysqli->prepare("SELECT id, totalprice, salesnotes FROM ShopTransaction WHERE accountID = ?")) {
+           if($stmt = $mysqli->prepare("SELECT id, totalprice, salesnote FROM ShopTransaction WHERE accountID = ?")) {
               $stmt->bind_param("i", $_SESSION['id']);
               $stmt->execute();
               $stmt->bind_result($id, $totalprice, $salesnotes);
