@@ -64,13 +64,13 @@
         <?php
           $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
-          if($stmt = $mysqli->prepare("select P.id, P.name, P.price from Products P")) {
+          if($stmt = $mysqli->prepare("select P.id, P.name, P.price, P.category from Products P")) {
              $stmt->execute();
-             $stmt->bind_result($id, $name, $price);
+             $stmt->bind_result($id, $name, $price, $category);
           }
 
           while ($stmt->fetch()) {
-            echo '<p><button type="submit" value="'. $id . '">DELETE</button> <a href="product.php?id='. $id .'" class="btn btn-info" role="button">VIEW</a> ID: ' . $id . ' Name: '. $name . ' Price: ' . $price . '</p>';
+            echo '<p><button type="submit" value="'. $id . '">DELETE</button> <a href="product.php?id='. $id .'" class="btn btn-info" role="button">VIEW</a> ID: ' . $id . ' Name: '. $name . ' Price: ' . $price . " Category ID: ". $category . '</p>';
           }
         ?>
       </div>
