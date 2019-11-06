@@ -55,8 +55,6 @@
                 echo   '</button>';
                 echo '</form>';
 
-                #echo "<div class='buy-button'><i class='fa fa-shopping-cart'></i> Add to cart</div>";
-
               echo "</div>";
             echo "</div>";
 

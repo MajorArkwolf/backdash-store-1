@@ -390,7 +390,8 @@ header {
     background-color: var(--bg);
     font-size: 18px;
     color: white;
-    width: 115px;
+    width: 130px;
+    height: 30px;
     padding: 8px 8px;
 }
 
