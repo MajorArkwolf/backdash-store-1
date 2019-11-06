@@ -66,10 +66,9 @@
               $stmt->bind_param("i", $_SESSION['id']);
               $stmt->execute();
               $stmt->bind_result($id, $totalprice, $salesnotes);
-              $stmt->fetch();
            }
            while ($stmt->fetch()) {
-             echo '<p> Transaction ID: ' . $id . ' Total Price: ' . $totalprice . 'Sales Notes :'. $salesnotes;
+             echo '<p> Transaction ID: ' . $id . ' Total Price: ' . $totalprice . 'Sales Notes :'. $salesnotes . '</p>';
            }
           ?>
          <br></br>
