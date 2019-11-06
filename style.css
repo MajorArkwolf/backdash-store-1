@@ -81,6 +81,7 @@ header {
     font-size: 1.05em;
     text-decoration: none;
     text-align: center;
+    padding: 14px 16px;
 }
 
 .navbar .icon {
