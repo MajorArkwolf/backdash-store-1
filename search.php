@@ -28,9 +28,12 @@
       <div class="text-area">
         <div class="product-grid">
           <?php
+            error_reporting(E_ALL);
+            ini_set("display_errors", 1);
+
             $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
-        if($stmt = $mysqli->prepare("select P.id, P.name, P.price from Products P where P.name like '%?%'")) {
+            if($stmt = $mysqli->prepare("select P.id, P.name, P.price from Products P where P.name like '%?%'")) {
                $stmt->bind_param("s", intval($_GET['text']));
                $stmt->execute();
                $stmt->bind_result($id, $name, $price);
