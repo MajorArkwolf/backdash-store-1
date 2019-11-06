@@ -72,7 +72,7 @@
               $stmt->execute();
               $stmt->bind_result($id, $totalprice, $salesnotes);
            }
-           if(stmt->num_rows >= 1) {
+           if($stmt->num_rows >= 1) {
              while ($stmt->fetch()) {
                echo '<tr>';
                echo '<td><form action="" method="post"><button type="submit" name="viewpurchase" value="'. $id . '">VIEW</button></form></td>';
