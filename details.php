@@ -37,7 +37,7 @@
              $stmt->bind_result($id, $name, $email, $address, $admin, $phone);
              $stmt->fetch();
           }
-          echo '<h3>Update Account Details</h3>'
+          echo '<h3>Update Account Details</h3>';
           echo '<form id="update" onsubmit="" action="sendUpdate.php" method="POST">';
           echo '<p>Email: <input type="textbox" name="email" id="email" value="' . $email . '"></input></p>';
           echo '<p>Name: <input type="textbox" name="name" id="name" value="' . $name . '"></input></p>';
@@ -52,7 +52,7 @@
           echo '<p>Confirm Password: <input type="password" id="userPassword2" onblur="CheckPassword()"></input></p>';
           echo '<p id="passwordverify"></p>';
           echo '<button type="submit" id="submitbutton" disabled>Submit</button>';
-          echo '</form';
+          echo '</form>';
          ?>
          <h2>Order History</h2>
 
