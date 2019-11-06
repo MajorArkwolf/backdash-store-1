@@ -1,17 +1,25 @@
+Storage.prototype.setObj = function(key, obj) {
+    return this.setItem(key, JSON.stringify(obj))
+}
+Storage.prototype.getObj = function(key) {
+    return JSON.parse(this.getItem(key))
+}
+
+localStorage.setItem("cart", JSON.stringify([]));
+
 function addToCart() {
-    let quantity = document.getElementById("quantity-picker");
-    let id = document.getElementById("id");
-    let cart;
+    let quantity = parseInt(document.getElementById("quantity-picker"));
+    let id = parseInt(document.getElementById("id"));
+    let cart = localStorage.getObj("cart");
 
     console.log(id.value);
-    if (localStorage.getItem("cart") === null) {
-        cart = [];
-    } else {
-        cart = JSON.parse(localStorage.getItem("cart"));
+    console.log(cart);
+
+    if (cart === null) {
+        localStorage.setObj("cart", []);
+        cart = localStorage.getObj("cart");
     }
 
-    cart[id.value] = (cart[id.value] || 0) + parseInt(quantity.value);
-
-    localStorage.setItem("cart", JSON.stringify(cart));
-    console.log(cart);
+    cart[id] = (cart[id] || 0) + quantity;
+    localStorage.setObj("cart", cart);
 }
