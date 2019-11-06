@@ -1,10 +1,10 @@
 "use strict"
 function CheckProduct(){
   var count = 0;
-  var name = document.getElementById("name");
-  var description = document.getElementById("description");
-  var price = document.getElementById("price");
-  var stock = document.getElementById("stock");
+  var name = document.getElementById("pname");
+  var description = document.getElementById("pdescription");
+  var price = document.getElementById("pprice");
+  var stock = document.getElementById("pstock");
   if(name == null || description == null || price == null || stock == null){
     return false;
   }
@@ -30,8 +30,8 @@ function CheckProduct(){
 
 function CheckCategory(){
   var count = 0;
-  var name = document.getElementById("name");
-  var description = document.getElementById("description");
+  var name = document.getElementById("cname");
+  var description = document.getElementById("cdescription");
   if(name == null || description == null){
     return false;
   }
