@@ -346,20 +346,19 @@ header {
     padding-bottom: 10px;
 }
 
-#name {
+#cart #name {
    width: 55%;
 }
 
-#quantity {
+#cart #quantity {
    width: 15%;
 }
 
-#price {
-
+#cart #price {
    width: 15%;
 }
 
-#total {
+#cart #total {
    width: 15%;
 }
 
