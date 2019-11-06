@@ -12,5 +12,5 @@ function addToCart() {
     }
 
     localStorage.setItem("cart", JSON.stringify(cart));
-    print(cart);
+    console.log(cart);
 }
