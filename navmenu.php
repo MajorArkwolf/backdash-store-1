@@ -52,6 +52,6 @@ echo '<button class="dropbtn">Account
     </form>
   </div>
 
-  <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()"><i class="fa fa-bars"></i></a>
+  <a href="javascript:void(0);" class="icon fa fa-bars" onclick="toggleNavbar()"></a>
     </nav>';
  ?>
