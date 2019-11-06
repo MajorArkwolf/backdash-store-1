@@ -50,7 +50,9 @@
                 echo "</div>";
                 echo '<form action="foo.php">';
                 echo   '<input class="quantity-picker" type="number" name="quantity" min="1">';
-                echo '<button type="submit" class="submit-button" name="submit"><i class='fa fa-shopping-cart'></i> Add to cart</button>';
+                echo   '<button type="submit" class="submit-button" name="submit">';
+                echo     '<i class="fa fa-shopping-cart"></i> Add to cart';
+                echo   '</button>';
                 echo '</form>';
 
                 #echo "<div class='buy-button'><i class='fa fa-shopping-cart'></i> Add to cart</div>";
