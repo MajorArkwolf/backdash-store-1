@@ -57,11 +57,11 @@
                   <h3>Update product details</h3>
 
                   <form class='input-form' action='product-update.php'>
-                    <label for='name'>Name: </label>
+                    <label for='name'>Name</label>
                     <input id='name' type='text' name='name' value='{$name}'>
-                    <label for='price'>Price: </label>
+                    <label for='price'>Price</label>
                     <input id='price' type='text' name='price' value='{$price}'>
-                    <label for='description'>Description: </label>
+                    <label for='description'>Description</label>
                     <textarea name='description' id='description' maxlength='500'>
                       {$description}
                     </textarea>
