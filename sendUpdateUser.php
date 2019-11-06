@@ -25,8 +25,14 @@
   $address = $_POST["address"];
   $isAdmin = $_POST["isAdmin"];
 
+  if($isAdmin == 1){
+    $admin = 1;
+  } else {
+    $admin = 0;
+  }
 
-  if (!$stmt->bind_param("ssssis", $name, $email, $phonenumber, $address, $isAdmin, $email)) {
+
+  if (!$stmt->bind_param("ssssis", $name, $email, $phonenumber, $address, $admin, $email)) {
       echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
   }
 
