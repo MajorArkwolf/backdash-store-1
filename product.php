@@ -88,7 +88,7 @@
                     while ($stmtCat->fetch()) {
                         echo "<option value='{$categoryId}'>{$categoryName} ";
                       if ($category == $categoryId) {
-                        echo "selected='selected'"
+                        echo "selected='selected'";
                       }
                       echo "</option>";
                     }
