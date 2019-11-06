@@ -86,11 +86,11 @@
                     <select name='category' id='category'>";
 
                     while ($stmtCat->fetch()) {
-                        echo "<option value='{$categoryId}'>{$categoryName}' ";
+                        echo "<option value='{$categoryId}'";
                       if ($category == $categoryId) {
-                        echo "selected='selected'";
+                        echo " selected='selected'";
                       }
-                      echo "</option>";
+                      echo ">{$categoryName}</option>";
                     }
 
                     echo "</select>
