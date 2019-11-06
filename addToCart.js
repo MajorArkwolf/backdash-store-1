@@ -21,9 +21,8 @@ function addToCart() {
     cart[id] = (cart[id] || 0) + quantity;
     localStorage.setObj("cart", cart);
 
-    console.log(id + ": " + localStorage.getObj("cart")[id]);
+    for (const [key, value] of Object.entries(cart)) {
+      console.log(key, value);
+    }
 
-    cart.forEach((i) => {
-        console.log(i);
-    })
 }
