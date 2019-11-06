@@ -307,7 +307,6 @@ header {
     }
 
     .navbar.responsive .search-container{
-        display: inline;
         float: none;
         text-align: left;
         padding-bottom: 10px;
