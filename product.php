@@ -87,7 +87,6 @@
         </p>
       </div>
     </div>
-    <script src="productchecker.js"></script>
     <script src="navbar.js"></script>
     <script src="addToCart.js"></script>
   </body>
