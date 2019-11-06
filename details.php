@@ -60,7 +60,7 @@
          <?php
            $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
-           if($stmt = $mysqli->prepare("select id, totalprice, salesnotes from ShopTransaction where id = ?")) {
+           if($stmt = $mysqli->prepare("select id, totalprice, salesnotes from ShopTransaction where accountID = ?")) {
               $stmt->bind_param("i", $_SESSION['id']);
               $stmt->execute();
               $stmt->bind_result($id, $totalprice, $salesnotes);
