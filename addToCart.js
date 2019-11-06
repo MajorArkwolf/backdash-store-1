@@ -5,7 +5,18 @@ Storage.prototype.getObj = function(key) {
     return JSON.parse(this.getItem(key))
 }
 
-//localStorage.setObj("cart", []);
+function getData(str) {
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText)
+        }
+    };
+
+    xmlhttp.open("GET","getData.php?id="+str,true);
+    xmlhttp.send();
+}
+
 
 function addToCart() {
     let quantity = parseInt(document.getElementById("quantity-picker").value);
@@ -22,7 +33,7 @@ function addToCart() {
     localStorage.setObj("cart", cart);
 
     for (const [key, value] of Object.entries(cart)) {
-      console.log(key, value);
+        getData(key);
+        console.log(key, value);
     }
-
 }
