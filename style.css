@@ -384,6 +384,7 @@ header {
 .quantity-picker {
     width: 40px;
     height: 36px;
+    padding-right: 10px;
 }
 
 .submit-button {
