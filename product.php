@@ -28,9 +28,6 @@
       <div class="text-area">
         <p>
           <?php
-          error_reporting(E_ALL);
-          ini_set("display_errors", 1);
-
             $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
             if($stmt = $mysqli->prepare("select P.id, P.name, P.description, P.price from Products P where P.id = ?")) {
@@ -56,6 +53,8 @@
 
             if($_SESSION['admin']) {
               echo '<p><b>Admin Token:</b> True </p>';
+            } else {
+              echo '<p>Normal user</p>';
             }
           ?>
         </p>
