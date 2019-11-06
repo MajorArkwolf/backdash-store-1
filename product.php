@@ -79,7 +79,7 @@
                     <label for='category'>Category</label>
                     <select name='category' id='category'>";
 
-                  if($stmtCat = $mysqli->prepare("select C.id, C.name from Categories C")) {
+                  if($stmtCat = $mysqli->prepare("select id, name from Categories")) {
                      $stmtCat->execute();
                      $stmtCat->bind_result($categoryId, $categoryName);
                   }
