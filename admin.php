@@ -29,7 +29,15 @@
       ?>
       <div class="text-area">
         <h2>Admin Page</h2>
-
+        <h3>Add Product</h3>
+        <form id="newproduct" onsubmit="" action="" method="POST">
+          <p>Product Name: <input type="textbox" name="name" id="name"></input></p>
+          <p>Product Description: <input type="textbox" name="description" id="description"></input></p>
+          <p>Price: <input type="textbox" name="price" id="price"></input></p>
+          <p>Product Name: <input type="textbox" name="stock" id="stock"></input></p>
+          <p>IMAGE UPLOADER COMING SOON</p>
+        </form>
+        <br></br>
         <h3>Current Product List</h3>
         <?php
           $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
