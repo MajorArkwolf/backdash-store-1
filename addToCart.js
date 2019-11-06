@@ -20,6 +20,6 @@ function addToCart() {
         cart = localStorage.getObj("cart");
     }
 
-    cart[id] = (cart[id] || 0) + quantity;
+    cart[toString(id)] = (cart[toString(id)] || 0) + quantity;
     localStorage.setObj("cart", cart);
 }
