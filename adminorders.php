@@ -40,13 +40,14 @@
                   <th>View</th>
                   <th id="name">Notes</th>
                   <th id="quantity">ID</th>
+                  <th id="quantity">MemberID</th>
                   <th id="price">Price</th>
                 </tr>';
           $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
-          if($stmt = $mysqli->prepare("SELECT id, totalprice, salenotes FROM ShopTransaction WHERE shipped != 1")) {
+          if($stmt = $mysqli->prepare("SELECT id, accountID,totalprice, salenotes FROM ShopTransaction WHERE shipped != 1")) {
              $stmt->execute();
-             $stmt->bind_result($id, $totalprice, $salesnotes);
+             $stmt->bind_result($id, $accoundid, $totalprice, $salesnotes);
           }
           if($stmt->num_rows >= 0) {
             while ($stmt->fetch()) {
@@ -55,6 +56,7 @@
               echo '<td>View Soon</td>';
               echo '<td>'. $salesnotes .'</td>';
               echo '<td>'. $id .'</td>';
+              echo '<td>'. $accoundid .'</td>';
               echo '<td>'. $totalprice .'</td>';
               echo '</tr>';
             }
@@ -62,6 +64,7 @@
             echo '<tr>';
             echo '<td></td>';
             echo '<td>No Data Found</td>';
+            echo '<td></td>';
             echo '<td></td>';
             echo '<td></td>';
             echo '</tr>';
@@ -77,13 +80,14 @@
                     <th>View</th>
                     <th id="name">Notes</th>
                     <th id="quantity">ID</th>
+                    <th id="quantity">Member ID</th>
                     <th id="price">Price</th>
                   </tr>';
           $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
-          if($stmt = $mysqli->prepare("SELECT id, totalprice, salenotes FROM ShopTransaction WHERE shipped = 1")) {
+          if($stmt = $mysqli->prepare("SELECT id, accountID,totalprice, salenotes FROM ShopTransaction WHERE shipped = 1")) {
              $stmt->execute();
-             $stmt->bind_result($id, $totalprice, $salesnotes);
+             $stmt->bind_result($id, $accountID,$totalprice, $salesnotes);
           }
           if($stmt->num_rows >= 0) {
             while ($stmt->fetch()) {
@@ -91,6 +95,7 @@
               echo '<td><form action="" method="post"><button type="submit" name="viewpurchase" value="'. $id . '">VIEW</button></form></td>';
               echo '<td>'. $salesnotes .'</td>';
               echo '<td>'. $id .'</td>';
+              echo '<td>'. $accountID .'</td>';
               echo '<td>'. $totalprice .'</td>';
               echo '</tr>';
             }
@@ -98,6 +103,7 @@
             echo '<tr>';
             echo '<td></td>';
             echo '<td>No Data Found</td>';
+            echo '<td></td>';
             echo '<td></td>';
             echo '<td></td>';
             echo '</tr>';
