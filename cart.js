@@ -31,7 +31,7 @@ function updateTable(str) {
             cell3.innerHTML = "$" + data["price"]
             cell4.innerHTML = "$" + data["totalPrice"]
 
-            let spinner = createElementFromHTML('<input id="quantity-picker" type="number" name="quantity" value="' +
+            let spinner = createElementFromHTML('<input class="quantity-picker-cart" type="number" name="quantity" value="' +
                 cart[data["id"]] + '" min="1">')
             cell2.appendChild(spinner)
         }

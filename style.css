@@ -387,7 +387,7 @@ header {
 
 }
 
-#quantity-cart {
+.quantity-picker-cart {
     width: 40px;
     height: auto;
     font-size: 16px;
