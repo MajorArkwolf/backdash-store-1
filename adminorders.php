@@ -33,7 +33,7 @@
         <a href="admin.php">Back to Admin page</a>
 
         <?php
-        echo '        <h3>Processing Transactions</h3>
+        echo '  <h3>Processing Transactions</h3>
                 <table id="cart">
                 <tr>
                   <th>View</th>
