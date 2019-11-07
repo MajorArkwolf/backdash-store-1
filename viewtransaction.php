@@ -14,7 +14,7 @@
     <div class="content">
       <header>
         <div>
-          <h1>Backdash</h1>
+          <h1>View Transaction</h1>
         </div>
       </header>
       <?php
@@ -36,8 +36,8 @@
             <th id="price">Total</th>
           </tr>
         <?php
-        error_reporting(E_ALL);
-        ini_set("display_errors", 1);
+          error_reporting(E_ALL);
+          ini_set("display_errors", 1);
           $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
           if($stmt = $mysqli->prepare("SELECT id, totalprice, salenotes FROM ShopTransaction WHERE id = ?")) {
@@ -45,7 +45,7 @@
              $stmt->execute();
              $stmt->bind_result($tid, $ttotalprice, $tsalesnotes);
           }
-              $stmt->fetch()
+              $stmt->fetch();
               echo '<tr>';
               echo '<td>'. $tsalesnotes .'</td>';
               echo '<td>'. $tid .'</td>';
