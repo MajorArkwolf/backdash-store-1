@@ -67,16 +67,18 @@
              $stmt->execute();
              $stmt->bind_result($productid, $quantity, $name, $price);
           }
-
+          $runningtotal = 0;
           while ($stmt->fetch()) {
             echo '<tr>';
             echo '<td>'. $name .'</td>';
             echo '<td>'. $quantity .'</td>';
-            echo '<td>'. $price .'</td>';
-            echo '<td>'. ($price * $quantity) .'</td>';
+            echo '<td>$'. $price .'</td>';
+            echo '<td>$'. ($price * $quantity) .'</td>';
             echo '</tr>';
+            $runningtotal += ($price * $quantity);
           }
-          echo '<td></td><td></td><td>Total Price</td><td>'. $ttotalprice .'</td>';
+          echo '<td></td><td></td><td>Total Price</td><td>'. $runningtotal .'</td>';
+          echo '<td></td><td></td><td>You Paid</td><td>'. $ttotalprice .'</td>';
           echo '</table>';
          ?>
         </table>
