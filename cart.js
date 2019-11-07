@@ -5,22 +5,43 @@ Storage.prototype.getObj = function(key) {
     return JSON.parse(this.getItem(key))
 }
 
+Array.prototype.remove = function(from, to) {
+    var rest = this.slice((to || from) + 1 || this.length);
+    this.length = from < 0 ? this.length + from : from;
+    return this.push.apply(this, rest);
+};
+
 function sortTable(table, col, reverse) {
-    let tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
-        tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
+    let tb = table.tBodies[0],
+        tr = Array.prototype.slice.call(tb.rows, 0),
         i;
     reverse = -((+reverse) || -1);
-    tr = tr.sort(function (a, b) { // sort rows
+    tr = tr.sort(function (a, b) {
         return reverse // `-1 *` if want opposite order
-        * (a.cells[col].textContent.trim() // using `.textContent.trim()` for test
+        * (a.cells[col].textContent.trim()
            .localeCompare(b.cells[col].textContent.trim())
         );
     });
-    for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
+
+    for(i = 0; i < tr.length; ++i) {
+        tb.appendChild(tr[i]);
+    }
 }
 
 function removeItem(element) {
-    console.log("Hi!")
+    let table = document.getElementById("cart")
+    let quantity = parseInt(element.parentNode.childNodes[0].value)
+    let id = parseInt(element.parentNode.parentNode.childNodes[4].innerHTML)
+
+    let cart = localStorage.getObj("cart");
+
+    if (cart === null) {
+        localStorage.setObj("cart", []);
+        cart = localStorage.getObj("cart");
+    }
+
+    cart.remove(id);
+    localStorage.setObj("cart", cart);
 }
 
 function createElementFromHTML(htmlString) {
@@ -34,8 +55,6 @@ function updateQuantity(element) {
     let table = document.getElementById("cart")
     let quantity = parseInt(element.parentNode.childNodes[0].value)
     let id = parseInt(element.parentNode.parentNode.childNodes[4].innerHTML)
-
-    console.log(quantity, id)
 
     let cart = localStorage.getObj("cart");
 
