@@ -5,6 +5,10 @@ Storage.prototype.getObj = function(key) {
     return JSON.parse(this.getItem(key))
 }
 
+function buy() {
+
+}
+
 function sortTable(table, col, reverse) {
     let tb = table.tBodies[0],
         tr = Array.prototype.slice.call(tb.rows, 0),
