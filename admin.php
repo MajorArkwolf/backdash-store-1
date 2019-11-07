@@ -84,7 +84,6 @@
           <th>View</th>
           <th>Delete</th>
           <th id="name">Info</th>
-          <th id="price">Price</th>
         </tr>
         <?php
           $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
