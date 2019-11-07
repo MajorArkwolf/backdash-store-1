@@ -37,7 +37,11 @@
             ob_end_clean();
 
             $order = json_decode(html_entity_decode(stripslashes($_GET["order"])));
-            print_r($order);
+
+            foreach ($order as $i) {
+              echo $i["id"] + "\n";
+              echo $i["quantity"] + "\n";
+            }
 
             // if($_SESSION['admin']) {
             //   $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
