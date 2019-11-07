@@ -15,6 +15,7 @@ function buy() {
         }
     }
 
+    localStorage.setObj("cart", [])
     window.location.href = "buy.php?order=" + encodeURIComponent(JSON.stringify(outCart));
 }
 
