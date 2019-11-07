@@ -17,9 +17,7 @@ function updateQuantity(element) {
     let table = document.getElementById("cart")
 
     for (let i = 1, row; row = table.rows[i]; i++) {
-        for (var j = 0, col; col = row.cells[j]; j++) {
-            console.log(i, j, col.innerHTML)
-        }
+        console.log(row.cells[4].innerHTML)
     }
 }
 
