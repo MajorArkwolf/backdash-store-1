@@ -83,8 +83,6 @@ function updateTotal() {
     let body = table.tBodies[0]
     let total = 0.0
 
-    console.log(body)
-
     for (let i = 0; i < body.rows.length; ++i) {
         total += parseFloat(body.rows[i].cells[3].innerHTML)
     }
