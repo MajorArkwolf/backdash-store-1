@@ -83,6 +83,7 @@ function updateTable(str) {
                   '</button>')
             cell0.innerHTML = data["name"]
             cell1.appendChild(spinner)
+            cell1.appendChild(remove)
             cell2.innerHTML = "$" + data["price"]
             cell3.innerHTML = "$" + data["totalPrice"]
             cell4.innerHTML = data["id"]
