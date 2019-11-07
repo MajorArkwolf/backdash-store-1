@@ -79,6 +79,13 @@
         </form>
         <br></br>
         <h3>Current Product List</h3>
+        <table id="cart">
+        <tr>
+          <th>View</th>
+          <th>Delete</th>
+          <th id="name">Info</th>
+          <th id="price">Price</th>
+        </tr>
         <?php
           $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
@@ -88,7 +95,11 @@
           }
 
           while ($stmt->fetch()) {
-            echo '<p><form action="sendDeleteItem.php" method="post"><button type="submit" name="deletedItem" value="'. $id . '">DELETE</button><a href="product.php?id='. $id .'" class="btn btn-info" role="button">VIEW</a> ID: ' . $id . ' Name: '. $name . ' Price: ' . $price . " CID: ". $category . '</form></p>';
+            echo '<tr>'
+            echo '<td><form action="sendDeleteItem.php" method="post"><button type="submit" name="deletedItem" value="'. $id . '">DELETE</button></form></td>';
+            echo '<td><a href="product.php?id='. $id .'" class="btn btn-info" role="button">VIEW</a></td>';
+            echo '<td> ID: ' . $id . ' Name: '. $name . ' Price: ' . $price . " CID: ". $category . '</td>';
+            echo '</tr>';
           }
         ?>
       </div>
