@@ -47,6 +47,7 @@
              $stmt->execute();
              $stmt->bind_result($id, $totalprice, $salesnotes);
           }
+          if($stmt->num_rows >= 0) {
             while ($stmt->fetch()) {
               echo '<tr>';
               echo '<td><form action="sendShipping.php" method="post"><button type="submit" name="ship" value="'. $id . '">Ship</button></form></td>';
@@ -55,6 +56,14 @@
               echo '<td>'. $totalprice .'</td>';
               echo '</tr>';
             }
+          } else {
+            echo '<tr>';
+            echo '<td></td>';
+            echo '<td>No Data Found</td>';
+            echo '<td></td>';
+            echo '<td></td>';
+            echo '</tr>';
+          }
           echo '</table>';
           $stmt->close();
         ?>
@@ -74,7 +83,6 @@
              $stmt->execute();
              $stmt->bind_result($id, $totalprice, $salesnotes);
           }
-          echo '<p>'.$stmt->num_rows.'</p>';
           if($stmt->num_rows >= 0) {
             while ($stmt->fetch()) {
               echo '<tr>';
