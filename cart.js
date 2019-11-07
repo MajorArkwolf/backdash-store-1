@@ -79,7 +79,8 @@ function updateQuantity(element) {
 }
 
 function updateTotal() {
-    let body = document.getElementById("cart").getElementsByTagName("tbody")[0]
+    let table = document.getElementById("cart")
+    let body = table.tBodies[0]
     let total = 0.0
 
     console.log(body)
