@@ -62,6 +62,16 @@
                 $stmt->execute();
                 $stmt->close();
               }
+
+              foreach ($order as $i) {
+                $query = "insert into ItemTransaction(transactionID, productID, quantity)
+                          values(default, ?, ?)";
+                if($stmt = $mysqli->prepare($query)) {
+                  $stmt->bind_param("ii", $i["id"], $i["quantity"]);
+                  $stmt->execute();
+                  $stmt->close();
+                }
+              }
             } else {
               echo "Not authorized";
             }
