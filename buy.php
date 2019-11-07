@@ -70,9 +70,9 @@
                   $stmt->bind_param("iii", $mysqli->insert_id , $i["id"], $i["quantity"]);
                   $stmt->execute();
                   $stmt->close();
-                }
-
-                echo $mysqli->error;
+                  echo $mysqli->error;
+                } else {
+                  echo $mysqli->error;
               }
             } else {
               echo "Not authorized";
