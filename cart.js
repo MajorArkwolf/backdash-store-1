@@ -79,8 +79,14 @@ function updateQuantity(element) {
 }
 
 function updateTotal() {
-    let table = document.getElementById("cart")
-    let total = 0.0;
+    let body = document.getElementById("cart").getElementsByTagName("tbody")[0]
+    let total = 0.0
+
+    for (let i = 0; i < body.rows; ++i) {
+        total += rows.cells[3]
+    }
+
+    document.getElementById("grand-total").innerHTML = total;
 }
 
 function updateTable(str) {
