@@ -48,14 +48,13 @@
           </tfoot>
         </table>
 
-
         <?php
           if (!isset($_SESSION['loggedin'])) {
             echo '<h3 class="warning">Please log in to checkout</h3>';
           } else {
             echo '<div class="product-update checkout">
               <h3 id="update-details">Checkout</h3>
-              <form class="input-form" action="buy()">
+              <form class="input-form" action="javascript:buy();">
                 <label for="name">Name</label>
                 <input id="name" type="text" name="name">
                 <label for="card-number">Card Number</label>
