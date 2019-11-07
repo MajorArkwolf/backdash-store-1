@@ -36,7 +36,7 @@
             include('navmenu.php');
             ob_end_clean();
 
-            $order = json_decode(html_entity_decode(stripslashes($_GET["order"])));
+            $order = json_decode(html_entity_decode(stripslashes($_GET["order"])), true);
 
             foreach ($order as $i) {
               echo $i["id"] + "\n";
