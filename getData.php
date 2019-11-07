@@ -2,6 +2,8 @@
   session_start();
 ?>
 <?php
+  error_reporting(E_ALL);
+  ini_set("display_errors", 1);
   $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
   $query = "select P.id, P.name, P.description, P.price, P.stock, P.price * ? as totalPrice from Products P where P.id = ?";
