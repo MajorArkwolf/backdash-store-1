@@ -44,11 +44,17 @@ function updateQuantity(element) {
     cart[id] = quantity;
     localStorage.setObj("cart", cart);
 
-    for (let i = table.rows.length; i > 1; --i) {
-        table.deleteRow(i)
-    }
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            let data = JSON.parse(this.responseText)
 
-    //populateCart()
+            element.parentNode.parentNode.childNodes[3].innerHTML = data["totalPrice"]
+        }
+    };
+
+    xmlhttp.open("GET","getData.php?id=" + id + "&quantity=" + quantity,true);
+    xmlhttp.send();
 }
 
 function updateTable(str) {
