@@ -16,9 +16,10 @@ function updateQuantity(element) {
     let id = parseInt(element.parentNode.childNodes[0].value)
     let table = document.getElementById("cart")
 
-    table.rows.forEach((i) => {
-        console.log(i.cells[0].innerHTML)
-    })
+    for (let i = 0, row; row = table.rows[i]; i++) {
+        console.log(row.cells[0].innerHTML)
+    }
+
 }
 
 function updateTable(str) {
