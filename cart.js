@@ -81,12 +81,12 @@ function updateQuantity(element) {
 function updateTotal() {
     let table = document.getElementById("cart")
     let body = table.tBodies[0]
-    let total = Number()
+    let total = 0.0
 
     console.log(body)
 
     for (let i = 0; i < body.rows.length; ++i) {
-        total += body.rows[i].cells[3].innerHTML
+        total += parseFloat(body.rows[i].cells[3].innerHTML)
     }
 
     document.getElementById("grand-total").innerHTML = "$" + total.toFixed(2);
