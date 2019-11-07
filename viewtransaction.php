@@ -77,8 +77,8 @@
             echo '</tr>';
             $runningtotal += ($price * $quantity);
           }
-          echo '<tr><td></td><td></td><td>Total Price</td><td>'. $runningtotal .'</td></tr>';
-          echo '<tr><td></td><td></td><td>You Paid</td><td>'. $ttotalprice .'</td></tr>';
+          echo '<tr><td></td><td></td><td>Total Price</td><td>$'. $runningtotal .'</td></tr>';
+          echo '<tr><td></td><td></td><td>You Paid</td><td>$'. $ttotalprice .'</td></tr>';
           echo '</table>';
          ?>
         </table>
