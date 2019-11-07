@@ -44,9 +44,12 @@ function updateQuantity(element) {
     cart[id] = quantity;
     localStorage.setObj("cart", cart);
 
-    for (const [key, value] of Object.entries(cart)) {
-        console.log(key, value);
+    let table = document.getElementById("cart").getElementsByTagName("tbody")[0]
+    for (let i = 0; i < table.rows.length; ++i) {
+        table.deleteRow(i)
     }
+
+    populateCart()
 }
 
 function updateTable(str) {
@@ -87,10 +90,9 @@ function populateCart() {
 
     for (const [key, value] of Object.entries(cart)) {
         if (key != 0 && key != null && value > 0) {
-            console.log(key, value)
             updateTable("id=" + key + "&quantity=" + value)
         }
     }
 }
 
-populateCart();
+populateCart()
