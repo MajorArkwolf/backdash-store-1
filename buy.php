@@ -53,9 +53,8 @@
 
                    $sum += $totalCost;
                 }
-
-                echo $sum;
               }
+              echo $sum;
             } else {
               echo "Not authorized";
             }
