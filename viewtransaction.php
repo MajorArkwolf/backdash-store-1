@@ -66,6 +66,5 @@
       </div>
     </div>
     <script src="navbar.js"></script>
-    <script src="cart.js"></script>
   </body>
 </html>
