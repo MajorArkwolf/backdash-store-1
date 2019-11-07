@@ -36,7 +36,7 @@
             include('navmenu.php');
             ob_end_clean();
 
-            $v = json_decode(stripslashes($_GET["data"]));
+            $v = json_decode(html_entity_decode(stripslashes ($order)));
             echo $v;
 
             // if($_SESSION['admin']) {
