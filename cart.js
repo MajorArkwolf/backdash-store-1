@@ -13,7 +13,7 @@ function createElementFromHTML(htmlString) {
 }
 
 function updateQuantity(element) {
-    console.log(element.parentNode.parentNode)
+    console.log(element.parentNode)
 }
 
 function updateTable(str) {
@@ -34,8 +34,10 @@ function updateTable(str) {
             cell3.innerHTML = "$" + data["price"]
             cell4.innerHTML = "$" + data["totalPrice"]
 
+            let hiddenId = createElementFromHTML('<input type="hidden" name="id" value="' + data["id"] + '">')
             let spinner = createElementFromHTML('<input class="quantity-picker-cart" type="number" name="quantity" value="' +
                 cart[data["id"]] + '" min="1" onclick="updateQuantity(this)">')
+            cell2.appendChild(hiddenId)
             cell2.appendChild(spinner)
         }
     };
