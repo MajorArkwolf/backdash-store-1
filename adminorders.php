@@ -92,7 +92,7 @@
           if($stmt->num_rows >= 0) {
             while ($stmt->fetch()) {
               echo '<tr>';
-              echo '<td><form action="" method="post"><button type="submit" name="viewpurchase" value="'. $id . '">VIEW</button></form></td>';
+              echo '<td><form action="viewtransaction.php" method="post"><button type="submit" name="viewid" value="'. $id . '">VIEW</button></form></td>';
               echo '<td>'. $salesnotes .'</td>';
               echo '<td>'. $id .'</td>';
               echo '<td>'. $accountID .'</td>';
