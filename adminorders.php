@@ -63,9 +63,10 @@
             echo '<td></td>';
             echo '</tr>';
           }
+          echo '</table>';
         ?>
         <?php
-          echo '        <h3>Completed Transactions</h3>
+          echo '  <h3>Completed Transactions</h3>
                   <table id="cart">
                   <tr>
                     <th>View</th>
@@ -96,6 +97,7 @@
             echo '<td></td>';
             echo '</tr>';
           }
+          echo '</table>';
         ?>
       </div>
     </div>
