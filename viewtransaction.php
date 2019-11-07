@@ -36,6 +36,8 @@
             <th id="price">Total</th>
           </tr>
         <?php
+        error_reporting(E_ALL);
+        ini_set("display_errors", 1);
           $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
           if($stmt = $mysqli->prepare("SELECT id, totalprice, salenotes FROM ShopTransaction WHERE id = ?")) {
@@ -49,9 +51,9 @@
               echo '<td>'. $tid .'</td>';
               echo '<td>'. $ttotalprice .'</td>';
               echo '</tr>';
-              $stmt->close();
-              echo '</table><br></br>';
 
+              echo '</table><br></br>';
+              $stmt->close();
          ?>
         <table id="cart">
           <tr>
