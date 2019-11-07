@@ -41,11 +41,10 @@
             if($_SESSION['loggedin']) {
               $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
               $sum = 0.0;
-              $query = "select sum()";
 
               foreach ($order as $i) {
                 if($stmt = $mysqli->prepare("select P.price * ? as totalCost from Products P where P.id = ?")) {
-                   $stmt->bind_param("ii", $i["id"], $["quantity"]);
+                   $stmt->bind_param("ii", $i["id"], $i["quantity"]);
                    $stmt->execute();
                    $stmt->bind_result($totalCost);
                    $stmt->fetch();
