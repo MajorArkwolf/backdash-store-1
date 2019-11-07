@@ -56,6 +56,7 @@
               echo '</tr>';
             }
           echo '</table>';
+          $stmt->close();
         ?>
         <br></br>
         <?php
@@ -91,6 +92,7 @@
             echo '</tr>';
           }
           echo '</table>';
+          $stmt->close();
         ?>
       </div>
     </div>
