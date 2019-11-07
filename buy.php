@@ -42,8 +42,9 @@
               $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
               $sum = 0.0;
 
+              $query = "select P.price * ? as totalCost from Products P where P.id = ?";
               foreach ($order as $i) {
-                if($stmt = $mysqli->prepare("select P.price * ? as totalCost from Products P where P.id = ?")) {
+                if($stmt = $mysqli->prepare($query)) {
                    $stmt->bind_param("ii", $i["quantity"], $i["id"]);
                    $stmt->execute();
                    $stmt->bind_result($totalCost);
@@ -53,7 +54,14 @@
                    $sum += $totalCost;
                 }
               }
-              echo $sum;
+
+              $query = "inesrt into ShopTransaction(id, accountID, totalprice)
+                        values(default, ?, ?)"
+              if($stmt = $mysqli->prepare($query)) {
+                $stmt->bind_param("id", $_SESSION['id'], $sum);
+                $stmt->execute();
+                $stmt->close();
+              }
             } else {
               echo "Not authorized";
             }
