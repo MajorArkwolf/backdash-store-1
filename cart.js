@@ -74,7 +74,7 @@ function updateTable(str) {
             cell4.innerHTML = data["id"]
             cell4.style.display = "none";
 
-            sortTable(table, 4, false);
+            sortTable(document.getElementById("cart"), 4, false);
         }
     };
 
