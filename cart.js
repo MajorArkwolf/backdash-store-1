@@ -85,10 +85,8 @@ function updateTotal() {
 
     for (let i = 0; i < body.rows.length; ++i) {
         let price = body.rows[i].cells[3]
-        let text = price.textContent
-        console.log(text)
-
-        // total += parseFloat(text)
+        let text = price.textContent.substr(1)
+        total += parseFloat(text)
     }
 
     document.getElementById("grand-total").innerHTML = "$" + total.toFixed(2);
