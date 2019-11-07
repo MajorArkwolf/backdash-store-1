@@ -84,7 +84,9 @@ function updateTotal() {
     let total = 0.0
 
     for (let i = 0; i < body.rows.length; ++i) {
-        let text = String(body.rows[i].cells[3].textContent).splice(1)
+        let price = body.rows[i].cells[3]
+        let text = price.textContent.splice(1)
+
         total += parseFloat(text)
     }
 
