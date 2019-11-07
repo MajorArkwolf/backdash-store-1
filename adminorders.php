@@ -52,7 +52,7 @@
             while ($stmt->fetch()) {
               echo '<tr>';
               echo '<td><form action="sendShipping.php" method="post"><button type="submit" name="ship" value="'. $id . '">Ship</button></form></td>';
-              echo '<td>View Soon</td>'
+              echo '<td>View Soon</td>';
               echo '<td>'. $salesnotes .'</td>';
               echo '<td>'. $id .'</td>';
               echo '<td>'. $totalprice .'</td>';
