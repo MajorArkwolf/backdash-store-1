@@ -82,7 +82,9 @@ function updateTotal() {
     let body = document.getElementById("cart").getElementsByTagName("tbody")[0]
     let total = 0.0
 
-    for (let i = 0; i < body.rows; ++i) {
+    console.log(body)
+
+    for (let i = 0; i < body.rows.length; ++i) {
         total += rows.cells[3].innerHTML
     }
 
