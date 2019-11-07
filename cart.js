@@ -13,7 +13,7 @@ function createElementFromHTML(htmlString) {
 }
 
 function updateQuantity(element) {
-    let id = intVal(element.parentNode.childNodes[0].value)
+    let id = parseInt(element.parentNode.childNodes[0].value)
     let table = document.getElementById("cart")
 
     table.rows.forEach((i) => {
