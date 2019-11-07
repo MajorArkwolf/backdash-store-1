@@ -74,7 +74,7 @@
              $stmt->execute();
              $stmt->bind_result($id, $totalprice, $salesnotes);
           }
-          echo '<p>$stmt->num_rows</p>';
+          echo '<p>'.$stmt->num_rows.'</p>';
           if($stmt->num_rows >= 1) {
             while ($stmt->fetch()) {
               echo '<tr>';
