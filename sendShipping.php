@@ -23,7 +23,7 @@
 
 
 
-  if (!$stmt->bind_param("si", $password, $id)) {
+  if (!$stmt->bind_param("i", $id)) {
       echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
   }
 
