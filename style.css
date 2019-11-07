@@ -338,6 +338,10 @@ header {
     width: 100%;
 }
 
+.checkout {
+    padding-top: 20px;
+}
+
 .cart-title {
     padding-bottom: 10px;
 }

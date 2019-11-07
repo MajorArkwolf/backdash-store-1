@@ -47,7 +47,7 @@
           </tr>
           </tfoot>
         </table>
-        <div class='product-update'>
+        <div class='product-update checkout'>
           <h3 id='update-details'>Checkout</h3>
           <form class='input-form' action='buy()'>
             <label for='name'>Name</label>
