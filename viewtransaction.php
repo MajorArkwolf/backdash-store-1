@@ -45,9 +45,9 @@
           }
               $stmt->fetch()
               echo '<tr>';
-              echo '<td>'. $salesnotes .'</td>';
-              echo '<td>'. $id .'</td>';
-              echo '<td>'. $totalprice .'</td>';
+              echo '<td>'. $tsalesnotes .'</td>';
+              echo '<td>'. $tid .'</td>';
+              echo '<td>'. $ttotalprice .'</td>';
               echo '</tr>';
               $stmt->close();
               echo '</table><br></br>';
