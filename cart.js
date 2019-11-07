@@ -19,21 +19,19 @@ function updateQuantity(element) {
 
     console.log(quantity, id)
 
-    // let quantity = parseInt(document.getElementById("quantity-picker").value);
-    // let id = parseInt(document.getElementById("productId").value);
-    // let cart = localStorage.getObj("cart");
+    let cart = localStorage.getObj("cart");
 
-    // if (cart === null) {
-    //     localStorage.setObj("cart", []);
-    //     cart = localStorage.getObj("cart");
-    // }
+    if (cart === null) {
+        localStorage.setObj("cart", []);
+        cart = localStorage.getObj("cart");
+    }
 
-    // cart[id] = (cart[id] || 0) + quantity;
-    // localStorage.setObj("cart", cart);
+    cart[id] = quantity;
+    localStorage.setObj("cart", cart);
 
-    // for (const [key, value] of Object.entries(cart)) {
-    //     console.log(key, value);
-    // }
+    for (const [key, value] of Object.entries(cart)) {
+        console.log(key, value);
+    }
 }
 
 function updateTable(str) {
