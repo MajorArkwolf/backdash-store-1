@@ -15,7 +15,7 @@ function buy() {
         }
     }
 
-    window.location.href = "buy.php?data=" + encodeURIComponent(JSON.stringify(outCart));
+    window.location.href = "buy.php?data=" + JSON.stringify(outCart);
 }
 
 function sortTable(table, col, reverse) {
