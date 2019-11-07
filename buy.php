@@ -29,9 +29,8 @@
       <div class="text-area">
         <h2>
         <?php
-          ini_set('display_errors', 1);
-          ini_set('display_startup_errors', 1);
-          error_reporting(E_ALL);
+            error_reporting(E_ALL);
+            ini_set("display_errors", 1);
 
             ob_start();
             include('navmenu.php');
@@ -65,18 +64,14 @@
                 $stmt->close();
               }
 
-              echo $transactionID;
-
               foreach ($order as $i) {
                 $query = "insert into ItemTransaction(transactionID, productID, quantity)
                           values(?, ?, ?)";
                 if($stmt = $mysqli->prepare($query)) {
-                  $stmt->bind_param("iii", $mysqli->insert_id , $i["id"], $i["quantity"]);
+                  $stmt->bind_param("iii", $transactionID, $i["id"], $i["quantity"]);
                   $stmt->execute();
                   $stmt->close();
-                  echo $mysqli->error;
-                } else {
-                  echo $mysqli->error;
+                }
               }
             } else {
               echo "Not authorized";
