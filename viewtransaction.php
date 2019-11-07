@@ -79,13 +79,6 @@
           echo '<td></td><td></td><td>Total Price</td><td>'. $ttotalprice .'</td>';
           echo '</table>';
          ?>
-        <table id="cart">
-          <tr>
-            <th id="name">Name</th>
-            <th id="quantity">Quantity</th>
-            <th id="price">Price</th>
-            <th id="total">Total</th>
-          </tr>
         </table>
       </div>
     </div>
