@@ -30,12 +30,16 @@
           Shopping Cart
         </h3>
         <table id="cart">
+          <thead>
           <tr>
             <th id="name">Name</th>
             <th id="quantity">Quantity</th>
             <th id="price">Price</th>
             <th id="total">Total</th>
           </tr>
+          </thead>
+          <tbody>
+          </tbody>
         </table>
       </div>
     </div>

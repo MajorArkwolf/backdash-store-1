@@ -5,11 +5,26 @@ Storage.prototype.getObj = function(key) {
     return JSON.parse(this.getItem(key))
 }
 
-function createElementFromHTML(htmlString) {
-  let div = document.createElement('div');
-  div.innerHTML = htmlString.trim();
+function sortTable(table, col, reverse) {
+    let tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
+        tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
+        i;
+    reverse = -((+reverse) || -1);
+    tr = tr.sort(function (a, b) { // sort rows
+        return reverse // `-1 *` if want opposite order
+        * (a.cells[col].textContent.trim() // using `.textContent.trim()` for test
+           .localeCompare(b.cells[col].textContent.trim())
+        );
+    });
+    for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
+}
 
-  return div.firstChild;
+
+function createElementFromHTML(htmlString) {
+    let div = document.createElement('div');
+    div.innerHTML = htmlString.trim();
+
+    return div.firstChild;
 }
 
 function updateQuantity(element) {
@@ -39,10 +54,10 @@ function updateTable(str) {
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             let cart = localStorage.getObj("cart");
-            let table = document.getElementById("cart")
+            let table = document.getElementById("cart").getElementsByTagName("tbody")[0]
             let data = JSON.parse(this.responseText)
 
-            let row = table.insertRow(table.rows.length)
+            let row = table.insertRow()
             let cell0 = row.insertCell(0)
             let cell1 = row.insertCell(1)
             let cell2 = row.insertCell(2)
@@ -74,6 +89,8 @@ function populateCart() {
             updateTable("id=" + key + "&quantity=" + value)
         }
     }
+
+    sortTable(document.getElementById("cart"), 0, false);
 }
 
 populateCart();
