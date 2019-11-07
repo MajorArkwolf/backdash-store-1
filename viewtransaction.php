@@ -50,7 +50,7 @@
               echo '<td>'. $totalprice .'</td>';
               echo '</tr>';
               $stmt->close();
-              echo '</table><br></br>'
+              echo '</table><br></br>';
 
          ?>
         <table id="cart">
