@@ -59,7 +59,7 @@
                 <input id="name" type="text" name="name">
                 <label for="card-number">Card Number</label>
                 <input id="card-number" type="text" name="card-number">
-                <button type="submit">Update</button>
+                <button type="submit">Buy</button>
               </form>
             </div>';
           }
