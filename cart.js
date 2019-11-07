@@ -19,6 +19,9 @@ function sortTable(table, col, reverse) {
     for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
 }
 
+function removeItem(element) {
+    console.log("Hi!")
+}
 
 function createElementFromHTML(htmlString) {
     let div = document.createElement('div');
@@ -49,7 +52,7 @@ function updateQuantity(element) {
         if (this.readyState == 4 && this.status == 200) {
             let data = JSON.parse(this.responseText)
 
-            element.parentNode.parentNode.childNodes[3].innerHTML = data["totalPrice"]
+            element.parentNode.parentNode.childNodes[3].innerHTML = "$" + data["totalPrice"]
         }
     };
 
@@ -74,7 +77,10 @@ function updateTable(str) {
 
             let spinner = createElementFromHTML('<input class="quantity-picker-cart" type="number" name="quantity" value="' +
                                                 cart[data["id"]] + '" min="1" onclick="updateQuantity(this)">')
-
+            let remove = createElementFromHTML(
+                  '<button type="submit" class="remove-button" name="submit" onclick="removeItem(this)">' +
+                    '<i class="fa fa-times"></i>' +
+                  '</button>')
             cell0.innerHTML = data["name"]
             cell1.appendChild(spinner)
             cell2.innerHTML = "$" + data["price"]
