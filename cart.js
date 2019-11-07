@@ -84,7 +84,7 @@ function updateTotal() {
     let total = 0.0
 
     for (let i = 0; i < body.rows.length; ++i) {
-        total += parseFloat(body.rows[i].cells[3].innerHTML)
+        total += parseFloat(body.rows[i].cells[3].innerHTML.splice(1))
     }
 
     document.getElementById("grand-total").innerHTML = "$" + total.toFixed(2);
