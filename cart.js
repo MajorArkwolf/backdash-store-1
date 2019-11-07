@@ -5,6 +5,13 @@ Storage.prototype.getObj = function(key) {
     return JSON.parse(this.getItem(key))
 }
 
+function createElementFromHTML(htmlString) {
+  let div = document.createElement('div');
+  div.innerHTML = htmlString.trim();
+
+  return div.firstChild;
+}
+
 function updateTable(str) {
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -22,6 +29,10 @@ function updateTable(str) {
             cell1.innerHTML = data["name"]
             cell2.innerHTML = cart[data["id"]]
             cell3.innerHTML = "$" + data["price"]
+            let spinner = createElementFromHTML('<input id="quantity" type="number" name="quantity" value="' +
+                data["id"] + '" min="1">')
+            table.appendChild(spinner)
+
             cell4.innerHTML = "$" + data["totalPrice"]
         }
     };
