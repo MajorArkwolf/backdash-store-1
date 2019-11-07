@@ -35,26 +35,61 @@
 
             $order = json_decode(html_entity_decode(stripslashes($_GET["order"])), true);
 
-            foreach ($order as $i) {
-              echo $i["id"] + "\n";
-              echo $i["quantity"] + "\n";
+            if($_SESSION['loggedin']) {
+              $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
+              $sum = 0.0;
+              $query = "select sum()";
+
+              foreach ($order as $i) {
+                if($stmt = $mysqli->prepare("select P.price * ? as totalCost from Products P where P.id = ?")) {
+                   $stmt->bind_param("ii", $i["id"], $["quantity"]);
+                   $stmt->execute();
+                   $stmt->bind_result($totalCost);
+                   $stmt->fetch();
+                   $stmt->close();
+
+                   $sum += $totalCost;
+                }
+              }
+
+              echo $totalCost;
+
+              // $query = "insert into ShopTransaction(id, accountID, totalprice)
+              //          values(?, ?, select)";
+
+              /*
+               CREATE TABLE ShopTransaction (
+                id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+                accountID INT NOT NULL,
+                totalprice DECIMAL(15, 2) NOT NULL,
+                salenotes TEXT,
+                constraint fk_shoptransaction_accountid foreign key (accountID)
+                references Accounts(id)
+              );
+              CREATE TABLE ItemTransaction (
+                transactionID INT NOT NULL,
+                productID INT NOT NULL,
+                quantity INT NOT NULL,
+                constraint pk_itemstransaction PRIMARY KEY (transactionID, productID),
+                CONSTRAINT fk_itemtransaction_shoptransaction foreign key (transactionID)
+                REFERENCES ShopTransaction (id),
+                CONSTRAINT fk_itemtransaction_product foreign key (productID)
+                REFERENCES Products (id),
+                CONSTRAINT q_zero CHECK (quantity > 0)
+              );
+               */
+
+              if ($stmt = $mysqli->prepare($query)) {
+                  $stmt->bind_param("ssdiii", $_GET['name'], $_GET['description'],
+                    doubleval($_GET['price']), intval($_GET['stock']),
+                    intval($_GET['category']), intval($_GET['id']));
+                  $stmt->execute();
+
+                  echo "Purchase successful!";
+              }
+            } else {
+              echo "Not authorized";
             }
-
-            // if($_SESSION['admin']) {
-            //   $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
-            //   $query = "update Products P set P.name = ?, P.description = ?, P.price = ?, P.stock = ?, P.category = ? where P.id = ?";
-
-            //   if ($stmt = $mysqli->prepare($query)) {
-            //       $stmt->bind_param("ssdiii", $_GET['name'], $_GET['description'],
-            //         doubleval($_GET['price']), intval($_GET['stock']),
-            //         intval($_GET['category']), intval($_GET['id']));
-            //       $stmt->execute();
-
-            //       echo "Update successfully!";
-            //   }
-            // } else {
-            //   echo "Not authorized";
-            // }
         ?>
         </h2>
     </div>
