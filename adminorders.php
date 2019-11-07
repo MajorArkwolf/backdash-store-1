@@ -56,6 +56,7 @@
             }
           echo '</table>';
         ?>
+        <br></br>
         <?php
           echo '  <h3>Completed Transactions</h3>
                   <table id="cart">
