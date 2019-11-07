@@ -12,6 +12,10 @@ function createElementFromHTML(htmlString) {
   return div.firstChild;
 }
 
+function updateQuantity(element) {
+    console.log(element)
+}
+
 function updateTable(str) {
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -27,12 +31,11 @@ function updateTable(str) {
             let cell4 = row.insertCell(3)
 
             cell1.innerHTML = data["name"]
-            //cell2.innerHTML = cart[data["id"]]
             cell3.innerHTML = "$" + data["price"]
             cell4.innerHTML = "$" + data["totalPrice"]
 
             let spinner = createElementFromHTML('<input class="quantity-picker-cart" type="number" name="quantity" value="' +
-                cart[data["id"]] + '" min="1">')
+                cart[data["id"]] + '" min="1" onclick="updateQuantity(this)">')
             cell2.appendChild(spinner)
         }
     };
