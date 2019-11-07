@@ -43,7 +43,7 @@
           <tfoot>
           <tr>
             <th id="grand-total-title" colspan="3">Grand Total</th>
-            <th id="grand-total"></th>
+            <th id="grand-total">$0.00</th>
           </tr>
           </tfoot>
         </table>
