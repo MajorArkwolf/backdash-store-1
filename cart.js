@@ -48,7 +48,7 @@ function updateQuantity(element) {
         table.deleteRow(i)
     }
 
-    populateCart()
+    //populateCart()
 }
 
 function updateTable(str) {
