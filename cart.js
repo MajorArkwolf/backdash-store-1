@@ -16,7 +16,9 @@ function buy() {
     }
 
     localStorage.setObj("cart", [])
-    window.location.href = "buy.php?order=" + encodeURIComponent(JSON.stringify(outCart));
+    window.location.href = "buy.php?name=" +encodeURIComponent(document.getElementById("card-name").value) +
+        "?card=" + encodeURIComponent(document.getElementById("card-number").value) +
+        "&order=" + encodeURIComponent(JSON.stringify(outCart));
 }
 
 function sortTable(table, col, reverse) {
