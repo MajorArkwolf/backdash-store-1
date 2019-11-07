@@ -42,8 +42,41 @@
         <?php
           $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
-          if($stmt = $mysqli->prepare("SELECT id, totalprice, salenotes FROM ShopTransaction WHERE accountID = ?")) {
+          if($stmt = $mysqli->prepare("SELECT id, totalprice, salenotes FROM ShopTransaction WHERE shipped != 1")) {
              $stmt->bind_param("i", $_SESSION['id']);
+             $stmt->execute();
+             $stmt->bind_result($id, $totalprice, $salesnotes);
+          }
+          if($stmt->num_rows > 0) {
+            while ($stmt->fetch()) {
+              echo '<tr>';
+              echo '<td><form action="" method="post"><button type="submit" name="viewpurchase" value="'. $id . '">VIEW</button></form></td>';
+              echo '<td>'. $salesnotes .'</td>';
+              echo '<td>'. $id .'</td>';
+              echo '<td>'. $totalprice .'</td>';
+              echo '</tr>';
+            }
+          } else {
+            echo '<tr>';
+            echo '<td></td>';
+            echo '<td>No Data Found</td>';
+            echo '<td></td>';
+            echo '<td></td>';
+            echo '</tr>';
+          }
+        ?>
+        <h3>Completed Transactions</h3>
+        <table id="cart">
+        <tr>
+          <th>View</th>
+          <th id="name">Notes</th>
+          <th id="quantity">ID</th>
+          <th id="price">Price</th>
+        </tr>
+        <?php
+          $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
+
+          if($stmt = $mysqli->prepare("SELECT id, totalprice, salenotes FROM ShopTransaction WHERE shipped = 1")) {
              $stmt->execute();
              $stmt->bind_result($id, $totalprice, $salesnotes);
           }
