@@ -48,6 +48,17 @@
           </tfoot>
         </table>
       </div>
+
+      <div class='product-update'>
+        <h3 id='update-details'>Checkout</h3>
+        <form class='input-form' action='buy()'>
+          <label for='name'>Name</label>
+          <input id='name' type='text' name='name'>
+          <label for='card-number'>Card Number</label>
+          <input id='card-number' type='text' name='card-number'>
+          <button type='submit'>Update</button>
+        </form>
+      </div>
     </div>
     <script src="navbar.js"></script>
     <script src="cart.js"></script>
