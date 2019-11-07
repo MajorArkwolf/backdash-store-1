@@ -6,7 +6,16 @@ Storage.prototype.getObj = function(key) {
 }
 
 function buy() {
+    let cart = localStorage.getObj("cart")
+    let outCart = []
 
+    for (const [key, value] of Object.entries(cart)) {
+        if (key != 0 && key != null && value > 0) {
+            outCart.push({id: key, quantity: value})
+        }
+    }
+
+    window.location.href = "buy.php?data=" + encodeURIComponent(JSON.stringify(outCart));
 }
 
 function sortTable(table, col, reverse) {
