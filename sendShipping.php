@@ -15,7 +15,7 @@
   }
 
   /* Prepared statement, stage 1: prepare */
-  if (!($stmt = $mysqli->prepare("UPDATE ShopTransaction set shipping = 1 where id = ?"))) {
+  if (!($stmt = $mysqli->prepare("UPDATE ShopTransaction set shipped = 1 where id = ?"))) {
       echo "Prepare failed: (" . $mysqli->errno . ") " . $mysqli->error;
   }
 
