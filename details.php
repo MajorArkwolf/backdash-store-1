@@ -89,6 +89,7 @@
              echo '<td></td>';
              echo '</tr>';
            }
+           echo '</table>'
           ?>
          <br></br>
          <?php

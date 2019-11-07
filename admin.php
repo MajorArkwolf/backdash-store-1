@@ -103,6 +103,7 @@
             echo '<td> ID: ' . $id . ' Name: '. $name . ' Price: ' . $price . " CID: ". $category . '</td>';
             echo '</tr>';
           }
+          echo '</table>';
         ?>
       </div>
     </div>
