@@ -71,6 +71,8 @@
                   $stmt->execute();
                   $stmt->close();
                 }
+
+                echo $mysqli->error;
               }
             } else {
               echo "Not authorized";
