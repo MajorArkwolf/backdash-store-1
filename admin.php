@@ -81,8 +81,8 @@
         <h3>Current Product List</h3>
         <table id="cart">
         <tr>
-          <th>View</th>
           <th>Delete</th>
+          <th>View</th>
           <th id="name">Info</th>
         </tr>
         <?php
