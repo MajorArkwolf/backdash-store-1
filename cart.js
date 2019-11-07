@@ -22,11 +22,11 @@ function updateTable(str) {
             cell1.innerHTML = data["name"]
             cell2.innerHTML = cart[data["id"]]
             cell3.innerHTML = "$" + data["price"]
-            cell4.innerHTML = "$" + (cart[data["id"]] * data["price"]).toFixed(2)
+            cell4.innerHTML = "$" + data["totalPrice"]
         }
     };
 
-    xmlhttp.open("GET","getData.php?id="+str,true);
+    xmlhttp.open("GET","getData.php?" + str,true);
     xmlhttp.send();
 }
 
@@ -36,7 +36,7 @@ function populateCart() {
     for (const [key, value] of Object.entries(cart)) {
         if (key != 0 && key != null && value > 0) {
             console.log(key, value)
-            updateTable(key)
+            updateTable("id=" + key + "&quantity=" + value)
         }
     }
 }
