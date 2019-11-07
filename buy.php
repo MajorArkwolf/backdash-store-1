@@ -36,21 +36,24 @@
             include('navmenu.php');
             ob_end_clean();
 
-            if($_SESSION['admin']) {
-              $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
-              $query = "update Products P set P.name = ?, P.description = ?, P.price = ?, P.stock = ?, P.category = ? where P.id = ?";
+            $v = json_decode(stripslashes($_GET["data"]));
+            echo $v;
 
-              if ($stmt = $mysqli->prepare($query)) {
-                  $stmt->bind_param("ssdiii", $_GET['name'], $_GET['description'],
-                    doubleval($_GET['price']), intval($_GET['stock']),
-                    intval($_GET['category']), intval($_GET['id']));
-                  $stmt->execute();
+            // if($_SESSION['admin']) {
+            //   $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
+            //   $query = "update Products P set P.name = ?, P.description = ?, P.price = ?, P.stock = ?, P.category = ? where P.id = ?";
 
-                  echo "Update successfully!";
-              }
-            } else {
-              echo "Not authorized";
-            }
+            //   if ($stmt = $mysqli->prepare($query)) {
+            //       $stmt->bind_param("ssdiii", $_GET['name'], $_GET['description'],
+            //         doubleval($_GET['price']), intval($_GET['stock']),
+            //         intval($_GET['category']), intval($_GET['id']));
+            //       $stmt->execute();
+
+            //       echo "Update successfully!";
+            //   }
+            // } else {
+            //   echo "Not authorized";
+            // }
         ?>
         </h2>
     </div>
