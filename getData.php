@@ -4,8 +4,7 @@
 <?php
   $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
 
-  $query = "select P.id, P.name, P.description, P.price, P.stock, P.price * ? as totalPrice
-            from Products P where P.id = ?";
+  $query = "select P.id, P.name, P.description, P.price, P.stock, P.price * ? as totalPrice from Products P where P.id = ?";
   if ($stmt = $mysqli->prepare($query)) {
      $stmt->bind_param("i", intval($_GET['quantity']));
      $stmt->bind_param("i", intval($_GET['id']));
