@@ -51,7 +51,7 @@
 
         <?php
           if (!isset($_SESSION['loggedin'])) {
-            echo '<h3>Please log in to checkout</h3>';
+            echo '<h3 class="warning">Please log in to checkout</h3>';
           } else {
             echo '<div class="product-update checkout">
               <h3 id="update-details">Checkout</h3>

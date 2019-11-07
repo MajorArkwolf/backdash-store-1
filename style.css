@@ -342,6 +342,10 @@ header {
     padding-top: 20px;
 }
 
+.warning {
+    text-align: center;
+}
+
 .cart-title {
     padding-bottom: 10px;
 }
