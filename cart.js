@@ -54,8 +54,9 @@ function createElementFromHTML(htmlString) {
 
 function updateQuantity(element) {
     let table = document.getElementById("cart")
-    let quantity = parseInt(element.parentNode.childNodes[0].value)
-    let id = parseInt(element.parentNode.parentNode.childNodes[4].innerHTML)
+    let row = element.parentNode.parentNode
+    let quantity = parseInt(row.childNodes[3].innerHTML)
+    let id = parseInt(row.childNodes[4].innerHTML)
 
     let cart = localStorage.getObj("cart")
 
