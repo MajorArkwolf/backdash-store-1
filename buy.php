@@ -55,7 +55,7 @@
                 }
               }
 
-              $query = "insert into ShopTransaction(id, accountID, totalprice, salesnotes)
+              $query = "insert into ShopTransaction(id, accountID, totalprice, salenotes)
                         values(default, ?, ?, ?)";
               if($stmt = $mysqli->prepare($query)) {
                 $stmt->bind_param("ids", $_SESSION["id"], $sum,
