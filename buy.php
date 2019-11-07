@@ -59,7 +59,7 @@
                         values(default, ?, ?, ?)";
               if($stmt = $mysqli->prepare($query)) {
                 $stmt->bind_param("ids", $_SESSION["id"], $sum,
-                  $_GET["name" . " " . $_GET["card"]]);
+                  $_GET["name"] . " " . $_GET["card"]);
                 $stmt->execute();
                 $transactionID = $mysqli->insert_id;
                 $stmt->close();
