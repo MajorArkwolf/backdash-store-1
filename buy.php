@@ -62,7 +62,10 @@
                   $_GET["name"] . " " . $_GET["card"]);
                 $stmt->execute();
                 $transactionID = $mysqli->insert_id;
+                echo $mysqli->error;
                 $stmt->close();
+              } else {
+                echo $mysqli->error;
               }
 
               $query = "insert into ItemTransaction(transactionID, productID, quantity)
