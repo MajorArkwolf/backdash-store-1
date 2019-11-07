@@ -46,7 +46,6 @@
              $stmt->execute();
              $stmt->bind_result($id, $totalprice, $salesnotes);
           }
-          if($stmt->num_rows) {
             while ($stmt->fetch()) {
               echo '<tr>';
               echo '<td><form action="" method="post"><button type="submit" name="viewpurchase" value="'. $id . '">VIEW</button></form></td>';
@@ -55,14 +54,6 @@
               echo '<td>'. $totalprice .'</td>';
               echo '</tr>';
             }
-          } else {
-            echo '<tr>';
-            echo '<td></td>';
-            echo '<td>No Data Found</td>';
-            echo '<td></td>';
-            echo '<td></td>';
-            echo '</tr>';
-          }
           echo '</table>';
         ?>
         <?php
