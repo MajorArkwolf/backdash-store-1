@@ -36,6 +36,7 @@
         echo '  <h3>Processing Transactions</h3>
                 <table id="cart">
                 <tr>
+                  <th>Ship</th>
                   <th>View</th>
                   <th id="name">Notes</th>
                   <th id="quantity">ID</th>
@@ -51,6 +52,7 @@
             while ($stmt->fetch()) {
               echo '<tr>';
               echo '<td><form action="sendShipping.php" method="post"><button type="submit" name="ship" value="'. $id . '">Ship</button></form></td>';
+              echo '<td>View Soon</td>'
               echo '<td>'. $salesnotes .'</td>';
               echo '<td>'. $id .'</td>';
               echo '<td>'. $totalprice .'</td>';
