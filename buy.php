@@ -82,14 +82,14 @@
               );
                */
 
-              if ($stmt = $mysqli->prepare($query)) {
-                  $stmt->bind_param("ssdiii", $_GET['name'], $_GET['description'],
-                    doubleval($_GET['price']), intval($_GET['stock']),
-                    intval($_GET['category']), intval($_GET['id']));
-                  $stmt->execute();
+              // if ($stmt = $mysqli->prepare($query)) {
+              //     $stmt->bind_param("ssdiii", $_GET['name'], $_GET['description'],
+              //       doubleval($_GET['price']), intval($_GET['stock']),
+              //       intval($_GET['category']), intval($_GET['id']));
+              //     $stmt->execute();
 
-                  echo "Purchase successful!";
-              }
+              //     echo "Purchase successful!";
+              // }
             } else {
               echo "Not authorized";
             }
