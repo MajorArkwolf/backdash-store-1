@@ -83,9 +83,10 @@ function updateTotal() {
     let total = 0.0
 
     for (let i = 0; i < body.rows; ++i) {
-        total += rows.cells[3]
+        total += rows.cells[3].innerHTML
     }
 
+    total.toFixed(2)
     document.getElementById("grand-total").innerHTML = total;
 }
 
