@@ -80,6 +80,7 @@ function updateQuantity(element) {
 
 function updateTotal() {
     let table = document.getElementById("cart")
+    let total = 0.0;
 }
 
 function updateTable(str) {
