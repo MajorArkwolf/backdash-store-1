@@ -58,8 +58,7 @@
               $query = "insert into ShopTransaction(id, accountID, totalprice, salenotes)
                         values(default, ?, ?, ?)";
               if($stmt = $mysqli->prepare($query)) {
-                $stmt->bind_param("ids", $_SESSION["id"], $sum,
-                  $_GET["name"] . " " . $_GET["card"]);
+                $stmt->bind_param("ids", $_SESSION["id"], $sum, $_GET["name"]);
                 $stmt->execute();
                 $transactionID = $mysqli->insert_id;
                 echo $mysqli->error;
