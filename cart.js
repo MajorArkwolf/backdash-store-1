@@ -18,7 +18,7 @@ function updateQuantity(element) {
 
     for (let i = 0, row; row = table.rows[i]; i++) {
         for (var j = 0, col; col = row.cells[j]; j++) {
-            console.log(col.innerHTML)
+            console.log(i, j, col.innerHTML)
         }
     }
 }
