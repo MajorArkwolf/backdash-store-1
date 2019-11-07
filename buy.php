@@ -54,42 +54,6 @@
                    $sum += $totalCost;
                 }
               }
-
-              echo $totalCost;
-
-              // $query = "insert into ShopTransaction(id, accountID, totalprice)
-              //          values(?, ?, select)";
-
-              /*
-               CREATE TABLE ShopTransaction (
-                id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-                accountID INT NOT NULL,
-                totalprice DECIMAL(15, 2) NOT NULL,
-                salenotes TEXT,
-                constraint fk_shoptransaction_accountid foreign key (accountID)
-                references Accounts(id)
-              );
-              CREATE TABLE ItemTransaction (
-                transactionID INT NOT NULL,
-                productID INT NOT NULL,
-                quantity INT NOT NULL,
-                constraint pk_itemstransaction PRIMARY KEY (transactionID, productID),
-                CONSTRAINT fk_itemtransaction_shoptransaction foreign key (transactionID)
-                REFERENCES ShopTransaction (id),
-                CONSTRAINT fk_itemtransaction_product foreign key (productID)
-                REFERENCES Products (id),
-                CONSTRAINT q_zero CHECK (quantity > 0)
-              );
-               */
-
-              // if ($stmt = $mysqli->prepare($query)) {
-              //     $stmt->bind_param("ssdiii", $_GET['name'], $_GET['description'],
-              //       doubleval($_GET['price']), intval($_GET['stock']),
-              //       intval($_GET['category']), intval($_GET['id']));
-              //     $stmt->execute();
-
-              //     echo "Purchase successful!";
-              // }
             } else {
               echo "Not authorized";
             }
