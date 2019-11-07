@@ -1,5 +1,5 @@
 <?php
-  header("refresh:3;url=product.php?id={$_GET['id']}");
+  header("refresh:3;url=cart.php");
   session_start();
 ?>
 <!DOCTYPE html>
@@ -64,15 +64,17 @@
                 $stmt->close();
               }
 
+              $query = "insert into ItemTransaction(transactionID, productID, quantity)
+                        values(?, ?, ?)";
               foreach ($order as $i) {
-                $query = "insert into ItemTransaction(transactionID, productID, quantity)
-                          values(?, ?, ?)";
                 if($stmt = $mysqli->prepare($query)) {
                   $stmt->bind_param("iii", $transactionID, $i["id"], $i["quantity"]);
                   $stmt->execute();
                   $stmt->close();
                 }
               }
+
+              echo "Purchase successful!";
             } else {
               echo "Not authorized";
             }
