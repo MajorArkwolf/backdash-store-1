@@ -27,7 +27,7 @@ function updateTable(str) {
             let cell4 = row.insertCell(3)
 
             cell1.innerHTML = data["name"]
-            // cell2.innerHTML = cart[data["id"]]
+            cell2.innerHTML = "";
             let spinner = createElementFromHTML('<input id="quantity" type="number" name="quantity" value="' +
                 cart[data["id"]] + '" min="1">')
             table.appendChild(cell2)
