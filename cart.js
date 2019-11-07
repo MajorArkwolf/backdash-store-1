@@ -37,6 +37,7 @@ function removeItem(element) {
     delete cart[id]
     localStorage.setObj("cart", cart)
     row.parentNode.removeChild(row)
+    updateTotal()
 }
 
 function createElementFromHTML(htmlString) {
@@ -69,10 +70,16 @@ function updateQuantity(element) {
 
             element.parentNode.parentNode.childNodes[3].innerHTML = "$" + data["totalPrice"]
         }
+
+        updateTotal()
     }
 
     xmlhttp.open("GET","getData.php?id=" + id + "&quantity=" + quantity,true)
     xmlhttp.send()
+}
+
+function updateTotal() {
+    let table = document.getElementById("cart")
 }
 
 function updateTable(str) {
@@ -105,6 +112,7 @@ function updateTable(str) {
             cell4.style.display = "none"
 
             sortTable(document.getElementById("cart"), 4, false)
+            updateTotal()
         }
     }
 
