@@ -36,8 +36,8 @@
             include('navmenu.php');
             ob_end_clean();
 
-            $v = json_decode(html_entity_decode(stripslashes ($order)));
-            echo $v;
+            $order = json_decode(html_entity_decode(stripslashes($_GET["order"])));
+            echo $order;
 
             // if($_SESSION['admin']) {
             //   $mysqli = new mysqli("localhost", "X32019269", "X32019269", "X32019269");
