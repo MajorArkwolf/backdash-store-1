@@ -31,6 +31,9 @@
       <div class="text-area">
         <h2>Admin Page</h2>
         <br></br>
+        <h3>View/Edit Orders<h3>
+        <a href="adminorders.php">Orders</a>
+        <br></br>
         <h3>Edit Member<h3>
           <form id="editaccount" onsubmit="" action="updateuser.php" method="POST">
               <?php
