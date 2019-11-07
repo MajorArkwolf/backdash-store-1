@@ -17,9 +17,10 @@ function updateQuantity(element) {
     let table = document.getElementById("cart")
 
     for (let i = 0, row; row = table.rows[i]; i++) {
-        console.log(row.cells[3].innerHTML)
+        for (var j = 0, col; col = row.cells[j]; j++) {
+            console.log(col.innerHTML)
+        }
     }
-
 }
 
 function updateTable(str) {
@@ -31,21 +32,21 @@ function updateTable(str) {
             let data = JSON.parse(this.responseText)
 
             let row = table.insertRow(table.rows.length)
-            let cell1 = row.insertCell(0)
-            let cell2 = row.insertCell(1)
-            let cell3 = row.insertCell(2)
-            let cell4 = row.insertCell(3)
-            let cell5 = row.insertCell(4)
-
-            cell1.innerHTML = data["name"]
-            cell3.innerHTML = "$" + data["price"]
-            cell4.innerHTML = "$" + data["totalPrice"]
-            cell5.innerHTML = data["id"]
+            let cell0 = row.insertCell(0)
+            let cell1 = row.insertCell(1)
+            let cell2 = row.insertCell(2)
+            let cell3 = row.insertCell(3)
+            let cell4 = row.insertCell(4)
 
             let spinner = createElementFromHTML('<input class="quantity-picker-cart" type="number" name="quantity" value="' +
                                                 cart[data["id"]] + '" min="1" onclick="updateQuantity(this)">')
-            cell2.appendChild(spinner)
-            cell5.style.display = "none";
+
+            cell0.innerHTML = data["name"]
+            cell1.appendChild(spinner)
+            cell2.innerHTML = "$" + data["price"]
+            cell3.innerHTML = "$" + data["totalPrice"]
+            cell4.innerHTML = data["id"]
+            cell4.style.display = "none";
         }
     };
 
