@@ -73,6 +73,8 @@ function updateTable(str) {
             cell3.innerHTML = "$" + data["totalPrice"]
             cell4.innerHTML = data["id"]
             cell4.style.display = "none";
+
+            sortTable(table, 4, false);
         }
     };
 
@@ -89,8 +91,6 @@ function populateCart() {
             updateTable("id=" + key + "&quantity=" + value)
         }
     }
-
-    sortTable(document.getElementById("cart"), 0, false);
 }
 
 populateCart();
