@@ -44,8 +44,7 @@ function updateQuantity(element) {
     cart[id] = quantity;
     localStorage.setObj("cart", cart);
 
-    let table = document.getElementById("cart").getElementsByTagName("tbody")[0]
-    for (let i = 0; i < table.rows.length; ++i) {
+    for (let i = 1; i < table.rows.length; ++i) {
         table.deleteRow(i)
     }
 
