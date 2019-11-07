@@ -95,7 +95,7 @@
           }
 
           while ($stmt->fetch()) {
-            echo '<tr>'
+            echo '<tr>';
             echo '<td><form action="sendDeleteItem.php" method="post"><button type="submit" name="deletedItem" value="'. $id . '">DELETE</button></form></td>';
             echo '<td><a href="product.php?id='. $id .'" class="btn btn-info" role="button">VIEW</a></td>';
             echo '<td> ID: ' . $id . ' Name: '. $name . ' Price: ' . $price . " CID: ". $category . '</td>';
