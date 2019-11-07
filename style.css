@@ -421,6 +421,9 @@ input[type=number]::-webkit-inner-spin-button {
     cursor: pointer;
 }
 
+#grand-total-title {
+    text-align: right;
+}
 
 @media screen and (max-width: 600px) {
     html {
