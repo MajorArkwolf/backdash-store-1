@@ -89,8 +89,7 @@ function updateTotal() {
         total += body.rows[i].cells[3].innerHTML
     }
 
-    total.toFixed(2)
-    document.getElementById("grand-total").innerHTML = "$" + total;
+    document.getElementById("grand-total").innerHTML = "$" + total.toFixed(2);
 }
 
 function updateTable(str) {
