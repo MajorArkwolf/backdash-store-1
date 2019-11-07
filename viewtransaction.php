@@ -45,15 +45,39 @@
              $stmt->execute();
              $stmt->bind_result($tid, $ttotalprice, $tsalesnotes);
           }
-              $stmt->fetch();
-              echo '<tr>';
-              echo '<td>'. $tsalesnotes .'</td>';
-              echo '<td>'. $tid .'</td>';
-              echo '<td>'. $ttotalprice .'</td>';
-              echo '</tr>';
+          $stmt->fetch();
+          echo '<tr>';
+          echo '<td>'. $tsalesnotes .'</td>';
+          echo '<td>'. $tid .'</td>';
+          echo '<td>'. $ttotalprice .'</td>';
+          echo '</tr>';
 
-              echo '</table><br></br>';
-              $stmt->close();
+          echo '</table><br></br>';
+          $stmt->close();
+
+          echo '        <table id="cart">
+                    <tr>
+                      <th id="name">Name</th>
+                      <th id="quantity">Quantity</th>
+                      <th id="price">Price</th>
+                      <th id="total">Total</th>
+                    </tr>';
+          if($stmt = $mysqli->prepare("SELECT I.productID, I.quantity, P.name, P.price FROM ItemTransaction I, Products P WHERE P.id = I.productID AND I.transactionID = ?")) {
+             $stmt->bind_param("i", $tid);
+             $stmt->execute();
+             $stmt->bind_result($productid, $quantity, $name, $price);
+          }
+
+          while ($stmt->fetch()) {
+            echo '<tr>';
+            echo '<td>'. $name .'</td>';
+            echo '<td>'. $quantity .'</td>';
+            echo '<td>'. $price .'</td>';
+            echo '<td>'. ($price * $quantity) .'</td>';
+            echo '</tr>';
+          }
+          echo '<td></td><td></td><td>Total Price</td><td>'. $ttotalprice .'</td>';
+          echo '</table>';
          ?>
         <table id="cart">
           <tr>
