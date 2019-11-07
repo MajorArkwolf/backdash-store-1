@@ -13,7 +13,7 @@ function createElementFromHTML(htmlString) {
 }
 
 function updateQuantity(element) {
-    console.log(element.parentNode)
+    console.log(element.parentNode.childNodes)
 }
 
 function updateTable(str) {
