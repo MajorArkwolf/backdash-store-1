@@ -86,7 +86,7 @@ function updateTotal() {
     console.log(body)
 
     for (let i = 0; i < body.rows.length; ++i) {
-        total += rows.cells[3].innerHTML
+        total += body.rows[i].cells[3].innerHTML
     }
 
     total.toFixed(2)
