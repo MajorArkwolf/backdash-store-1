@@ -40,6 +40,12 @@
           </thead>
           <tbody>
           </tbody>
+          <tfoot>
+          <tr>
+            <th colspan="3">Grand Total</th>
+            <th id="grand-total">Price</th>
+          </tr>
+          </tfoot>
         </table>
       </div>
     </div>

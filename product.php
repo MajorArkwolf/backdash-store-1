@@ -91,7 +91,7 @@
                     }
 
                     echo "</select>
-                      <label for='price'>Price</label>
+                    <label for='price'>Price</label>
                     <input id='price' type='text' name='price' value='{$price}'>
                     <label for='stock'>Stock</label>
                     <input id='stock' type='text' name='stock' value='{$stock}'>
