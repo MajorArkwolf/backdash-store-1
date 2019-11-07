@@ -30,6 +30,7 @@
       ?>
       <div class="text-area">
         <h2>Admin Page</h2>
+        <a href="admin.php">Back to Admin page</a>
 
         <?php
         echo '        <h3>Processing Transactions</h3>
