@@ -13,12 +13,27 @@ function createElementFromHTML(htmlString) {
 }
 
 function updateQuantity(element) {
-    let id = parseInt(element.parentNode.childNodes[0].value)
     let table = document.getElementById("cart")
+    let quantity = parseInt(element.parentNode.childNodes[1].value)
+    let id = parseInt(element.parentNode.childNodes[4].value)
 
-    for (let i = 1, row; row = table.rows[i]; i++) {
-        console.log(row.cells[4].innerHTML)
-    }
+    console.log(quantity, id)
+
+    // let quantity = parseInt(document.getElementById("quantity-picker").value);
+    // let id = parseInt(document.getElementById("productId").value);
+    // let cart = localStorage.getObj("cart");
+
+    // if (cart === null) {
+    //     localStorage.setObj("cart", []);
+    //     cart = localStorage.getObj("cart");
+    // }
+
+    // cart[id] = (cart[id] || 0) + quantity;
+    // localStorage.setObj("cart", cart);
+
+    // for (const [key, value] of Object.entries(cart)) {
+    //     console.log(key, value);
+    // }
 }
 
 function updateTable(str) {
