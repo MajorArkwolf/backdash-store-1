@@ -27,13 +27,13 @@ function updateTable(str) {
             let cell4 = row.insertCell(3)
 
             cell1.innerHTML = data["name"]
-            cell2.innerHTML = "";
-            let spinner = createElementFromHTML('<input id="quantity" type="number" name="quantity" value="' +
-                cart[data["id"]] + '" min="1">')
-            table.appendChild(cell2)
-
+            cell2.innerHTML = cart[data["id"]]
             cell3.innerHTML = "$" + data["price"]
             cell4.innerHTML = "$" + data["totalPrice"]
+
+            let spinner = createElementFromHTML('<input id="quantity" type="number" name="quantity" value="' +
+                cart[data["id"]] + '" min="1">')
+            cell2.appendChild(spinner)
         }
     };
 
