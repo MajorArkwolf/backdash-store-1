@@ -44,7 +44,7 @@
 
               foreach ($order as $i) {
                 if($stmt = $mysqli->prepare("select P.price * ? as totalCost from Products P where P.id = ?")) {
-                   $stmt->bind_param("ii", $i["quantity"], $i["price"]);
+                   $stmt->bind_param("ii", $i["quantity"], $i["id"]);
                    $stmt->execute();
                    $stmt->bind_result($totalCost);
                    $stmt->fetch();
