@@ -17,7 +17,7 @@ function buy() {
 
     localStorage.setObj("cart", [])
     window.location.href = "buy.php?name=" +encodeURIComponent(document.getElementById("card-name").value) +
-        "?card=" + encodeURIComponent(document.getElementById("card-number").value) +
+        "&card=" + encodeURIComponent(document.getElementById("card-number").value) +
         "&order=" + encodeURIComponent(JSON.stringify(outCart));
 }
 
