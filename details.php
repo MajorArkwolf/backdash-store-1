@@ -72,7 +72,7 @@
               $stmt->execute();
               $stmt->bind_result($id, $totalprice, $salesnotes);
            }
-           if($stmt->num_rows > 0) {
+           if($stmt->num_rows >= 0) {
              while ($stmt->fetch()) {
                echo '<tr>';
                echo '<td><form action="viewtransaction.php" method="post"><button type="submit" name="viewid" value="'. $id . '">VIEW</button></form></td>';
