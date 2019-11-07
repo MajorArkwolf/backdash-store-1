@@ -5,12 +5,6 @@ Storage.prototype.getObj = function(key) {
     return JSON.parse(this.getItem(key))
 }
 
-Array.prototype.remove = function(from, to) {
-    var rest = this.slice((to || from) + 1 || this.length)
-    this.length = from < 0 ? this.length + from : from
-    return this.push.apply(this, rest)
-}
-
 function sortTable(table, col, reverse) {
     let tb = table.tBodies[0],
         tr = Array.prototype.slice.call(tb.rows, 0),
@@ -40,7 +34,7 @@ function removeItem(element) {
         cart = localStorage.getObj("cart")
     }
 
-    cart.remove(id)
+    delete cart[id]
     localStorage.setObj("cart", cart)
     row.parentNode.removeChild(row)
 }
