@@ -81,7 +81,7 @@ function updateQuantity(element) {
 function updateTotal() {
     let table = document.getElementById("cart")
     let body = table.tBodies[0]
-    let total = 0.0
+    let total = Number()
 
     console.log(body)
 
