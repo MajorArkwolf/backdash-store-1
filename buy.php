@@ -29,6 +29,9 @@
       <div class="text-area">
         <h2>
         <?php
+            error_reporting(E_ALL);
+            ini_set("display_errors", 1);
+
             ob_start();
             include('navmenu.php');
             ob_end_clean();
