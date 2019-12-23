@@ -14,6 +14,10 @@
   <a href="#license">License</a>
 </p>
 
+While every effort was made to keep to best practices, please understand
+this project developed by students under tight time constraints and
+that security was not assessed.
+
 ## License
 This project is licensed under the ISC license. Please see the [`LICENSE.md`](LICENSE.md)
 file for details.
