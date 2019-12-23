@@ -15,7 +15,7 @@
 </p>
 
 While every effort was made to keep to best practices, please understand
-this project developed by students under tight time constraints and
+this project was developed by students under tight time constraints and
 that security was not assessed.
 
 ## License
